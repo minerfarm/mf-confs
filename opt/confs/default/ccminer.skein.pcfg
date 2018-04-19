@@ -1,0 +1,52 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine DGBSKEIN using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=CCMiner
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is the username usually in form wallet.workername DEFAULT Suprnova Requires an account to be setup!!
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters.
+# ALGO1 is the algorithm 
+POOL1=stratum+tcp://dgbs.suprnova.cc:5226
+USER1=pimp.dgbskein
+PASS1=x
+ALGO1=skein
+
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ccminer
+BINARY=ccminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-remote -b

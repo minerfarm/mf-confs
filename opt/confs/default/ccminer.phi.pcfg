@@ -1,0 +1,71 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine PHI/X11Gost (Luxcoin, SibCoin, ...) using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=CCMiner
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is the username usually in form wallet.workername DEFAULT Nicehash Requires a BTC wallet as the username!!!
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters.
+# ALGO1 is the algorithm 
+
+# LuxCoin (LUX) to Yiimp (PHI algo) (USER1 is LUX wallet)
+# POOL1=stratum+tcp://yiimp.eu:8333
+# USER1=LKGhQvonaQL5fxZnv4b8rHNLb3g41vnmHN.pimpworker
+# PASS1=x
+# ALGO1=phi
+
+# X11Gost to Nicehash (X11Gost algo) (USER1 is BTC wallet dot worker)
+  POOL1=stratum+tcp://x11gost.usa.nicehash.com:3359
+  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimpworker
+  PASS1=x
+  ALGO1=sib
+
+# Sibcoin/SiberianChervonets (SIB) (X11Gost algo) to p2pool (USER1 is SIB wallet)
+#  POOL1=stratum+tcp://crypto.mine.nu:9345
+#  USER1=SX6bMPbedpaJjLnAmG3qc99yPRJ2bdL8Em
+#  PASS1=x
+#  ALGO1=sib
+
+# Sibcoin/SiberianChervonets (SIB) (X11Gost algo) to Suprnova Using X11Gost algo (USER1 is pool username dot worker)
+#  POOL1=stratum+tcp://sib.suprnova.cc:3458 
+#  USER1=username.workername
+#  PASS1=password
+#  ALGO1=sib
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ccminer-phi
+BINARY=ccminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-remote -b

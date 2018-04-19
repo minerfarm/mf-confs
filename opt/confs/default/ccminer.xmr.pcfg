@@ -1,0 +1,122 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine Cryptonight using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=CCMiner Multi Cryptonight
+
+# for xmr7 cryptonight and no rejected shares, use monero, not cryptonight
+ALGO1=monero
+#
+
+# CRYPTONIGHT POOL INFORMATION: Put your pool / wallet info here.
+# ---------------------------------------------------------------------
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is usually in form wallet.workername MAKE SURE IT IS AN XMR WALLET!
+# PASS1 is usually x but can be used for parameters.
+
+# With XMR, if you are mining to an exchange wallet you must include the payment ID.
+# If you are mining to your own wallet like Monero-Core, you can generate an 
+# integrated wallet address. We have provided an example of each type.
+
+# MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://mine.moneropool.com:3333
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+
+# XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://mine.xmrpool.net:80
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+
+# Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+  PASS1=x
+
+# Nanopool with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+#  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker)
+#  PASS1=x
+
+
+#### Other Cryptonight coins ####
+
+# Sumokoin (SUMO) Fairpool with with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://mine.sumo.fairpool.xyz:5555
+#  USER1=Sumoo5H59i819DcLT3DjZVToKneE2UE5xFSGCZkzwmdkdg1W8KPF4s8CmAiNzhmEKW9VLupxAvk56JZYp64wTKEgKufmGzsAeq9.845e48022c728a433e65bcf420c5058a68c3a9c145980005afd7bf35716ce581+PimpWorker
+#  PASS1=x
+
+# Electroneum (ETN) Nanopool with Exchange Wallet: Username is YOUR_WALLET.YOU_PAYMENTID_YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
+#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.01c50c450fe03eb9fae48af51b2a41de5ca94e9ca9da2ae0e25439be165bc86c.PimpWorker
+#  PASS1=x
+
+# Sumokoin (SUMO) Sumopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://sumopool.sonofatech.com:3333
+#  USER1=Your_sumo_address_here.PimpWorker
+#  PASS1=x
+
+# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://pool.sumokoin.net:3333
+#  USER1=Your_sumo_address_here.PimpWorker
+#  PASS1=x
+
+# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://sumo.sumominer.com:4444
+#  USER1=Your_sumo_address_here.PimpWorker
+#  PASS1=x
+
+# Electroneum (ETN) Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
+#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
+#  PASS1=x
+
+# Electroneum (ETN) Vip with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://mine.electroneum.vip:5555
+#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
+#  PASS1=x
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# Default is for temp target 75C and temp stop 90C.
+# IF YOU WANT TO MANAGE FANS WITH gputool DONT PUT FAN OPTIONS IN FLAGS
+#  Reason: miner will override gputool. But we didn't want to lose the failsafe defaults.
+# For all options read ccminer documentation:
+# https://github.com/tpruvot/ccminer/blob/windows/README.txt
+
+FLAGS=
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ccminer-cryptonight
+BINARY=ccminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-remote -b

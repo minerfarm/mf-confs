@@ -1,0 +1,21 @@
+#!/bin/sh
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \      By miners, for miners
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP Conf package installer
+# ==================================================================
+
+find /opt/confs/default/ -type f | gawk -F"/" '{
+        ofile = $0 ;
+        gsub("/opt/confs/default","/opt/confs",$0);
+        syscmd=sprintf("if [ ! -f %s ] ; then ln -s %s %s ; fi",$0,ofile,$0);
+        system(syscmd);
+        close(syscmd);
+        }'

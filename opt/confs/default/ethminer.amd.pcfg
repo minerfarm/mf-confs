@@ -1,0 +1,117 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \      by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|          https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+#
+# Mine ETHASH coins with ethminer
+ 
+#  PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY SO YOU DO NOT BURN OR DAMAGE
+#  YOUR HARDWARE. PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+
+# NAME = This is the way the miner will appear in miner farm
+NAME=ethminer
+USER1=pimp # needed for ethminer compatibility with miner.farm
+
+# PRIMARY/ETH/ETC/UBQ POOLS:
+# ---------------------------------------------------------------------
+# PRIMARY POOL INFORMATION: Put your ETHASH pool and wallet here.
+# POOL1 is in form protocol://username:password@url:port
+
+# ETH Ethermine (USER1 is ETH wallet dot workername)
+  POOL1=stratum+tcp://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91:x@us1.ethermine.org:4444
+
+# ETH Ethpool (USER1 is ETH wallet dot workername)
+#  POOL1=stratum+tcp://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker:x@us1.ethpool.org:3333
+
+# ETH Nanopool (USER1 is ETH wallet dot workername)
+#  POOL1=stratum+tcp://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker:x@eth-us-east1.nanopool.org:9999
+
+# ETH MiningRigRentals (Make an account, USER1 is Username dot rignumber)
+#  POOL1=stratum+tcp://pimp.32526:x@us-east01.miningrigrentals.com:3333
+
+####################### MINING OTHER ETHASH COINS ##############################
+
+## Note: These are other coin pools not ETH and they requre a UBQ address as USER1.
+
+# UBIQ/UBQ Minertopia (USER1 is UBQ wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0x6637ad6077ba88c14e8d9ed716305ba02f4cfe78:x@ubq.minertopia.org:8008
+
+# UBIQ/UBQ Ubiqpool (USER1 is UBQ wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0x6637ad6077ba88c14e8d9ed716305ba02f4cfe78:x@us.ubiqpool.io:8008
+
+# MUSICoin MineCrypto (USER1 is MUSIC wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0xecbcb21bc60781fb09146efa8d7c049cab356374:x@mc.minecrypto.pro:7007
+
+# MUSICoin Drowningpool (USER1 is MUSIC wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0xecbcb21bc60781fb09146efa8d7c049cab356374:x@music.drowningpool.net:8008
+
+# ELLAism Minerpool (USER1 is ELLA wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0x920909701089024e62636b626a922d7e7b9afb4f:x@lb.geo.ellapool.eu:8002
+
+# ELLAism Devpool (USER1 is ELLA wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0x920909701089024e62636b626a922d7e7b9afb4f:x@us.pool.ellaism.org:8008
+
+# PIRL Minerpool (USER1 is PIRL wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0x3f19709674952fb73ff883c68dd90624d8f62fef:x@lb.geo.pirlpool.eu:8002
+
+# PIRL CryptoPools (USER1 is PIRL wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0x3f19709674952fb73ff883c68dd90624d8f62fef:x@pirl.cryptopools.info:8002
+
+# Metaverse/ETP dOdOpool (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://M9Uak7xhUTs6s2dASrPk5SLNSHNPwKpyGv:x@etp.dodopool.com:8008
+
+# Metaverse/ETP farm (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://M9Uak7xhUTs6s2dASrPk5SLNSHNPwKpyGv:x@uk.metaverse.farm:3334
+
+# Metaverse/ETP SandPool (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://M9Uak7xhUTs6s2dASrPk5SLNSHNPwKpyGv:x@etp.sandpool.org:8008
+
+#  EXPanse MinerPool (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
+#  POOL1=stratum+tcp://0xa6a9c40ddbd94b9012e27fc3d95afd6387673df1:x@exp.minerpool.net:7002
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=-G --farm-recheck 2000 
+
+# Mining configuration:
+#    -G,--opencl  When mining use the GPU via OpenCL.
+#    --opencl-platform <n>  When mining using -G/--opencl use OpenCL platform n (default: 0).
+#    --opencl-device <n>  When mining using -G/--opencl use OpenCL device n (default: 0).
+#    --opencl-devices <0 1 ..n> Select which OpenCL devices to mine on. Default is to use all
+#    -t, --mining-threads <n> Limit number of CPU/GPU miners to n (default: use everything available on selected platform)
+#    -L, --dag-load-mode <mode> DAG generation mode.
+#        parallel    - load DAG on all GPUs at the same time (default)
+#        sequential  - load DAG on GPUs one after another. Use this when the miner crashes during DAG generation
+#        single <n>  - generate DAG on device n, then copy to other devices
+# OpenCL configuration:
+#    --cl-kernel <n>  Use a different OpenCL kernel (default: use stable kernel)
+#        0: stable kernel
+#        1: unstable kernel
+#    --cl-local-work Set the OpenCL local work size. Default is 128
+#    --cl-global-work Set the OpenCL global work size as a multiple of the local work size. Default is 8192 * 128
+#    --cl-parallel-hash <1 2 ..8> Define how many threads to associate per hash. Default=8
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised 
+TYPE=GPU
+DIR=ethminer
+BINARY=ethminer
+CONF=p1:P
+API=-api-port

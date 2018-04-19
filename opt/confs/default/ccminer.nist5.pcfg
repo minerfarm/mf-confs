@@ -1,0 +1,59 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \       by miners, for miners
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine NIST5 COINS using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=CCMiner
+# ALGO1 is the algorithm 
+ALGO1=nist5
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is the username usually in form wallet.workername DEFAULT Nicehash Requires a BTC wallet as the username!!!
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters.
+
+# Nist5 multi on Nicehash (USER1 is BTC wallet dot worker)
+  POOL1=stratum+tcp://nist5.usa.nicehash.com:3340
+  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
+  PASS1=x
+
+# BulwarkCoin (BWK)  on BSOD (USER1 is BWK wallet)
+#  POOL1=stratum+tcp://pool.bsod.pw:3833
+#  USER1=
+#  PASS1=c=BWK
+
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=-a nist5
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ccminer
+BINARY=ccminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-remote -b

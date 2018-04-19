@@ -1,0 +1,106 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \       by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner.
+# ==================================================================
+# Profile Description:
+# 
+# Mine EQUIHASH using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=BMiner
+# ALGO1 is the algorithm, needs to be Equihash for this miner.
+ALGO1=Equihash
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# USER1 is in form stratum://wallet@url:port   (No worker names supported by this miner)
+# THERE IS NO POOL1 IT IS PART OF THE USER1 FIELD FOR THIS MINER.
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is not used for this miner. 
+
+# POOLS:
+# ---------------------------------------------------------------------
+# ZEC Mine-to-wallet pools:
+# These pools allow you to mine to direct wallet address.
+# Either put a ZEC wallet (starts with t), nicehash takes a BTC wallet,
+#  then put a dot and then your worker name if you like. 
+# Simply remove the # from the pool/user/pass that you want to use and put the #
+#  in front of every other pool.
+#
+# Zcash (ZEC) on Flypool (Use ZEC wallet)
+   USER1=stratum://t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD@eu1-zcash.flypool.org:3333
+
+# Zcash (ZEC) on nanopool (Use ZEC wallet)
+#   USER1=stratum://t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD@zec-eu1.nanopool.org:6666
+
+# Zcash (ZEC) on nicehash  (Use ZEC wallet)
+#   USER1=stratum://1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir@stratum://equihash.usa.nicehash.com:3357
+
+#### Other Equihash Coins ####
+
+# Hush (HUSH) on Luckpool (USER1 is HUSH wallet)
+#   USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@luckpool.org:3757
+
+# Hush (HUSH) on Hushpool (USER1 is HUSH wallet)
+#   USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@us.hushpool.cloud:5551
+
+# Hush (HUSH) on Hushmine (USER1 is HUSH wallet)
+#   USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@us.hushmine.pro:9009
+
+# Hush (HUSH) on Miningspeed (USER1 is HUSH wallet)
+#   USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@us.miningspeed.com:3092
+
+# Komodo (KMD) on Luckpool (USER1 is KMD wallet)
+#   USER1=stratum://R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk@luckpool.org:3857
+
+# Komodo (KMD) on KomodoMiningPool (USER1 is KMD wallet)
+#   USER1=stratum://R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk@us.komodominingpool.com:5555
+
+# Zclassic (ZCL) on LuckPool (USER1 is ZCL wallet)
+#   USER1=stratum://t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ@luckpool.org:3557
+
+# Zclassic (ZCL) on ZCLMine (USER1 is ZCL wallet)
+#   USER1=stratum://t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ@us.zclmine.pro:9009
+
+# Zencash (ZEN) on LuckPool (USER1 is ZEN wallet)
+#   USER1=stratum://znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y@luckpool.org:3057
+
+# Zencash (ZEN) on Zenpool (USER1 is ZEN wallet)
+#   USER1=stratum://znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y@zenpool.org:3033
+
+# Mining Bitcoin Gold (BTG) on suprnova
+# This will mine towards the account foo which has the password pwd.
+# USER1=stratum://foo.worker:pwd@btg.suprnova.cc:8816
+
+# Mining Zcash over SSL connections
+# To connect to the mining pool over SSL, you can use stratum+ssl:// instead of stratum:// in the URI.
+# USER1=stratum+ssl://t1ZBtpkUy1y1deYsNJnzdW4tk7HiJEcfUzr.worker@zec-eu1.nanopool.org:6633
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=bminer
+BINARY=bminer
+CONF=u1:uri
+API=api 127.0.0.1:

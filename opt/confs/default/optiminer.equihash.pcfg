@@ -1,0 +1,178 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \       by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine Zcash and other Equihash coins using Optiminer's FEE Miner
+# *** NOTE: OPTIMINER TAKES A % of your hash from using this miner!!
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=Optiminer Zcash
+# ALGO1 Needs to be Equihash.
+ALGO1=Equihash
+
+# POOLS:
+# ---------------------------------------------------------------------
+# ZEC Mine-to-wallet pools:
+# These pools allow you to mine to direct wallet address.
+# Either put a ZEC wallet (starts with t), nicehash takes a BTC wallet,
+# Then put a dot and then your worker name if you like. 
+#
+# flypool SSL/TLS connection:   
+  POOL1=ssl://eu1-zcash.flypool.org:3443
+  USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.PimpWorker 
+  PASS1=x
+#
+# flypool (unencrypted connection): 
+#   POOL1=eu1-zcash.flypool.org:3333 
+#   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.PimpWorker
+#   PASS1=x
+#
+# nanopool (unencrypted connection): 
+#   POOL1=zec-eu1.nanopool.org:6666 
+#   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.PimpWorker
+#   PASS1=x
+#
+# nicehash (unencrypted connection): 
+#   POOL1=equihash.usa.nicehash.com:3357 
+#   USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir
+#   PASS1=x
+#
+# ---------------------------------------------------------------------
+# ZEC Mine-to-worker pools:
+# These pools require you to create an account and a worker to mine to:
+#
+# suprnova SSL/TLS connection:
+#   POOL1=ssl://zec.suprnova.cc:2242 
+#   USER1=YourLogin.YourWorkerName
+#   PASS1=YourWorkerPassword
+#
+# miningpoolhub SSL/TLS connection (auto-detects, same port for unencrypted connection):
+#   POOL1=ssl://us-east.equihash-hub.miningpoolhub.com:20570
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+#
+# coinmine SSL/TLS connection:
+#   POOL1=ssl://zec.coinmine.pl:7017
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+#
+# miningpoolhub (unencrypted connection)
+#   POOL1=us-east.equihash-hub.miningpoolhub.com:20570 
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+#
+# suprnova (unencrypted connection):
+#   POOL1=zec.suprnova.cc:2142 
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+#
+# coinmine (unencrypted connection):
+#   POOL1=zec-us.coinmine.pl:7007 
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+# 
+# coinmine (unencrypted connection):
+#   POOL1=us-east01.miningrigrentals.com
+#   USER1=pimp.34579
+#   PASS1=x
+# ---------------------------------------------------------------------
+
+#### Other Equihash Coins ####
+
+# Hush (HUSH) on Luckpool (USER1 is HUSH wallet)
+#   POOL1=luckpool.org:3757
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.pimpworker
+#   PASS1=x
+
+# Hush (HUSH) on Hushpool (USER1 is HUSH wallet)
+#   POOL1=us.hushpool.cloud:5551
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
+#   PASS1=x
+
+# Hush (HUSH) on Hushmine (USER1 is HUSH wallet)
+#   POOL1=us.hushmine.pro:9009
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
+#   PASS1=x
+
+# Hush (HUSH) on Miningspeed (USER1 is HUSH wallet)
+#   POOL1=us.miningspeed.com:3092
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
+#   PASS1=x
+
+# Komodo (KMD) on Luckpool (USER1 is KMD wallet)
+#   POOL1=luckpool.org:3857
+#   USER1=R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk.PimpWorker
+#   PASS1=x
+
+# Komodo (KMD) on KomodoMiningPool (USER1 is KMD wallet)
+#   POOL1=us.komodominingpool.com:5555
+#   USER1=R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk.PimpWorker
+#   PASS1=x
+
+# Zclassic (ZCL) on LuckPool (USER1 is ZCL wallet)
+#   POOL1=luckpool.org:3557
+#   USER1=t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ.PimpWorker
+#   PASS1=x
+
+# Zclassic (ZCL) on ZCLMine (USER1 is ZCL wallet)
+#   POOL1=us.zclmine.pro:9009
+#   USER1=t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ.PimpWorker
+#   PASS1=x
+
+# Zencash (ZEN) on LuckPool (USER1 is ZEN wallet)
+#   POOL1=luckpool.org:3057
+#   USER1=znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y.PimpWorker
+#   PASS1=x
+
+# Zencash (ZEN) on Zenpool (USER1 is ZEN wallet)
+#   POOL1=zenpool.org:3033
+#   USER1=znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y.PimpWorker
+#   PASS1=x
+#
+# Here are some Commonly mined Equihash coins:
+# Zcash (-a equihash200_9)
+# Bitcoin Gold (-a equihash200_9)
+# Hush (-a equihash200_9)
+# Zero (-a equihash192_7)
+# Minexcoin (-a equihash96_5)
+# Kommodo (-a equihash200_9)
+# BitcoinZ (-a equihash200_9)
+
+# For more details, read Optiminer Command line Documentation:
+# https://github.com/Optiminer/OptiminerEquihash
+#
+#   -i <number>,  --intensity <number>  (accepted multiple times)
+#     Worker intensity. 0 means auto-detect based on available memory.
+#     Higher values use more GPU memory. Can be specified once applying the
+#     same intensity to all devices or once per device (same order as -d).
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=--nodevfee -a equihash200_9
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=optiminer-equihash
+BINARY=optiminer-equihash
+CONF=p1:s,u1:u,l1:p
+API=-m 

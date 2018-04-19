@@ -1,0 +1,63 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine LYRA2z COINS using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=CCMiner
+# ALGO1 is the algorithm 
+ALGO1=lyra2z
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is the username usually in form wallet.workername DEFAULT Nicehash Requires a BTC wallet as the username!!!
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters.
+
+# ZCoin (XZC) Lyra2z on Zpool (USER1 is XZC wallet)
+  POOL1=stratum+tcp://lyra2z.mine.zpool.ca:4553
+  USER1=aP6qk6bpjirPzF6NdaY1Fu1t1ySfgCMg1y
+  PASS1=c=XZC
+
+# ZCoin (XZC) Lyra2z on Miningpoolhub (Create an account)
+#  POOL1=stratum+tcp://us-east.lyra2z-hub.miningpoolhub.com:20581
+#  USER1=pimp.pimp
+#  PASS1=x
+
+# ZCoin (XZC) Lyra2z on Suprnova (Create an account)
+#  POOL1=stratum+tcp://xzc.suprnova.cc:1569
+#  USER1=pimp.pimp
+#  PASS1=x
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ccminer
+BINARY=ccminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-remote -b

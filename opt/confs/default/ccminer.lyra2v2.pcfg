@@ -1,0 +1,88 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine LYRA2V2 COINS using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=CCMiner
+# ALGO1 is the algorithm 
+ALGO1=lyra2v2
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is the username usually in form wallet.workername DEFAULT Nicehash Requires a BTC wallet as the username!!!
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters.
+
+# Lyra2v2 multi on Nicehash (USER1 is BTC wallet dot worker)
+  POOL1=stratum+tcp://lyra2rev2.usa.nicehash.com:3347
+  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
+  PASS1=x
+
+# Lyra2v2 multi on Miningpoolhub (Create an account)
+#  POOL1=stratum+tcp://hub.miningpoolhub.com:20593
+#  USER1=username.workername
+#  PASS1=x
+
+# MonaCoin (MONA) on Zpool (USER1 is MONA wallet)
+#  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533 
+#  USER1=MRBWgynUWqL5xdwGxUZMt6yunKr2dwnojE.Pimp
+#  PASS1=c=MONA
+
+# MonaCoin (MONA) on CoinFoundry (USER1 is MONA wallet)
+#  POOL1=stratum+tcp://mona.coinfoundry.org:3093
+#  USER1=MRBWgynUWqL5xdwGxUZMt6yunKr2dwnojE.Pimp
+#  PASS1=d=8
+
+# MonaCoin (MONA) on Suprnova (Create an account)
+#  POOL1=stratum+tcp://mona.suprnova.cc:2995
+#  USER1=username.workername
+#  PASS1=x
+
+# Unitus (UIS) on Zpool (USER1 is UIS wallet)
+#  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533 
+#  USER1=UeT1zJUSmmtahXbQRAWsdMAxkkyPSbV9ZS.Pimp
+#  PASS1=c=UIS-lyra
+
+# VertCoin (VTC) on Zpool (USER1 is VTC wallet)
+#  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533
+#  USER1=VdxmUu21iWftsXw348VZgAqjogEJSQR9M2.Pimp
+#  PASS1=c=VTC
+
+# VertCoin (VTC) on CoinFoundry (USER1 is VTC wallet)
+#  POOL1=stratum+tcp://vtc.coinfoundry.org:3096
+#  USER1=VdxmUu21iWftsXw348VZgAqjogEJSQR9M2.Pimp
+#  PASS1=d=8
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ccminer
+BINARY=ccminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-remote -b

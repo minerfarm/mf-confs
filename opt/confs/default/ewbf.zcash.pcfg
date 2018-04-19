@@ -1,0 +1,187 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \       by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine Equihash using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=EWBF miner
+# ALGO1 Needs to be Equihash.
+ALGO1=Equihash
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# FOR EWBF MINER: 
+# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
+# Note: EWBF miner does not currently support SSL stratum ssl:// 
+# USER1 is the username usually in form wallet.workername 
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters on some pools.
+
+# POOLS:
+# ---------------------------------------------------------------------
+# ZEC Mine-to-wallet pools:
+# These pools allow you to mine to direct wallet address.
+# Either put a ZEC wallet (starts with t), nicehash takes a BTC wallet,
+#  then put a dot and then your worker name if you like. 
+# Simply remove the # from the pool/user/pass that you want to use and put the #
+#  in front of every other pool.
+#
+# flypool (unencrypted connection): FLAGS=--port 3333
+   POOL1=eu1-zcash.flypool.org 
+   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.PimpWorker
+   PASS1=x
+
+# nanopool (unencrypted connection): FLAGS=--port 6666
+#   POOL1=zec-eu1.nanopool.org 
+#   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.YourWorkerName
+#   PASS1=x
+
+# nicehash (unencrypted connection): FLAGS=--port 3357
+#   POOL1=equihash.usa.nicehash.com
+#   USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir
+#   PASS1=x
+
+# ---------------------------------------------------------------------
+# ZEC Mine-to-worker pools:
+# These pools require you to create an account and a worker to mine to:
+#
+# miningpoolhub (unencrypted connection):  FLAGS=--port 20570
+#   POOL1=us-east.equihash-hub.miningpoolhub.com 
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+
+# suprnova (unencrypted connection): FLAGS=--port 2142
+#   POOL1=zec.suprnova.cc
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+
+# coinmine (unencrypted connection): FLAGS=--port 7007
+#   POOL1=zec-us.coinmine.pl
+#   USER1=YourLogin.YourWorkerName 
+#   PASS1=YourWorkerPassword
+ 
+# miningrigrentals (unencrypted connection):  FLAGS=--port 3333
+#   POOL1=us-east01.miningrigrentals.com
+#   USER1=pimp.34579
+#   PASS1=x
+
+#### Other Equihash Coins ####
+
+# Hush (HUSH) on Luckpool (USER1 is HUSH wallet) FLAGS=--port 3757
+#   POOL1=luckpool.org
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.pimpworker
+#   PASS1=x
+
+# Hush (HUSH) on Hushpool (USER1 is HUSH wallet) FLAGS=--port 5551
+#   POOL1=us.hushpool.cloud
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
+#   PASS1=x
+
+# Hush (HUSH) on Hushmine (USER1 is HUSH wallet) FLAGS=--port 9009
+#   POOL1=us.hushmine.pro
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
+#   PASS1=x
+
+# Hush (HUSH) on Miningspeed (USER1 is HUSH wallet) FLAGS=--port 3092
+#   POOL1=us.miningspeed.com
+#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
+#   PASS1=x
+
+# Komodo (KMD) on Luckpool (USER1 is KMD wallet) FLAGS=--port 3857
+#   POOL1=luckpool.org
+#   USER1=R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk.PimpWorker
+#   PASS1=x
+
+# Komodo (KMD) on KomodoMiningPool (USER1 is KMD wallet) FLAGS=--port 5555
+#   POOL1=us.komodominingpool.com
+#   USER1=R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk.PimpWorker
+#   PASS1=x
+
+# Zclassic (ZCL) on LuckPool (USER1 is ZCL wallet) FLAGS=--port 3557
+#   POOL1=luckpool.org
+#   USER1=t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ.PimpWorker
+#   PASS1=x
+
+# Zclassic (ZCL) on ZCLMine (USER1 is ZCL wallet) FLAGS=--port 9009
+#   POOL1=us.zclmine.pro
+#   USER1=t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ.PimpWorker
+#   PASS1=x
+
+# Zencash (ZEN) on LuckPool (USER1 is ZEN wallet) FLAGS=--port 3057
+#   POOL1=luckpool.org
+#   USER1=znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y.PimpWorker
+#   PASS1=x
+
+# Zencash (ZEN) on Zenpool (USER1 is ZEN wallet) FLAGS=--port 3033
+#   POOL1=zenpool.org
+#   USER1=znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y.PimpWorker
+#   PASS1=x
+
+# ---------------------------------------------------------------------
+
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# We suggest leaving --log 2 in so you can control your miner and monitor it.
+# You have to define the pool's Stratum port here as well. 
+# IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE --templimit
+#  Reason: EWBF will override gputool. But we didn't want to lose the failsafe defaults.
+
+FLAGS=--port 3333 --eexit 1 --fee 0 --templimit 90 --tempunits C --pec
+
+
+# Here is the CLI --help information provided by the miner's author:
+# +-------------------------------------------------+
+# |         EWBF's Zcash CUDA miner. 0.3.3b         |
+# +-------------------------------------------------+
+# --help, -h          Show this help.
+# --server            Stratum server only hostname or ip address.
+# --port              Stratum server port.
+# --user              Stratum user.
+# --pass              Stratum password.
+# --fee               The developer fee in percent allowed decimals for example 0, 1, 2.5, 1.5 etc.
+# --pec               Power efficiency calculator. Shows power statistics.
+# --cuda_devices      Space-separated list of cuda devices.
+#                     Without this option all devices are used.
+# --solver            Disable benchmark and use specified solver
+#                     Allowed values from 0 to 3.
+# --eexit             Exit in case of error. Value 1 exit if miner cannot restart workers.
+#                     Value 2 if lost connection with the pool. 3 both cases.
+# --log               Create file miner.log in directory of miner.
+#                     Allowed values 1 and 2. 1 only errors, 2 will repeat console output.
+# --logfile           Set custom filename.
+# --tempunits         Temperature units, allowed values: C for celsius, F for fahrenheit and K for kelvin :)).
+# --templimit         Temperature limit, gpu will be stopped if this limit is reached.
+# --api               Enable api without an argument will be listen on 127.0.0.1:42000,
+#                     You can set listen address as an argument for example: --api 0.0.0.0:12345
+#                     Allowed ports 1000 - 65535
+# Example1: miner --server server.com --port 7777 --user name --pass secret --cuda_devices 0 1 2 3 --eexit 1
+# Example2: miner --server server.com --port 7777 --user name --pass secret --eexit 1 --log 2 --solver 1
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=nvidia-ewbf-zcash
+BINARY=ewbfminer
+CONF=p1:-server,u1:-user,l1:-pass,
+API=-api 127.0.0.1:
+
