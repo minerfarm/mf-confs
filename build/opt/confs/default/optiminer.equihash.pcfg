@@ -36,15 +36,10 @@ ALGO1=Equihash
 # Either put a ZEC wallet (starts with t), nicehash takes a BTC wallet,
 # Then put a dot and then your worker name if you like. 
 #
-# flypool SSL/TLS connection:   
-  POOL1=ssl://eu1-zcash.flypool.org:3443
-  USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.PimpWorker 
-  PASS1=x
-#
 # flypool (unencrypted connection): 
-#   POOL1=eu1-zcash.flypool.org:3333 
-#   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.PimpWorker
-#   PASS1=x
+   POOL1=eu1-zcash.flypool.org:3333 
+   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.PimpWorker
+   PASS1=x
 #
 # nanopool (unencrypted connection): 
 #   POOL1=zec-eu1.nanopool.org:6666 
@@ -175,4 +170,4 @@ TYPE=GPU
 DIR=optiminer-equihash
 BINARY=optiminer-equihash
 CONF=p1:s,u1:u,l1:p
-API=-m 
+API=m
