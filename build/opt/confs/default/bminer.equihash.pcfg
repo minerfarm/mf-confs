@@ -50,7 +50,7 @@ ALGO1=Equihash
 #   USER1=stratum://t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD@zec-eu1.nanopool.org:6666
 
 # Zcash (ZEC) on nicehash  (Use ZEC wallet)
-#   USER1=stratum://1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir@stratum://equihash.usa.nicehash.com:3357
+#   USER1=stratum://1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir@equihash.usa.nicehash.com:3357
 
 #### Other Equihash Coins ####
 
