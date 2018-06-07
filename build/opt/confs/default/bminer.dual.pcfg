@@ -1,0 +1,132 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \       by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner.
+# ==================================================================
+# Profile Description:
+# 
+# Mine ETH AND DCR/XVG using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=BMiner
+# ALGO1 is the algorithm, needs to be Equihash for this miner.
+ALGO1=Ethash
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# USER1 is in form stratum://wallet@url:port   (No worker names supported by this miner)
+# THERE IS NO POOL1 IT IS PART OF THE USER1 FIELD FOR THIS MINER.
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is not used for this miner. 
+
+
+
+# PRIMARY/ETH/ETC/UBQ POOLS:
+# ---------------------------------------------------------------------
+# PRIMARY POOL INFORMATION: Put your ETHASH pool and wallet here.
+#
+# FORMAT: protocol://wallet.worker@pool:port
+#
+# Simply remove the # from the pool/user/pass that you want to use and put the #
+#  in front of every other pool. And put your own wallet and/or worker name instead. 
+
+
+# ETH Ethermine with SSL (USER1 is ETH wallet dot workername at pool:port)
+#   You can use ethash+ssl:// instead of ethash:// to connect to the pool via SSL connections:
+  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:5555
+
+# ETH Ethermine (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:4444
+
+# ETH Nanopool (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth-us-west1.nanopool.org:9999
+
+# ETH f2pool (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.f2pool.com:8008
+
+# ETH waterhole (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.waterhole.xyz:8008
+
+# ETH 2miners (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.2miners.com:2020
+
+# ETH dwarfpool (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth-eu.dwarfpool.com:8008
+
+# ETH sparkpool (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us-west.sparkpool.com:3333
+
+# ETH coinfoundry (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethstratum://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.coinfoundry.org:3072
+
+# ETH coinotron (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethstratum://foo.pimpworker@coinotron.com:3344
+
+# ETH miningpoolhub (USER1 is ETH wallet dot workername at pool:port)
+#  USER1=ethstratum://foo.pimpworker:x@us-east.ethash-hub.miningpoolhub.com:20535
+
+#################################################################################
+# DUAL MINING CONFIG: Not enabled by default. 
+# ---------------------------------------------------------------------
+# To Dual Mine:
+#
+#  Put your Second-Coin (BLAKE14R/BLAKE2S) Pool/wallet info here
+# POOL INFORMATION: Put your pool and wallet here.
+# USER2 is in form stratum://wallet@url:port   (No worker names supported by this miner)
+# THERE IS NO POOL2 IT IS PART OF THE USER2 FIELD FOR THIS MINER.
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS2 is not used for this miner. 
+# ALGO2 should be the name of the Algo to mine: decred, lbry, sia, or pasc
+#   The ALGO2 is required for proper stats in miner.farm.
+
+## Dual mining Ethash & Decred:
+
+# Bminer supports mining Blake14r-based coins as a secondary coin, such as Decred (DCR), over different pools. Here are a few examples:
+
+# USER2=blake14r://foo.pimpworker:pwd@stratum.decredpool.org:3343
+USER2=blake14r://DsZt1npFipRNuUyM9nLY46oRTya3J2ETE88.pimpworker:pwd@dcr.coinmine.pl:2222
+# USER2=blake14r://foo.pimpworker:pwd@dcr.suprnova.cc:3252
+# USER2=blake14r://foo.pimpworker:pwd@dcr.pool.mn:4801
+
+## Dual mining Ethash & Verge:
+
+# Bminer supports mining Blake2s-based coins as a secondary coin, such as Verge (XVG), over different pools. Here are a few examples:
+
+# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@xvg.blake2s.com:8888
+# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@xvg.antminepool.com:9008
+# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@mine.luckypool.xyz:5766
+# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@mine.nlpool.nl:5766
+# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@blake2s.mine.zpool.ca:5766
+# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@xvg2.coinfoundry.org:3165
+
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# You can add extended logging by adding: -logfile=/var/log/bminer.log 
+
+FLAGS=
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=bminer
+BINARY=bminer
+CONF=u1:uri,u2:uri2
+API=api 127.0.0.1:
