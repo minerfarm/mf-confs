@@ -16,7 +16,7 @@
 # ==================================================================
 # Profile Description:
 # 
-# Mine ETH AND DCR/XVG using NVIDIA
+# Mine ETH AND [soon] DCR/XVG using NVIDIA
 #
 # DISCLAIMER: MINING IS DANGEROUS!!!
 # PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
@@ -81,39 +81,8 @@ ALGO1=Ethash
 #  USER1=ethstratum://foo.pimpworker:x@us-east.ethash-hub.miningpoolhub.com:20535
 
 #################################################################################
-# DUAL MINING CONFIG: Not enabled by default. 
-# ---------------------------------------------------------------------
-# To Dual Mine:
-#
-#  Put your Second-Coin (BLAKE14R/BLAKE2S) Pool/wallet info here
-# POOL INFORMATION: Put your pool and wallet here.
-# USER2 is in form stratum://wallet@url:port   (No worker names supported by this miner)
-# THERE IS NO POOL2 IT IS PART OF THE USER2 FIELD FOR THIS MINER.
-# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
-# PASS2 is not used for this miner. 
-# ALGO2 should be the name of the Algo to mine: decred, lbry, sia, or pasc
-#   The ALGO2 is required for proper stats in miner.farm.
-
-## Dual mining Ethash & Decred:
-
-# Bminer supports mining Blake14r-based coins as a secondary coin, such as Decred (DCR), over different pools. Here are a few examples:
-
-# USER2=blake14r://foo.pimpworker:pwd@stratum.decredpool.org:3343
-USER2=blake14r://DsZt1npFipRNuUyM9nLY46oRTya3J2ETE88.pimpworker:pwd@dcr.coinmine.pl:2222
-# USER2=blake14r://foo.pimpworker:pwd@dcr.suprnova.cc:3252
-# USER2=blake14r://foo.pimpworker:pwd@dcr.pool.mn:4801
-
-## Dual mining Ethash & Verge:
-
-# Bminer supports mining Blake2s-based coins as a secondary coin, such as Verge (XVG), over different pools. Here are a few examples:
-
-# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@xvg.blake2s.com:8888
-# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@xvg.antminepool.com:9008
-# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@mine.luckypool.xyz:5766
-# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@mine.nlpool.nl:5766
-# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@blake2s.mine.zpool.ca:5766
-# USER2=blake2s://DsaJr69WhJ8eearUvHc12utaFNoEWCxkmd5.pimpworker:pwd@xvg2.coinfoundry.org:3165
-
+# DUAL MINING CONFIG: Does not yet work properly in bminer. We will update this file when it does.
+# Meanwhile you can mine ETHASH coins with bminer.
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
