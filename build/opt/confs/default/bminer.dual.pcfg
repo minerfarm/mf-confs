@@ -16,7 +16,7 @@
 # ==================================================================
 # Profile Description:
 # 
-# Mine ETH AND [soon] DCR/XVG using NVIDIA
+# Mine ETH, BYTOM, AND/OR DCR/XVG using NVIDIA
 #
 # DISCLAIMER: MINING IS DANGEROUS!!!
 # PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
@@ -26,15 +26,12 @@
 # NAME = This is the way the miner will appear in miner farm
 NAME=BMiner
 # ALGO1 is the algorithm, needs to be Equihash for this miner.
-ALGO1=Ethash
 #
 # POOL INFORMATION: Put your pool and wallet here.
 # USER1 is in form stratum://wallet@url:port   (No worker names supported by this miner)
 # THERE IS NO POOL1 IT IS PART OF THE USER1 FIELD FOR THIS MINER.
 # NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
 # PASS1 is not used for this miner. 
-
-
 
 # PRIMARY/ETH/ETC/UBQ POOLS:
 # ---------------------------------------------------------------------
@@ -45,40 +42,54 @@ ALGO1=Ethash
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool. And put your own wallet and/or worker name instead. 
 
-
 # ETH Ethermine with SSL (USER1 is ETH wallet dot workername at pool:port)
 #   You can use ethash+ssl:// instead of ethash:// to connect to the pool via SSL connections:
   USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:5555
+  ALGO1=Ethash
 
 # ETH Ethermine (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:4444
+#  ALGO1=Ethash
 
 # ETH Nanopool (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth-us-west1.nanopool.org:9999
+#  ALGO1=Ethash
 
 # ETH f2pool (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.f2pool.com:8008
+#  ALGO1=Ethash
 
 # ETH waterhole (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.waterhole.xyz:8008
+#  ALGO1=Ethash
 
 # ETH 2miners (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.2miners.com:2020
+#  ALGO1=Ethash
 
 # ETH dwarfpool (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth-eu.dwarfpool.com:8008
+#  ALGO1=Ethash
 
 # ETH sparkpool (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us-west.sparkpool.com:3333
+#  ALGO1=Ethash
 
 # ETH coinfoundry (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethstratum://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.coinfoundry.org:3072
+#  ALGO1=Ethash
 
 # ETH coinotron (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethstratum://foo.pimpworker@coinotron.com:3344
+#  ALGO1=Ethash
 
 # ETH miningpoolhub (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethstratum://foo.pimpworker:x@us-east.ethash-hub.miningpoolhub.com:20535
+#  ALGO1=Ethash
+
+# Bytom (BTM)  F2pool (USER1 is BTM wallet dot workername at pool:port)
+#  USER1=tensority://bm1qgryyzvnphwqqndcva4uzpfptgcd06uuau6y48j.pimpworker@btm.f2pool.com:9221
+#  ALGO1=tensority
 
 #################################################################################
 # DUAL MINING CONFIG: Does not yet work properly in bminer. We will update this file when it does.
@@ -90,7 +101,7 @@ ALGO1=Ethash
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # You can add extended logging by adding: -logfile=/var/log/bminer.log 
 
-FLAGS=
+FLAGS=-max-temperature 80
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
