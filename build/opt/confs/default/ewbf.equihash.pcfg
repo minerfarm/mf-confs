@@ -1,0 +1,117 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \       by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine Equihash using NVIDIA
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=ewbfminer
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# FOR EWBF MINER: 
+# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
+# Note: EWBF miner does not currently support SSL stratum ssl:// 
+# USER1 is the username usually in form wallet.workername 
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters on some pools.
+
+# POOLS:
+# ---------------------------------------------------------------------
+# ZEC Mine-to-wallet pools:
+# These pools allow you to mine to direct wallet address.
+# Either put a ZEC wallet (starts with t), nicehash takes a BTC wallet,
+#  then put a dot and then your worker name if you like. 
+# Simply remove the # from the pool/user/pass that you want to use and put the #
+#  in front of every other pool.
+#
+# miningspeed (unencrypted connection): FLAGS=--port 3072
+#   POOL1=us.miningspeed.com
+#   USER1=t1gueMFRfHKkYfn13UB1V2dbXkkhjkhjkhjkh.PimpWorker
+#   PASS1=x
+#   ALGO1=144_5
+
+# zenhash at zcash: FLAGS=3057
+  POOL1=us1.zhash.pro
+   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+   PASS1=x
+   ALGO1=144_5
+
+# nanopool (unencrypted connection): FLAGS=--port 6666
+#   POOL1=zec-eu1.nanopool.org 
+#   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.YourWorkerName
+#   PASS1=x
+
+# nicehash (unencrypted connection): FLAGS=--port 3357
+#   POOL1=equihash.usa.nicehash.com
+#   USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir
+#   PASS1=x
+
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# We suggest leaving --log 2 in so you can control your miner and monitor it.
+# You have to define the pool's Stratum port here as well. 
+# IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE --templimit
+#  Reason: EWBF will override gputool. But we didn't want to lose the failsafe defaults.
+
+FLAGS=--port 3057 --eexit 1 --fee 0 --templimit 80 --tempunits C --pec --pers BitcoinZ
+
+# Here is the CLI --help information provided by the miner's author:
+#+-------------------------------------------------+
+#|         EWBF's Eqihash CUDA miner. v0.2         |
+#+-------------------------------------------------+
+#--help, -h          Show this help.
+#--server            Stratum server only hostname or ip address.
+#--port              Stratum server port.
+#--user              Stratum user.
+#--pass              Stratum password.
+#--fee               The developer fee in percent allowed decimals for example 0, 1, 2.5, 1.5 etc.
+#--pec               Power efficiency calculator. Shows power statistics.
+#--cuda_devices      Space-separated list of cuda devices.
+#                    Without this option all devices are used.
+#--eexit             Exit in case of error. Value 1 exit if miner cannot restart workers.
+#                    Value 2 if lost connection with the pool. 3 both cases.
+#--log               Create file miner.log in directory of miner.
+#                    Allowed values 1 and 2. 1 only errors, 2 will repeat console output.
+#--logfile           Set custom filename.
+#--config            Config file.
+#--tempunits         Temperature units, allowed values: C for celsius, F for fahrenheit and K for kelvin :)).
+#--templimit         Temperature limit, gpu will be stopped if this limit is reached.
+#--api               Enable api without an argument will be listen on 127.0.0.1:42000,
+#                    You can set listen address as an argument for example: --api 0.0.0.0:12345
+#                    Allowed ports 1000 - 65535
+#
+#--algo              Variant of equihash, supported values 192_7, 144_5.
+#--pers              Personalization for equihash, string 8 characters
+#Example1: miner --server server.com --port 7777 --user name --pass secret --cuda_devices 0 1 2 3 --eexit 1
+#Example2: miner --server server.com --port 7777 --user name --pass secret --eexit 1 --log 2 --solver 1
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ewbf
+BINARY=ewbfminer
+CONF=p1:-server,u1:-user,l1:-pass,a1:-algo
+API=-api 127.0.0.1:
+
