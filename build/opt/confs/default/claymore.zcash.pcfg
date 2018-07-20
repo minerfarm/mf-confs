@@ -155,7 +155,7 @@ ALGO1=Equihash
 # Default is for temp target 75C and temp stop 90C.
 # IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE -tt 75 -tstop 90
 #  Reason: Claymore will override gputool. But we didn't want to lose the failsafe defaults.
-FLAGS=-tt 75 -tstop 90
+FLAGS=-allpools 1 -logfile /var/log/claymore.zcash.log -tt 75 -tstop 90
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised 

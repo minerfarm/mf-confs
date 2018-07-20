@@ -200,7 +200,7 @@ NAME=Claymore Dual
 # IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE -tt 75 -tstop 90
 #  Reason: Claymore will override gputool. But we didn't want to lose the failsafe defaults.
 
-FLAGS=-allpools 1 -eworker Pimpworker -tt 75 -tstop 90
+FLAGS=-allpools 1 -logfile /var/log/claymore.dual.log -logsmaxsize 100MB -eworker Pimpworker -tt 75 -tstop 90
 
 
 # For all options read Claymore dual documentation: 
