@@ -34,15 +34,10 @@ ALGO1=cryptonight-light
 # USER1 is usually in form walletid
 # PASS1 is usually x but can be used for parameters.
 
-# SumoMiner: Username is AEON Address only, no dot workername.
-  POOL1=stratum+tcp://aeon.sumominer.com:3333 
+# Aeon-Pool: Username is AEON Address only, no dot workername.
+  POOL1=stratum+tcp://mine.aeon-pool.com:3333
   USER1=WmsdkVJhNbvSNkKAWoSXWjbqTQiFqU21nL5nK3tjvtFX5SWpQhkipbjhFaaEttMUt9c61Em6dP1WeHkyDtyRgWf11Q6LGb7N5
   PASS1=x
-
-# Aeon-Pool: Username is AEON Address only, no dot workername.
-#  POOL1=stratum+tcp://mine.aeon-pool.com:3333
-#  USER1=WmsdkVJhNbvSNkKAWoSXWjbqTQiFqU21nL5nK3tjvtFX5SWpQhkipbjhFaaEttMUt9c61Em6dP1WeHkyDtyRgWf11Q6LGb7N5
-#  PASS1=x
 
 # AeonMiningPro: Username is AEON Address only, no dot workername.
 #  POOL1=stratum+tcp://pool.aeonmining.pro:3333

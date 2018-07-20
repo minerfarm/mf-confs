@@ -39,7 +39,7 @@ ALGO1=Cryptonight
 # integrated wallet address. We have provided an example of each type.
 
 # MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-  POOL1=stratum+tcp://mine.moneropool.com:3333
+  POOL1=stratum+tcp://mine.moneropool.com:7777
   USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
   PASS1=x
 
