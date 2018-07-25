@@ -67,77 +67,83 @@ NAME=Claymore Dual
 
 ## Note: These are other coin pools not ETH and they requre a UBQ address as USER1.
 
+# Ethereum Classic (ETC) Nanopool (requires -allpools 1 in the FLAGS below)
+#  POOL1=etc-eu1.nanopool.org:19999
+#  USER1=0xff6f2df18310575c946635b8e1809702e024baef.pimpworker
+#  PASS1=x
+#  ALGO1=ethash
+
 # UBIQ/UBQ Minertopia (USER1 is UBQ wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://ubq.minertopia.org:8008
 #  USER1=0x6637ad6077ba88c14e8d9ed716305ba02f4cfe78
 #  PASS1=x
-#  ALGO1=Ubiq(Ethash)
+#  ALGO1=ethash
 
 # UBIQ/UBQ Ubiqpool (USER1 is UBQ wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://us.ubiqpool.io:8008
 #  USER1=0x6637ad6077ba88c14e8d9ed716305ba02f4cfe78
 #  PASS1=x
-#  ALGO1=Ubiq(Ethash)
+#  ALGO1=ethash
 
 # MUSICoin MineCrypto (USER1 is MUSIC wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://mc.minecrypto.pro:7007
 #  USER1=0xecbcb21bc60781fb09146efa8d7c049cab356374
 #  PASS1=x
-#  ALGO1=Musicoin(Ethash)
+#  ALGO1=ethash
 
 # MUSICoin Drowningpool (USER1 is MUSIC wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://music.drowningpool.net:8008
 #  USER1=0xecbcb21bc60781fb09146efa8d7c049cab356374
 #  PASS1=x
-#  ALGO1=Musicoin(Ethash)
+#  ALGO1=ethash
 
 # ELLAism Minerpool (USER1 is ELLA wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://lb.geo.ellapool.eu:8002
 #  USER1=0x920909701089024e62636b626a922d7e7b9afb4f
 #  PASS1=x
-#  ALGO1=ELLAism(Ethash)
+#  ALGO1=ethash
 
 # ELLAism Devpool (USER1 is ELLA wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://us.pool.ellaism.org:8008
 #  USER1=0x920909701089024e62636b626a922d7e7b9afb4f
 #  PASS1=x
-#  ALGO1=ELLAism(Ethash)
+#  ALGO1=ethash
 
 # PIRL Minerpool (USER1 is PIRL wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://lb.geo.pirlpool.eu:8002
 #  USER1=0x3f19709674952fb73ff883c68dd90624d8f62fef
 #  PASS1=x
-#  ALGO1=PIRL(Ethash)
+#  ALGO1=ethash
 
 # PIRL CryptoPools (USER1 is PIRL wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://pirl.cryptopools.info:8002
 #  USER1=0x3f19709674952fb73ff883c68dd90624d8f62fef
 #  PASS1=x
-#  ALGO1=PIRL(Ethash)
+#  ALGO1=ethash
 
 # Metaverse/ETP dOdOpool (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://etp.dodopool.com:8008
 #  USER1=M9Uak7xhUTs6s2dASrPk5SLNSHNPwKpyGv
 #  PASS1=x
-#  ALGO1=ETP(Ethash)
+#  ALGO1=ethash
 
 # Metaverse/ETP farm (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://uk.metaverse.farm:3334
 #  USER1=M9Uak7xhUTs6s2dASrPk5SLNSHNPwKpyGv
 #  PASS1=x
-#  ALGO1=ETP(Ethash)
+#  ALGO1=ethash
 
 # Metaverse/ETP SandPool (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://etp.sandpool.org:8008
 #  USER1=M9Uak7xhUTs6s2dASrPk5SLNSHNPwKpyGv
 #  PASS1=x
-#  ALGO1=ETP(Ethash)
+#  ALGO1=ethash
 
 #  EXPanse MinerPool (USER1 is ETP wallet only) (requires -allpools 1 in the FLAGS below)
 #  POOL1=stratum+tcp://exp.minerpool.net:7002
 #  USER1=0xa6a9c40ddbd94b9012e27fc3d95afd6387673df1
 #  PASS1=x
-#  ALGO1=EXP(Ethash)
+#  ALGO1=ethash
 
 #################################################################################
 # DUAL MINING CONFIG: Not enabled by default. 
