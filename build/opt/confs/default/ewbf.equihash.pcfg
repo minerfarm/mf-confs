@@ -43,28 +43,17 @@ NAME=ewbfminer
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool.
 #
-# miningspeed (unencrypted connection): FLAGS=--port 3072
-#   POOL1=us.miningspeed.com
-#   USER1=t1gueMFRfHKkYfn13UB1V2dbXkkhjkhjkhjkh.PimpWorker
-#   PASS1=x
-#   ALGO1=144_5
-
-# zenhash at zcash: FLAGS=3057
-  POOL1=us1.zhash.pro
+# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 --pers BitcoinZ below)
+   POOL1=us1.zhash.pro
    USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
    PASS1=x
    ALGO1=144_5
 
-# nanopool (unencrypted connection): FLAGS=--port 6666
-#   POOL1=zec-eu1.nanopool.org 
-#   USER1=t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD.YourWorkerName
+# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set FLAGS=--port 1445 --pers BgoldPoW below)
+#   POOL1=eu.btgpool.pro
+#   USER1=GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker
 #   PASS1=x
-
-# nicehash (unencrypted connection): FLAGS=--port 3357
-#   POOL1=equihash.usa.nicehash.com
-#   USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir
-#   PASS1=x
-
+#   ALGO1=144_5
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
@@ -75,33 +64,17 @@ NAME=ewbfminer
 # IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE --templimit
 #  Reason: EWBF will override gputool. But we didn't want to lose the failsafe defaults.
 
-FLAGS=--port 3057 --eexit 1 --fee 0 --templimit 80 --tempunits C --pec --pers BitcoinZ
+FLAGS=--eexit 1 --fee 0 --templimit 80 --tempunits C --pec --port 3057 --pers BitcoinZ
 
 # Here is the CLI --help information provided by the miner's author:
 #+-------------------------------------------------+
-#|         EWBF's Eqihash CUDA miner. v0.2         |
-#+-------------------------------------------------+
-#--help, -h          Show this help.
-#--server            Stratum server only hostname or ip address.
-#--port              Stratum server port.
-#--user              Stratum user.
-#--pass              Stratum password.
-#--fee               The developer fee in percent allowed decimals for example 0, 1, 2.5, 1.5 etc.
-#--pec               Power efficiency calculator. Shows power statistics.
 #--cuda_devices      Space-separated list of cuda devices.
 #                    Without this option all devices are used.
 #--eexit             Exit in case of error. Value 1 exit if miner cannot restart workers.
 #                    Value 2 if lost connection with the pool. 3 both cases.
-#--log               Create file miner.log in directory of miner.
-#                    Allowed values 1 and 2. 1 only errors, 2 will repeat console output.
-#--logfile           Set custom filename.
-#--config            Config file.
 #--tempunits         Temperature units, allowed values: C for celsius, F for fahrenheit and K for kelvin :)).
 #--templimit         Temperature limit, gpu will be stopped if this limit is reached.
-#--api               Enable api without an argument will be listen on 127.0.0.1:42000,
-#                    You can set listen address as an argument for example: --api 0.0.0.0:12345
-#                    Allowed ports 1000 - 65535
-#
+
 #--algo              Variant of equihash, supported values 192_7, 144_5.
 #--pers              Personalization for equihash, string 8 characters
 #Example1: miner --server server.com --port 7777 --user name --pass secret --cuda_devices 0 1 2 3 --eexit 1
