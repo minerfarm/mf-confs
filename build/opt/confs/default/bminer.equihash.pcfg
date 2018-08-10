@@ -92,6 +92,27 @@ ALGO1=Equihash
 # To connect to the mining pool over SSL, you can use stratum+ssl:// instead of stratum:// in the URI.
 # USER1=stratum+ssl://t1ZBtpkUy1y1deYsNJnzdW4tk7HiJEcfUzr.worker@zec-eu1.nanopool.org:6633
 
+# BitcoinZ at zenhash (USER1 is BitcoinZ wallet)
+#   USER1=zhash://znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker@us1.zhash.pro:3057
+
+# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet)
+#   USER1=zhash://GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker@eu.btgpool.pro:1445
+
+# LitecoinZ (LTZ) at Equipool (USER1 is LTZ Wallet)
+#  USER1=zhash+ssl://1SRNyNM5sgnmrGAQNnm3FRMQfakTPgz3nj.PimpWorker@mine-ltz-na.equipool.1ds.us:50092
+
+# LitecoinZ (LTZ) at MagPool (USER1 is LTZ Wallet)
+#  USER1=zhash+ssl://1SRNyNM5sgnmrGAQNnm3FRMQfakTPgz3nj.PimpWorker@ltz.magnificentpool.com:1983
+
+# Safecoin (SAFE) at Equipool (USER1 is SAFE Wallet)
+#  USER1=zhash+ssl://putSafeCoinWalletHere.PimpWorker@mine-safe-na.equipool.1ds.us:50112
+
+# SnowGem (XSG) at Equipool (USER1 is XSG Wallet)
+#  USER1=zhash+ssl://putSnowGemWalletHere.PimpWorker@mine-xsg-na.equipool.1ds.us:50082
+
+# ZELcash (ZEL) at Equipool (USER1 is ZEL Wallet)
+#  USER1=zhash+ssl://putZELWalletHere.PimpWorker@mine-zel-na.equipool.1ds.us:50052
+
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 
