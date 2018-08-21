@@ -16,7 +16,7 @@
 # ==================================================================
 # Profile Description:
 # 
-# Mine PHI/X16R/XEVAN/more using NVIDIA
+# Mine PHI/X16R/XEVAN/more using NVIDIA (See below for algorithms)
 #
 # DISCLAIMER: MINING IS DANGEROUS!!!
 # PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
@@ -49,8 +49,22 @@ NAME=Zenemy
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # -i 19 is the default intensity. 
 # For more details, see: https://forum.getpimp.org/topic/3434/flags-command-line-options-for-z-enemy-in-the-zenemy-multi-pcfg
+#
+# ALGORITHMS SUPPORTED by this miner: Set ALGO1= above
+# aergo (AeriumX: AEX); bitcore (Bitcore: BTX); x16r (X16R: Raven, );
+# x16s (X16S: Pigeon); x17 (X17: Verge); c11 (C11: CHC); 
+# phi (PHI1612: Folm, Seraph); phi2 (PHI2: LUXCoin)
+# renesis (RESS: Renesis); tribus (Tribus: Denarius); poly (Poly: Polytimos); 
+# skunk (Skunk: Skunk); sonoa (Sonoa: SONO); hex (Hex: HEX); hsr (HSR: HSR); 
+# timetravel (Machinecoin: MAC); xevan (Xevan: Transend);
+
+# FLAGS Commonly used with this miner: 
+# -d, --devices           Comma separated list of CUDA devices to use (0,1 etc).
+#  -i  --intensity=N[,N]   GPU intensity 8.0-31.0, decimals allowed (default: 19)
+#      --cuda-schedule     set CUDA scheduling option: 0: BlockingSync (default), 1: Spin, 2: Yield
 
 FLAGS=
+
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
