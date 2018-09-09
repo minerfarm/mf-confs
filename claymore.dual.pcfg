@@ -162,11 +162,11 @@ NAME=Claymore Dual
 # ALGO2 should be the name of the Algo to mine: decred, lbry, sia, or pasc
 #   The ALGO2 is required for proper stats in miner.farm.
 
-# EXAMPLE FOR SIACOIN BLAKE2S: (use FLAGS=-mode 0 -dcoin blake2s)
-#  POOL2=stratum+tcp://sia-us-east1.nanopool.org:7777
+# EXAMPLE FOR SIACOIN on siamining: (use FLAGS=-mode 0 -dcoin sc)
+#  POOL2=stratum+tcp://us-east.siamining.com:3333
 #  USER2=903a13a05913218c2140d9a02943a3b6c7e426c7374b28582d150190e2f17818486af9e15fa7
 #  PASS2=x
-#  ALGO2=blake2s
+#  ALGO2=sc
 
 # EXAMPLE FOR DECRED: (use FLAGS=-mode 0 -dcoin dcr)
 #  POOL2=stratum+tcp://decred.mine.zpool.ca:5744
@@ -180,23 +180,12 @@ NAME=Claymore Dual
 #  PASS2=x
 #  ALGO2=lbry
 
-# EXAMPLE FOR PASCAL: (use FLAGS=-mode 0 -dcoin pasc)
-#  POOL2=stratum+tcp://pasc.suprnova.cc:5279
-#  USER2=pimp.pimp
-#  PASS2=x
-#  ALGO2=pasc
-
-# EXAMPLE FOR PASCAL: (use FLAGS=-mode 0 -dcoin pasc)
-#  POOL2=stratum+tcp://pasc-us-east1.nanopool.org:15555
-#  USER2=yourPASCwallet.worker
-#  PASS2=x
-#  ALGO2=pasc
-
 # EXAMPLE FOR PASCALLITE: (use FLAGS=-mode 0 -dcoin pasc) (PASCALITE)
 # Pascalite requires accountnumber dot paymentid, see pool for syntax
 #  POOL2=stratum+tcp://mine.pasl.fairpool.xyz:4009
 #  USER2=5-70.5ce620abe76c711d5357bff11589e92fd57c5a32d4ffd9ba79384b94af9ce0af+pimpworker
 #  PASS2=x
+#  ALGO2=pasc
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
