@@ -41,7 +41,7 @@ ALGO1=monero
 # integrated wallet address. We have provided an example of each type.
 
 # MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.moneropool.com:3333
+#  POOL1=stratum+tcp://mine.moneropool.com:7777
 #  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
 #  PASS1=x
 
@@ -51,22 +51,17 @@ ALGO1=monero
 #  PASS1=x
 
 # Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-  PASS1=x
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
 
 # Nanopool with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-#  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker)
+#  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker
 #  PASS1=x
 
 
 #### Other Cryptonight coins ####
-
-# Sumokoin (SUMO) Fairpool with with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.sumo.fairpool.xyz:5555
-#  USER1=Sumoo5H59i819DcLT3DjZVToKneE2UE5xFSGCZkzwmdkdg1W8KPF4s8CmAiNzhmEKW9VLupxAvk56JZYp64wTKEgKufmGzsAeq9.845e48022c728a433e65bcf420c5058a68c3a9c145980005afd7bf35716ce581+PimpWorker
-#  PASS1=x
 
 # Electroneum (ETN) Nanopool with Exchange Wallet: Username is YOUR_WALLET.YOU_PAYMENTID_YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
@@ -90,11 +85,6 @@ ALGO1=monero
 
 # Electroneum (ETN) Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
-#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
-#  PASS1=x
-
-# Electroneum (ETN) Vip with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.electroneum.vip:5555
 #  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
 #  PASS1=x
 

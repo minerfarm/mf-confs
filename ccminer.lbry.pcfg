@@ -39,11 +39,6 @@ POOL1=stratum+tcp://lbry.usa.nicehash.com:3356
 USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimpworker
 PASS1=x
 
-# Lbrycrd MiningRigRentals
-#  POOL1=http://us-east01.miningrigrentals.com:3333
-#  USER1=pimp.32506
-#  PASS1=x
-
 # Zpool example with Payout to BTC
 #  POOL1=stratum+tcp://lbry.mine.zpool.ca:3334
 #  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimpworker

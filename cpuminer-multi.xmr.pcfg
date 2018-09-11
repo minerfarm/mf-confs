@@ -55,7 +55,7 @@ ALGO1=Cryptonight
 
 # Nanopool with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-#  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker)
+#  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker
 #  PASS1=x
 
 
@@ -90,12 +90,6 @@ ALGO1=Cryptonight
 #  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
 #  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
 #  PASS1=x
-
-# Electroneum (ETN) Vip with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.electroneum.vip:5555
-#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
-#  PASS1=x
-
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:

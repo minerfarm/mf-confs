@@ -43,36 +43,43 @@ NAME=CryptoDredge
 #  POOL1=stratum+tcp://hub.miningpoolhub.com:20593
 #  USER1=username.workername
 #  PASS1=x
+#  ALGO1=lyra2v2
 
 # MonaCoin (MONA) on Zpool (USER1 is MONA wallet)
 #  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533 
 #  USER1=MRBWgynUWqL5xdwGxUZMt6yunKr2dwnojE.Pimp
 #  PASS1=c=MONA
+#  ALGO1=lyra2v2
 
 # MonaCoin (MONA) on CoinFoundry (USER1 is MONA wallet)
 #  POOL1=stratum+tcp://mona.coinfoundry.org:3093
 #  USER1=MRBWgynUWqL5xdwGxUZMt6yunKr2dwnojE.Pimp
 #  PASS1=d=8
+#  ALGO1=lyra2v2
 
 # MonaCoin (MONA) on Suprnova (Create an account)
 #  POOL1=stratum+tcp://mona.suprnova.cc:2995
 #  USER1=username.workername
 #  PASS1=x
+#  ALGO1=lyra2v2
 
 # Unitus (UIS) on Zpool (USER1 is UIS wallet)
 #  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533 
 #  USER1=UeT1zJUSmmtahXbQRAWsdMAxkkyPSbV9ZS.Pimp
 #  PASS1=c=UIS-lyra
+#  ALGO1=lyra2v2
 
 # VertCoin (VTC) on Zpool (USER1 is VTC wallet)
 #  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533
 #  USER1=VdxmUu21iWftsXw348VZgAqjogEJSQR9M2.Pimp
 #  PASS1=c=VTC
+#  ALGO1=lyra2v2
 
 # VertCoin (VTC) on CoinFoundry (USER1 is VTC wallet)
 #  POOL1=stratum+tcp://vtc.coinfoundry.org:3096
 #  USER1=VdxmUu21iWftsXw348VZgAqjogEJSQR9M2.Pimp
 #  PASS1=d=8
+#  ALGO1=lyra2v2
 
 #==================================================================
 # Formatting:

@@ -34,15 +34,10 @@ ALGO1=groestl
 # NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
 # PASS1 is usually x but can be used for parameters.
  
-# GroestlCoin (GRS) on Zpool (USER1 is GRS address)
-  POOL1=stratum+tcp://groestl.mine.zpool.ca:5333
-  USER1=FYScwnpi3KXTFWxi1qiY1FEaXKtA9NtUXV
-  PASS1=c=GRS
-
 # GroestlCoin (GRS) on Miningpoolhub (USER1 is pool username dot worker)
-#  POOL1=stratum+tcp://hub.miningpoolhub.com:20486
-#  USER1=pimp.pimp
-#  PASS1=x
+  POOL1=stratum+tcp://hub.miningpoolhub.com:20486
+  USER1=pimp.pimp
+  PASS1=x
 
 # GroestlCoin (GRS) on Suprnova (USER1 is pool username dot worker)
 #  POOL1=stratum+tcp://grs.suprnova.cc:5544

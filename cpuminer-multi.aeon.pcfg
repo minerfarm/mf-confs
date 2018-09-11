@@ -39,11 +39,6 @@ ALGO1=cryptonight-light
   USER1=WmsdkVJhNbvSNkKAWoSXWjbqTQiFqU21nL5nK3tjvtFX5SWpQhkipbjhFaaEttMUt9c61Em6dP1WeHkyDtyRgWf11Q6LGb7N5
   PASS1=x
 
-# AeonMiningPro: Username is AEON Address only, no dot workername.
-#  POOL1=stratum+tcp://pool.aeonmining.pro:3333
-#  USER1=WmsdkVJhNbvSNkKAWoSXWjbqTQiFqU21nL5nK3tjvtFX5SWpQhkipbjhFaaEttMUt9c61Em6dP1WeHkyDtyRgWf11Q6LGb7N5
-#  PASS1=x
-
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
 # Here is where you can add command line parameters such as intensity and mining modes.
