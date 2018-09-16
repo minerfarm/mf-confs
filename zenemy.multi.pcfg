@@ -175,7 +175,7 @@ NAME=Zenemy
 # ALGO1=aergo
 # PASS1=c=<COIN>,mc=AEX
 
-#========== x13 ========== (Zenemy & CCminer)
+#========== x13 ========== (Zenemy)
 #  Coins: BitCoinDiamond (BCD)
 #
 # POOL1=stratum+tcp://bcd.vvpool.com:5610
