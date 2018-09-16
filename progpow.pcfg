@@ -1,0 +1,77 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \      by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|          https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+#
+# Mine ProgPow coins with progpowminer
+ 
+#  PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY SO YOU DO NOT BURN OR DAMAGE
+#  YOUR HARDWARE. PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+
+# NAME = This is the way the miner will appear in miner farm
+NAME=progpowminer
+USER1=pimp # needed for ethminer compatibility with miner.farm
+
+# PRIMARY ProgPoW POOLS:
+# ---------------------------------------------------------------------
+# PRIMARY POOL INFORMATION: Put your ProgPoW pool and wallet here.
+# POOL1 is in form protocol://username:password@url:port
+
+#  BitCoinInterest (BCI) at CoinBlockers (USER1 is wallet dot worker)
+POOL1=stratum+tcp://iAPj8JmHrgnjFUeH1ezWorYnUdnusj9Git.PimpWorker@bci-us.coinblockers.com:3910
+
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=-U --farm-recheck 2000
+
+# Mining configuration:
+#    -U,--cuda  When mining use the GPU via CUDA.
+#    --opencl-platform <n>  When mining using -G/--opencl use OpenCL platform n (default: 0).
+#    --opencl-device <n>  When mining using -G/--opencl use OpenCL device n (default: 0).
+#    --opencl-devices <0 1 ..n> Select which OpenCL devices to mine on. Default is to use all
+#    -t, --mining-threads <n> Limit number of CPU/GPU miners to n (default: use everything available on selected platform)
+#    -L, --dag-load-mode <mode> DAG generation mode.
+#        parallel    - load DAG on all GPUs at the same time (default)
+#        sequential  - load DAG on GPUs one after another. Use this when the miner crashes during DAG generation
+#        single <n>  - generate DAG on device n, then copy to other devices
+# CUDA configuration:
+#    --cuda-block-size Set the CUDA block work size. Default is 128
+#    --cuda-grid-size Set the CUDA grid size. Default is 8192
+#    --cuda-streams Set the number of CUDA streams. Default is 2
+#    --cuda-schedule <mode> Set the schedule mode for CUDA threads waiting for CUDA devices to finish work. Default is 'sync'. Possible values are:
+#        auto  - Uses a heuristic based on the number of active CUDA contexts in the process C and the number of logical processors in the system P. If C > P, then yield else spin.
+#        spin  - Instruct CUDA to actively spin when waiting for results from the device.
+#        yield - Instruct CUDA to yield its thread when waiting for results from the device.
+#        sync  - Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the results from the device.
+#    --cuda-devices <0 1 ..n> Select which CUDA GPUs to mine on. Default is to use all
+#    --cuda-parallel-hash <1 2 ..8> Define how many hashes to calculate in a kernel, can be scaled to achieve better performance. Default=4
+#    --cuda-noeval  bypass host software re-evalution of GPU solutions.
+#        This will trim some milliseconds off the time it takes to send a result to the pool.
+#        Use at your own risk! If GPU generates errored results they WILL be forwarded to the pool
+#        Not recommended at high overclock.
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised 
+TYPE=GPU
+DIR=progpow
+BINARY=progpowminer
+CONF=p1:P
+API=-api-port
