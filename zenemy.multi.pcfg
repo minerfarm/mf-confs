@@ -175,6 +175,15 @@ NAME=Zenemy
 # ALGO1=aergo
 # PASS1=c=<COIN>,mc=AEX
 
+#========== x13 ========== (Zenemy & CCminer)
+#  Coins: BitCoinDiamond (BCD)
+#
+# POOL1=stratum+tcp://bcd.vvpool.com:5610
+# USER1=<WALLET>.<WORKER>
+# ALGO1=bcd
+# PASS1=x
+
+
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # -i 19 is the default intensity. 
