@@ -99,9 +99,8 @@ NAME=BMiner
 # COMMAND LINE PARAMETERS:
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# You can add extended logging by adding: -logfile=/var/log/bminer.log 
 
-FLAGS=-max-temperature 80
+FLAGS-logfile /var/log/bminer.log
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised

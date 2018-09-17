@@ -348,7 +348,7 @@ NAME=CryptoDredge
 # cryptonightheavy | cryptonightv7 | lyra2v2 | lyra2z | masari | neoscrypt | 
 # phi | phi2 | skein | skunk | stellite | tribus
 
-FLAGS=
+FLAGS=--log /var/log/cryptodredge.log
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
