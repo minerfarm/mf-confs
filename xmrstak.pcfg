@@ -33,22 +33,22 @@ NAME=xmr-stak
 # If you are mining to your own wallet like Monero-Core, you can generate an 
 # integrated wallet address. We have provided an example of each type.
 
-# MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.moneropool.com:3333
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
+# MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency monero7 in FLAGS=)
+  POOL1=stratum+tcp://mine.moneropool.com:7777
+  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+  PASS1=x
 
-# XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+# XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency monero7 in FLAGS=)
 #  POOL1=stratum+tcp://mine.xmrpool.net:80
 #  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
 #  PASS1=x
 
-# Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-  PASS1=x
+# Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency monero7 in FLAGS=)
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
 
-# Nanopool with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
+# Nanopool with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL (Set --currency monero7 in FLAGS=)
 #  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
 #  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker)
 #  PASS1=x
@@ -56,52 +56,154 @@ NAME=xmr-stak
 
 #### Other Cryptonight coins ####
 
-# Sumokoin (SUMO) Fairpool with with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.sumo.fairpool.xyz:5555
-#  USER1=Sumoo5H59i819DcLT3DjZVToKneE2UE5xFSGCZkzwmdkdg1W8KPF4s8CmAiNzhmEKW9VLupxAvk56JZYp64wTKEgKufmGzsAeq9.845e48022c728a433e65bcf420c5058a68c3a9c145980005afd7bf35716ce581+PimpWorker
-#  PASS1=x
-
-# Electroneum (ETN) Nanopool with Exchange Wallet: Username is YOUR_WALLET.YOU_PAYMENTID_YOUR_WORKER/YOUR_EMAIL
+# Electroneum (ETN) Nanopool with Exchange Wallet: Username is YOUR_WALLET.YOU_PAYMENTID_YOUR_WORKER/YOUR_EMAIL (Set --currency electroneum in FLAGS=)
 #  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
 #  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.01c50c450fe03eb9fae48af51b2a41de5ca94e9ca9da2ae0e25439be165bc86c.PimpWorker
 #  PASS1=x
 
-# Sumokoin (SUMO) Sumopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+# Sumokoin (SUMO) Sumopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency sumokoin in FLAGS=)
 #  POOL1=stratum+tcp://sumopool.sonofatech.com:3333
 #  USER1=Your_sumo_address_here.PimpWorker
 #  PASS1=x
 
-# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency sumokoin in FLAGS=)
 #  POOL1=stratum+tcp://pool.sumokoin.net:3333
 #  USER1=Your_sumo_address_here.PimpWorker
 #  PASS1=x
 
-# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency sumokoin in FLAGS=)
 #  POOL1=stratum+tcp://sumo.sumominer.com:4444
 #  USER1=Your_sumo_address_here.PimpWorker
 #  PASS1=x
 
-# Electroneum (ETN) Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+# Electroneum (ETN) Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency electroneum in FLAGS=)
 #  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
 #  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
 #  PASS1=x
 
-# Electroneum (ETN) Vip with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.electroneum.vip:5555
-#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
+#========== CryptoNight v7 ========== (CryptoDredge)
+#  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
+
+# Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL)  (Set --currency cryptonightv7 in FLAGS=)
+#  POOL1=stratum+tcp://mine.xmrpool.net:80
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
 #  PASS1=x
+
+# Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL)  (Set --currency cryptonightv7 in FLAGS=)
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+
+# Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
+
+# Lethean (LTHN) on hashvault.pro (USER1 is LTHN address [dot paymentid if exchange]) (Set --currency cryptonightv7 in FLAGS=)
+#  POOL1=stratum+tcp://pool.lethean.hashvault.pro:5555
+#  USER1=LetheanWalletHere
+#  PASS1=Workername
+
+# Lethean (LTHN) on west-pool (Set --currency cryptonightv7 in FLAGS=)
+#  POOL1=stratum+tcp://intense.west-pool.org:6666
+#  USER1=LetheanWalletHere
+#  PASS1=Workername:Email
+
+# Graft (GRFT) on graft.spacepools.org (USER1 is PUBLIC_GRF_ADDRESS@RIG_ID) (Set --currency graft in FLAGS=)
+#  POOL1=stratum+tcp://pool.graft.spacepools.org:1111
+#  USER1=GraftWalletHere@PimpWorker
+#  PASS1=x
+
+# Graft (GRFT) on graft.ingest.cryptoknight.cc (USER1 is PUBLIC_ADDRESS) (Set --currency graft in FLAGS=)
+#  POOL1=stratum+tcp://graft.ingest.cryptoknight.cc:9112
+#  USER1=GraftWalletHere
+#  PASS1=Workername
+
+# Graft (GRFT) on graft.miner.rocks:5555 (USER1 is PUBLIC_ADDRESS) (Set --currency graft in FLAGS=)
+#  POOL1=stratum+tcp://graft.miner.rocks:5555
+#  USER1=GraftWalletHere
+#  PASS1=w=Workername
+
+#========== CryptoNight Classic ========== (CryptoDredge)
+#  Coins: Electroneum (ETN), Bytecoin (BCN), DigitalNote (XDN), Karbo (KRB),
+#   LeviarCoin (XLC)
+
+# Electroneum (ETN) on etn.spacepools.org (USER1 is PUBLIC_ADDRESS) (Set --currency electroneum in FLAGS=)
+#  POOL1=stratum+tcp://pool.etn.spacepools.org:1111
+#  USER1=EtnWalletHere
+#  PASS1=x
+
+#========== CryptoNight XTL ========== (CryptoDredge)
+#  Coins: Stellite (XTL)
+# Stellite (XTL) on CryptoPoolSpace (USER1 is PUBLIC_ADDRESS) (Set --currency stellite in FLAGS=)
+#  POOL1=stratum+tcp://Pool.XTL.CryptoPool.Space:3333
+#  USER1=StelliteWalletHere
+#  PASS1=x
+
+# Stellite (XTL) on CryptoKnight (USER1 is PUBLIC_ADDRESS) (Set --currency stellite in FLAGS=)
+#  POOL1=stratum+tcp://stellite.ingest-us.cryptoknight.cc:16222
+#  USER1=StelliteWalletHere
+#  PASS1=WorkerName
+
+#========== CryptoNight Heavy ========== (CryptoDredge)
+#  Coins: Loki (LOKI), Saronite (XRN)
+
+# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
+#  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
+#  USER1=LokiWalletHere
+#  PASS1=WorkerName
+
+# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
+#  POOL1=stratum+tcp://loki.miner.rocks:5555
+#  USER1=LokiWalletHere
+#  PASS1=w=WorkerName
+
+# Saronite (XRN) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
+#  POOL1=stratum+tcp://saronite.miner.rocks:5555
+#  USER1=XRNWalletHere
+#  PASS1=w=WorkerName
+
+#========== CryptoNight XHV Heavy ========== (CryptoDredge)
+#  Coins: Haven (XHV)
+
+# Haven (XHV) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency haven in FLAGS=)
+#  POOL1=stratum+tcp://haven.miner.rocks:4005
+#  USER1=XRNWalletHere
+#  PASS1=w=WorkerName
+
+#========== CryptoNight v7 lite ========== (CryptoDredge)
+#  Coins: Aeon (AEON), Turtlecoin (TRTL)
+
+# Aeon (AEON) on aeon-pool (USER1 is PUBLIC_ADDRESS) (Set --currency aeon in FLAGS=)
+#  POOL1=stratum+tcp://mine.aeon-pool.com:5555
+#  USER1=AeonWalletHere
+#  PASS1=x
+
+# Turtlecoin (TRTL) on eu.turtlepool.space (USER1 is PUBLIC_ADDRESS) (Set --currency turtlecoin in FLAGS=)
+#  POOL1=stratum+tcp://eu.turtlepool.space:5555
+#  USER1=TurtleWalletHere
+#  PASS1=x
+
+# Turtlecoin (TRTL) on cryptoknight (USER1 is PUBLIC_ADDRESS) (Set --currency turtlecoin in FLAGS=)
+#  POOL1=stratum+tcp://turtle.ingest.cryptoknight.cc:4902
+#  USER1=TurtleWalletHere
+#  PASS1=x
+
+#========== CryptoNight Fast ========== (CryptoDredge) (Set --currency masari in FLAGS=)
+#  Coins: Masari (MSR)
+
+# Masari (MSR) on masaricoin (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://pool.masaricoin.com:9999
+#  USER1=MasariWalletHere
+#  PASS1=x
+
+
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# Default is for temp target 75C and temp stop 90C.
-# IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE -tt 75 -tstop 90
-#  Reason: Claymore will override gputool. But we didn't want to lose the failsafe defaults.
 
-FLAGS=--currency monero7 -r -p
+FLAGS=--currency monero7 -r PimpWorker
 
-# For all options do: /opt/miners/xmr-stak/xmr-stak --help:
+# For all options do: /opt/miners/xmrstak/xmr-stak --help:
 #
 #  -c, --config FILE          common miner configuration file
 #  -C, --poolconf FILE        pool configuration file
@@ -119,10 +221,11 @@ FLAGS=--currency monero7 -r -p
 #  --currency NAME            currency to mine
 #
 # Supported coin options:
-#  aeon7, bbscoin, croat, cryptonight, cryptonight_heavy, 
-#  cryptonight_lite, cryptonight_lite_v7, cryptonight_v7, 
-#  edollar, electroneum, graft, haven, intense, karbo,
-#  monero7, stellite, sumokoin
+#  aeon7, alloy, bbscoin, bitcoal, croat, cryptonight, cryptonight_heavy, 
+#  cryptonight_lite, cryptonight_lite_v7, cryptonight_lite_v7_xor, cryptonight_v7, 
+#  cryptonight_v7_stellite, dero, edollar, electroneum, graft, haven, intense, karbo,
+#  monero7, stellite, sumokoin, ipbc, leviarcoin, loki, masari, ombre, monero7, ryo,
+#  solace, turtlecoin, ultranote
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised 
