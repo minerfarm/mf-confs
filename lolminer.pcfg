@@ -16,7 +16,7 @@
 # ==================================================================
 # Profile Description:
 # 
-# Mine Equihash variants using AMD
+# Mine Equihash variants using AMD/NVIDIA (Some support mixed some dont)
 #
 # DISCLAIMER: MINING IS DANGEROUS!!!
 # PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
@@ -41,68 +41,69 @@ NAME=lolminer
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool.
 #
-# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 --pers BitcoinZ below)
-#   POOL1=us1.zhash.pro
-#   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
-#   PASS1=x
-#   ALGO1=BTCZ
+# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 below)
+   POOL1=us1.zhash.pro
+   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+   PASS1=x
+   ALGO1=BTCZ
 
-# ZelCash (ZEL) at pickaxe.pro (USER1 is ZEL wallet) (set FLAGS=--port 3044 --pers ZelProof below)
+# ZelCash (ZEL) at pickaxe.pro (USER1 is ZEL wallet) (set FLAGS=--port 3044 below)
 #   POOL1=equihash.pickaxe.pro
 #   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
 #   PASS1=x
 #   ALGO1=ZEL
 
-# BitcoinGold (BTG) at Pool.Gold (USER1 is BitcoinGold wallet) (set FLAGS=--port 3050 --pers BgoldPoW)
+# BitcoinGold (BTG) at Pool.Gold (USER1 is BitcoinGold wallet) (set FLAGS=--port 3050 below)
 #   POOL1=main.pool.gold
 #   USER1=Username.Workername
 #   PASS1=x
 #   ALGO1=BTG
 
-# BitcoinGold (BTG) at MiningPoolHub (USER1 is username.workername) (set FLAGS=--port 17026 --pers BgoldPoW)
+# BitcoinGold (BTG) at MiningPoolHub (USER1 is username.workername) (set FLAGS=--port 17026 below)
 #   POOL1=us-east.equihash-hub.miningpoolhub.com
 #   USER1=Username.Workername
 #   PASS1=x
 #   ALGO1=BTG
 
-# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set FLAGS=--port 1445 --pers BgoldPoW below)
+# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set FLAGS=--port 1445 below)
 #   POOL1=eu.btgpool.pro
 #   USER1=GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker
 #   PASS1=x
 #   ALGO1=BTG
 
-# LiteCoinZ (LTZ) at BitPool.Ro (USER1 is LitecoinZ wallet) (set FLAGS=--port 3041 --pers ZcashPoW below)
+# LiteCoinZ (LTZ) at BitPool.Ro (USER1 is LitecoinZ wallet) (set FLAGS=--port 3041 below)
 # 0 Sol - 2KSol (Single GPU) port 3041
 # 1KSol - 10 KSol (Multiple GPU) port 4019
 # 50 KSol and more (Middle Farm, NiceHash) port 4020
 #   POOL1=ltz.bitpool.ro
-#   USER1=Yourltzwallethere.PimpWorker
+#   USER1=L1Ucd8BU7KfeoGWXFjgwerQHVHQS6uMVzfA.PimpWorker
 #   PASS1=x
 #   ALGO1=LTZ
 
-# SnowGem (XSG) at MiningSpeed (USER1 is Wallet.Worker, Pass is email address) (set FLAGS=--port 3022 --pers sngemPoW below)
-#   POOL1=us.miningspeed.com
-#   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
-#   PASS1=yourmail@domain.com
-#   ALGO1=XSG
+# SnowGem (XSG) at MiningSpeed (USER1 is Wallet.Worker, Pass is email address) (set FLAGS=--port 3022 below)
+   POOL1=us.miningspeed.com
+   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
+   PASS1=yourmail@domain.com
+   ALGO1=XSG
 
-# SnowGem (XSG) at Voidr (USER1 is Wallet.Worker) (set FLAGS=--port 3032 --pers sngemPoW below)
+# SnowGem (XSG) at Voidr (USER1 is Wallet.Worker) (set FLAGS=--port 3032 below)
 #   POOL1=us.voidr.net
 #   USER1=YourWalletHere.PimpWorker
 #   PASS1=yourmail@domain.com
 #   ALGO1=XSG
 
-# SnowGem (XSG) at YouMine (USER1 is Wallet.Worker, Pass is email address) (set FLAGS=--port 3032 --pers sngemPoW below)
+# SnowGem (XSG) at YouMine (USER1 is Wallet.Worker, Pass is email) (set FLAGS=--port 3032 below)
 #   POOL1=xsg.youmine.xyz
 #   USER1=YourWalletHere.PimpWorker
 #   PASS1=yourmail@domain.com
 #   ALGO1=XSG
 
 # MinexCoin (MNX) on Minexpool (USER1 is MNX wallet) (set FLAGS=--port 9999 below)
-   POOL1=stratum.minexpool.eu
-   USER1=XQZoBeGPZJoLhTdkcF8bScsNH5Wyesd9g4.lolRig
-   PASS1=x
-   ALGO1=MNX
+# Does not seem to support mixed mining yet.
+#   POOL1=stratum.minexpool.eu
+#   USER1=XQZoBeGPZJoLhTdkcF8bScsNH5Wyesd9g4.lolRig
+#   PASS1=x
+#   ALGO1=MNX
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
@@ -111,7 +112,7 @@ NAME=lolminer
 # You have to define the pool's Stratum port here as well. 
 # Do not remove kernelsdir option or lolminer will break.
 
-FLAGS=--kernelsdir /opt/miners/lolminers/kernels --port 9999
+FLAGS=--kernelsdir /opt/miners/lolminer/kernels --log 1 --logfile /var/log/lolminer.log --port 3022
 
 # Here is the CLI --help information provided by the miner's author:
 #+-------------------------------------------------+
