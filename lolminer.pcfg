@@ -1,0 +1,154 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \       by miners, for miners.
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine Equihash variants using AMD
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=lolminer
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
+# Note: LOL miner does not currently support SSL stratum ssl:// 
+# USER1 is the username usually in form wallet.workername 
+# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
+# PASS1 is usually x but can be used for parameters on some pools.
+
+# POOLS:
+# ---------------------------------------------------------------------
+# These pools allow you to mine to direct wallet address.
+# Either put a coin wallet (starts with t), nicehash takes a BTC wallet,
+#  then put a dot and then your worker name if you like. 
+# Simply remove the # from the pool/user/pass that you want to use and put the #
+#  in front of every other pool.
+#
+# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 --pers BitcoinZ below)
+#   POOL1=us1.zhash.pro
+#   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+#   PASS1=x
+#   ALGO1=BTCZ
+
+# ZelCash (ZEL) at pickaxe.pro (USER1 is ZEL wallet) (set FLAGS=--port 3044 --pers ZelProof below)
+#   POOL1=equihash.pickaxe.pro
+#   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+#   PASS1=x
+#   ALGO1=ZEL
+
+# BitcoinGold (BTG) at Pool.Gold (USER1 is BitcoinGold wallet) (set FLAGS=--port 3050 --pers BgoldPoW)
+#   POOL1=main.pool.gold
+#   USER1=Username.Workername
+#   PASS1=x
+#   ALGO1=BTG
+
+# BitcoinGold (BTG) at MiningPoolHub (USER1 is username.workername) (set FLAGS=--port 17026 --pers BgoldPoW)
+#   POOL1=us-east.equihash-hub.miningpoolhub.com
+#   USER1=Username.Workername
+#   PASS1=x
+#   ALGO1=BTG
+
+# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set FLAGS=--port 1445 --pers BgoldPoW below)
+#   POOL1=eu.btgpool.pro
+#   USER1=GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker
+#   PASS1=x
+#   ALGO1=BTG
+
+# LiteCoinZ (LTZ) at BitPool.Ro (USER1 is LitecoinZ wallet) (set FLAGS=--port 3041 --pers ZcashPoW below)
+# 0 Sol - 2KSol (Single GPU) port 3041
+# 1KSol - 10 KSol (Multiple GPU) port 4019
+# 50 KSol and more (Middle Farm, NiceHash) port 4020
+#   POOL1=ltz.bitpool.ro
+#   USER1=Yourltzwallethere.PimpWorker
+#   PASS1=x
+#   ALGO1=LTZ
+
+# SnowGem (XSG) at MiningSpeed (USER1 is Wallet.Worker, Pass is email address) (set FLAGS=--port 3022 --pers sngemPoW below)
+#   POOL1=us.miningspeed.com
+#   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
+#   PASS1=yourmail@domain.com
+#   ALGO1=XSG
+
+# SnowGem (XSG) at Voidr (USER1 is Wallet.Worker) (set FLAGS=--port 3032 --pers sngemPoW below)
+#   POOL1=us.voidr.net
+#   USER1=YourWalletHere.PimpWorker
+#   PASS1=yourmail@domain.com
+#   ALGO1=XSG
+
+# SnowGem (XSG) at YouMine (USER1 is Wallet.Worker, Pass is email address) (set FLAGS=--port 3032 --pers sngemPoW below)
+#   POOL1=xsg.youmine.xyz
+#   USER1=YourWalletHere.PimpWorker
+#   PASS1=yourmail@domain.com
+#   ALGO1=XSG
+
+# MinexCoin (MNX) on Minexpool (USER1 is MNX wallet) (set FLAGS=--port 9999 below)
+   POOL1=stratum.minexpool.eu
+   USER1=XQZoBeGPZJoLhTdkcF8bScsNH5Wyesd9g4.lolRig
+   PASS1=x
+   ALGO1=MNX
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# You have to define the pool's Stratum port here as well. 
+# Do not remove kernelsdir option or lolminer will break.
+
+FLAGS=--kernelsdir /opt/miners/lolminers/kernels --port 9999
+
+# Here is the CLI --help information provided by the miner's author:
+#+-------------------------------------------------+
+
+# Accepted values for --coin (ALGO1= line above) as of lolminer 0.5:
+# AION Aion Mainnet Equihash 210/9 2%
+# ANON Anon Equihash 144/5 2%
+# ASF Asofe Equihash 144/5 2%
+# BTCZ BitcoinZ Equihash 144/5 2%
+# BTG Bitcoin Gold Equihash 144/5 2%
+# BTH Bithereum Equihash 144/5 2%
+# LTZ Litecoin Z Equihash 144/5 2%
+# HEPTA Heptacoin Equihash 144/5 2%
+# MNX MinexCoin Equihash 96/5 1%
+# SAFE SafeCoin Equihash 144/5 2%
+# GENX Genesis Equihash 192/7 2%
+# XSG SnowGem Equihash 144/5 2%
+# ZEL Zelcash Equihash 144/5 2%
+# ZER Zero Equihash 192/7 2%
+# --------- to mine other coins not listed above with pers string: ---------
+# AUTO144_5 with PERS String: Equihash 144/5 2%
+# AUTO192_7 with PERS String: Equihash 192/7 2%
+# In case that a coin using Equihash 144/5 or 192/7 is NOT listed in the table in the
+# quick-start section it may still be possible to mine it with lolMiner.
+# In order to do so use --coin AUTO144_5 or --coin AUTO192_7 respectively. Then
+# use flag such as --overwritePersonal Coin_PoW in the FLAGS section.
+
+# Other options: 
+# --devices 0,2,3 	   choose specific gpus to use for mining
+# --rigname $HOSTNAME  sets rig name 
+# --logs 1  Writes log to /opt/miners/lolminer/logs
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=lolminer
+BINARY=lolminer
+CONF=p1:-pool,u1:-user,l1:-pass,a1:-coin
+API=-apiport
+
