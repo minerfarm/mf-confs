@@ -101,7 +101,7 @@ NAME=Zenemy
 # ALGO1=bitcore
 # PASS1=c=<COIN>,mc=BTX
 #
-#========== phi ========== (Zenemy) & (CryptoDredge)
+#========== phi ========== (Zenemy) and (CryptoDredge)
 #  Coins: Seraph(SERA), Fonero(FNO), Folm(FLM)
 #
 # POOL1=stratum+tcp://phi.mine.zergpool.com:8333
@@ -134,7 +134,7 @@ NAME=Zenemy
 # ALGO1=xevan
 # PASS1=c=<COIN>,mc=<COIN>
 #
-#========== tribus ========== (Zenemy) & (CryptoDredge)
+#========== tribus ========== (Zenemy) and (CryptoDredge)
 #  Coins: Scriv(SCRIV), Tincoin(TIN), Denarius(DNR)
 #
 # POOL1=stratum+tcp://tribus.mine.zergpool.com:8533

@@ -111,7 +111,7 @@ NAME=CryptoDredge
 #                     Must match wallet type.
 #
 # ==================================================================
-#========== phi ========== (Zenemy) & (CryptoDredge)
+#========== phi ========== (Zenemy) and (CryptoDredge)
 #  Coins: Seraph(SERA), Fonero(FNO), Folm(FLM)
 #
 # POOL1=stratum+tcp://phi.mine.zergpool.com:8333
@@ -119,7 +119,7 @@ NAME=CryptoDredge
 # ALGO1=phi
 # PASS1=c=<COIN>,mc=<COIN>
 #
-#========== tribus ========== (Zenemy) & (CryptoDredge)
+#========== tribus ========== (Zenemy) and (CryptoDredge)
 #  Coins: Scriv(SCRIV), Tincoin(TIN), Denarius(DNR)
 #
 # POOL1=stratum+tcp://tribus.mine.zergpool.com:8533
