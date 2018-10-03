@@ -34,10 +34,10 @@ NAME=CryptoDredge
 # ALGO1 is the algorithm (see list below for choices.)
 
 # Lyra2v2 multi on Nicehash (USER1 is BTC wallet dot worker)
-  POOL1=stratum+tcp://lyra2rev2.usa.nicehash.com:3347
-  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
-  PASS1=x
-  ALGO1=lyra2v2
+#  POOL1=stratum+tcp://lyra2rev2.usa.nicehash.com:3347
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
+#  PASS1=x
+#  ALGO1=lyra2v2
 
 # Lyra2v2 multi on Miningpoolhub (Create an account)
 #  POOL1=stratum+tcp://hub.miningpoolhub.com:20593
@@ -283,6 +283,13 @@ NAME=CryptoDredge
 
 #========== CryptoNight Heavy ========== (CryptoDredge)
 #  Coins: Loki (LOKI), Saronite (XRN)
+
+# LOKI on Blokspace (USER1 is PUBLIC_ADDRESS)
+  POOL1=stratum tcp://loki.blokspace.io:4444
+  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5w
+    P
+  PASS1=melt
+  ALGO1=cryptonightheavy
 
 # Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
