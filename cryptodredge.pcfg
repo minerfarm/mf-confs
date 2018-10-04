@@ -286,8 +286,7 @@ NAME=CryptoDredge
 
 # LOKI on Blokspace (USER1 is PUBLIC_ADDRESS)
   POOL1=stratum+tcp://loki.blokspace.io:4444
-  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5w
-    P
+  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
   PASS1=melt
   ALGO1=cryptonightheavy
 
