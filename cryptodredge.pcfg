@@ -285,22 +285,22 @@ NAME=CryptoDredge
 #  Coins: Loki (LOKI), Saronite (XRN)
 
 # LOKI on Blokspace (USER1 is PUBLIC_ADDRESS)
-  POOL1=stratum+tcp://loki.blokspace.io:4444
-  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
-  PASS1=melt
-  ALGO1=cryptonightheavy
+#  POOL1=stratum+tcp://loki.blokspace.io:4444
+# USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+# PASS1=melt
+# ALGO1=cryptonightheavy
 
 # Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
-#  USER1=LokiWalletHere
-#  PASS1=WorkerName
+#  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+#  PASS1=Pimpworker
 #  ALGO1=cryptonightheavy
 
 # Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stratum+tcp://loki.miner.rocks:5555
-#  USER1=LokiWalletHere
-#  PASS1=w=WorkerName
-#  ALGO1=cryptonightheavy
+  POOL1=stratum+tcp://loki.miner.rocks:5555
+  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+  PASS1=w=Pimpworker
+  ALGO1=cryptonightheavy
 
 # Saronite (XRN) on MinerRocks (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://saronite.miner.rocks:5555
