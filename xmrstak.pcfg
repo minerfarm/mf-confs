@@ -33,10 +33,15 @@ NAME=xmr-stak
 # If you are mining to your own wallet like Monero-Core, you can generate an 
 # integrated wallet address. We have provided an example of each type.
 
+# Loki (LOKI) on BlokSpace (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
+  POOL1=stratum+tcp://loki.blokspace.io:4444
+  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+  PASS1=w=PimpWorker
+
 # MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency monero7 in FLAGS=)
-  POOL1=stratum+tcp://mine.moneropool.com:7777
-  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-  PASS1=x
+#  POOL1=stratum+tcp://mine.moneropool.com:7777
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
 
 # XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency monero7 in FLAGS=)
 #  POOL1=stratum+tcp://mine.xmrpool.net:80
@@ -201,7 +206,7 @@ NAME=xmr-stak
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 
-FLAGS=--currency monero7 -r PimpWorker
+FLAGS=--currency loki -r PimpWorker
 
 # For all options do: /opt/miners/xmrstak/xmr-stak --help:
 #
