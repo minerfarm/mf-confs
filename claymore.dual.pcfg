@@ -34,16 +34,16 @@ NAME=Claymore Dual
 # PASS1 is usually x but can be used for parameters.
 
 # ETH Ethermine (USER1 is ETH wallet dot workername)
-#  POOL1=stratum+tcp://us1.ethermine.org:4444
-#  USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
-#  PASS1=x
-#  ALGO1=Ethereum
-
-# ETH Nicehash (USER1 is BTC wallet dot worker) (Need FLAGS= -esm 3)
-  POOL1=stratum+tcp://daggerhashimoto.usa.nicehash.com:3353
-  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.PimpWorker
+  POOL1=stratum+tcp://us1.ethpool.org:3333
+  USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
   PASS1=x
   ALGO1=Ethereum
+
+# ETH Nicehash (USER1 is BTC wallet dot worker) (Need FLAGS= -esm 3)
+#  POOL1=stratum+tcp://daggerhashimoto.usa.nicehash.com:3353
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.PimpWorker
+#  PASS1=x
+#  ALGO1=Ethereum
 
 # ETH Ethpool (USER1 is ETH wallet dot workername)
 #  POOL1=stratum+tcp://us1.ethpool.org:3333
@@ -177,7 +177,7 @@ NAME=Claymore Dual
 # IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE -tt 75 -tstop 90
 #  Reason: Claymore will override gputool. But we didn't want to lose the failsafe defaults.
 
-FLAGS=-allpools 1 -logfile /var/log/claymore.dual.log -logsmaxsize 100MB -eworker Pimpworker -tt 75 -tstop 90 -esm 3
+FLAGS=-allpools 1 -logfile /var/log/claymore.dual.log -logsmaxsize 100MB -eworker Pimpworker -tt 75 -tstop 90 
 
 
 # For all options read Claymore dual documentation: 
