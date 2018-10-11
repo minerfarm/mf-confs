@@ -42,6 +42,11 @@ NAME=BMiner
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool. And put your own wallet and/or worker name instead. 
 
+# ETH Ethermine with SSL (USER1 is ETH wallet dot workername at pool:port)
+#   You can use ethash+ssl:// instead of ethash:// to connect to the pool via SSL connections:
+#  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us1.ethpool.org:3333
+#  ALGO1=Ethash
+
 # ETH Ethermine (USER1 is ETH wallet dot workername at pool:port)
   USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us1.ethpool.org:3333
   ALGO1=Ethash
@@ -86,19 +91,16 @@ NAME=BMiner
 # DUAL MINING CONFIG: You can mine a 2nd coin at the same time as the first coin.
 # DISCLAIMER: THIS IS DANGEROUS AND VERY HARD ON EQUIPMENT - MONITOR CLOSELY!!! 
 
+
+
 # Decred (DCR) as 2nd coin (USER2 is DECRED wallet dot workername colon password at pool:port)
 #  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@dcr.coinmine.pl:2222
-#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@stratum.decredpool.org:3343
-#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@dcr.suprnova.cc:3252
-#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@dcr.pool.mn:4801
 
 # Verge (XVG) as 2nd coin (USER2 is VERGE wallet dot workername colon password at pool:port)
-#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg.blake2s.com:8888
-#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg.antminepool.com:9008
-#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.luckypool.xyz:5766
-#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.nlpool.nl:5766
-#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@blake2s.mine.zpool.ca:5766
-#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg2.coinfoundry.org:3165
+#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg.antminepool.com:9008
+#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.luckypool.xyz:5766
+#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.nlpool.nl:5766
+#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg2.coinfoundry.org:3165
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
