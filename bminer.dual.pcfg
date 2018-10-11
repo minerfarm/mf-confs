@@ -18,7 +18,7 @@
 # 
 # Mine ETH, BYTOM, AND/OR DCR/XVG using NVIDIA
 #
-# DISCLAIMER: MINING IS DANGEROUS!!!
+# DISCLAIMER: MINING IS DANGEROUS!!! ESPECIALLY DUAL MINING!
 # PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
 # SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
@@ -37,19 +37,14 @@ NAME=BMiner
 # ---------------------------------------------------------------------
 # PRIMARY POOL INFORMATION: Put your ETHASH pool and wallet here.
 #
-# FORMAT: protocol://wallet.worker@pool:port
+# FORMAT: protocol://wallet.pimpworker@pool:port
 #
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool. And put your own wallet and/or worker name instead. 
 
-# ETH Ethermine with SSL (USER1 is ETH wallet dot workername at pool:port)
-#   You can use ethash+ssl:// instead of ethash:// to connect to the pool via SSL connections:
-  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:5555
-  ALGO1=Ethash
-
 # ETH Ethermine (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:4444
-#  ALGO1=Ethash
+  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us1.ethpool.org:3333
+  ALGO1=Ethash
 
 # ETH Nanopool (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth-us-west1.nanopool.org:9999
@@ -57,10 +52,6 @@ NAME=BMiner
 
 # ETH f2pool (USER1 is ETH wallet dot workername at pool:port)
 #  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.f2pool.com:8008
-#  ALGO1=Ethash
-
-# ETH waterhole (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.waterhole.xyz:8008
 #  ALGO1=Ethash
 
 # ETH 2miners (USER1 is ETH wallet dot workername at pool:port)
@@ -92,13 +83,30 @@ NAME=BMiner
 #  ALGO1=tensority
 
 #################################################################################
-# DUAL MINING CONFIG: Does not yet work properly in bminer. We will update this file when it does.
-# Meanwhile you can mine ETHASH coins with bminer.
+# DUAL MINING CONFIG: You can mine a 2nd coin at the same time as the first coin.
+# DISCLAIMER: THIS IS DANGEROUS AND VERY HARD ON EQUIPMENT - MONITOR CLOSELY!!! 
+
+# Decred (DCR) as 2nd coin (USER2 is DECRED wallet dot workername colon password at pool:port)
+#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@dcr.coinmine.pl:2222
+#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@stratum.decredpool.org:3343
+#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@dcr.suprnova.cc:3252
+#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@dcr.pool.mn:4801
+
+# Verge (XVG) as 2nd coin (USER2 is VERGE wallet dot workername colon password at pool:port)
+#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg.blake2s.com:8888
+#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg.antminepool.com:9008
+#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.luckypool.xyz:5766
+#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.nlpool.nl:5766
+#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@blake2s.mine.zpool.ca:5766
+#  blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg2.coinfoundry.org:3165
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# All flags documentation for bminer: https://bminer.me/references/
+# DUAL MINING FLAGS: -dual-subsolver X : The sub-solver for dual mining. Valid values are 0, 1, 2, 3. Default is -1, which is to tune automatically
+# -dual-intensity X : The intensity of the secondary mining. Valid values are 0 to 300. Default is 0, which is to tune automatically.
 
 FLAGS-logfile /var/log/bminer.log
 
