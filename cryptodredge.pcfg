@@ -32,6 +32,18 @@
   PASS1=w=Pimpworker
   ALGO1=cryptonightheavy
 
+# BitTube (cnsaber) on Fairhash (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://pool.tube.fairhash.org:5555
+#  USER1=bxdLhsWY56SNjVN2aQ5Yyb6hhCFfAQJVbYszWCUjeDTJMgHad8wZbNJBdrvujZzPvRY2X5AiWdTDCP626s4WbHcG1TYdEot9f+f2a4f42b8cf040c4888f3a06aa3b9124223c99faee6f4e809e0e8b525080cfda.Pimpworker
+#  PASS1=x
+#  ALGO1=cnsaber
+
+# BitTube (cnsaber) on BitTube (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://mining.bit.tube:15555
+#  USER1=bxdLhsWY56SNjVN2aQ5Yyb6hhCFfAQJVbYszWCUjeDTJMgHad8wZbNJBdrvujZzPvRY2X5AiWdTDCP626s4WbHcG1TYdEot9f
+#  PASS1=x
+#  ALGO1=cnsaber
+
 # Lyra2v2 multi on Nicehash (USER1 is BTC wallet dot worker)
 #  POOL1=stratum+tcp://lyra2rev2.usa.nicehash.com:3347
 #  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
