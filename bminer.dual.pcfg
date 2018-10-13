@@ -94,13 +94,13 @@ NAME=BMiner
 
 
 # Decred (DCR) as 2nd coin (USER2 is DECRED wallet dot workername colon password at pool:port)
-#  USER2=blake14r://DsY6tKWKH7bo4GiML3dF2Gwcnv3yNk4EJM6.pimpworker:pwd@dcr.coinmine.pl:2222
+#  USER2=blake14r://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@dcr.coinmine.pl:2222
 
 # Verge (XVG) as 2nd coin (USER2 is VERGE wallet dot workername colon password at pool:port)
-#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg.antminepool.com:9008
-#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.luckypool.xyz:5766
-#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@mine.nlpool.nl:5766
-#  USER2=blake2s://D7amyedtyeXk1jwfsPG3mvKZbwGg5r9oZ9.pimpworker:pwd@xvg2.coinfoundry.org:3165
+#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@xvg.antminepool.com:9008
+#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@mine.luckypool.xyz:5766
+#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@mine.nlpool.nl:5766
+#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@xvg2.coinfoundry.org:3165
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
