@@ -33,7 +33,7 @@ NAME=xmr-stak
 # If you are mining to your own wallet like Monero-Core, you can generate an 
 # integrated wallet address. We have provided an example of each type.
 
-# Loki (LOKI) on BlokSpace (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
+# Loki (LOKI) on BlokSpace (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
   POOL1=stratum+tcp://loki.blokspace.io:4444
   USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
   PASS1=w=PimpWorker
@@ -150,12 +150,12 @@ NAME=xmr-stak
 #========== CryptoNight Heavy ========== (CryptoDredge)
 #  Coins: Loki (LOKI), Saronite (XRN)
 
-# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
+# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
 #  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
 #  USER1=LokiWalletHere
 #  PASS1=WorkerName
 
-# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
+# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
 #  POOL1=stratum+tcp://loki.miner.rocks:5555
 #  USER1=LokiWalletHere
 #  PASS1=w=WorkerName
@@ -206,7 +206,7 @@ NAME=xmr-stak
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 
-FLAGS=--currency loki -r PimpWorker
+FLAGS=--currency cryptonight_heavy -r PimpWorker
 
 # For all options do: /opt/miners/xmrstak/xmr-stak --help:
 #
@@ -226,11 +226,11 @@ FLAGS=--currency loki -r PimpWorker
 #  --currency NAME            currency to mine
 #
 # Supported coin options:
-#  aeon7, alloy, bbscoin, bitcoal, croat, cryptonight, cryptonight_heavy, 
+#  aeon7, bbscoin, cryptonight, cryptonight_haven, cryptonight_bittube2, cryptonight_heavy, 
 #  cryptonight_lite, cryptonight_lite_v7, cryptonight_lite_v7_xor, cryptonight_v7, 
-#  cryptonight_v7_stellite, dero, edollar, electroneum, graft, haven, intense, karbo,
-#  monero7, stellite, sumokoin, ipbc, leviarcoin, loki, masari, ombre, monero7, ryo,
-#  solace, turtlecoin, ultranote
+#  cryptonight_v7_stellite, graft, haven, intense, cryptonight_v8
+#  monero, stellite, masari, ombre, ryo, qrl, turtlecoin
+#  
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised 
