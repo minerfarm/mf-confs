@@ -16,11 +16,11 @@
 # ==================================================================
 # Profile Description:
 #
-# Mine Cryptonight coins using fireiceuk XMR-Stak's open source miner
+# Mine Cryptonight coins using Indeedminers XMR-Aeon-Stak's open source miner
 # ==================================================================
 
 # NAME = This is the way the miner will appear in miner farm
-NAME=xmr-stak
+NAME=xmr-aeonstak
 
 # EXAMPLE POOLS:
 # CRYPTONIGHT POOL INFORMATION: Put your pool / wallet info here.
@@ -29,14 +29,15 @@ NAME=xmr-stak
 # USER1 is usually in form wallet.workername MAKE SURE IT IS THE RIGHT WALLET!
 # PASS1 is usually x but can be used for parameters.
 
-# With Cryptonight, if you are mining to an exchange wallet you must include the payment ID.
+# With cryptonight variants, if you are mining to an exchange wallet you must include the payment ID.
 # If you are mining to your own wallet like Monero-Core, you can generate an 
 # integrated wallet address. We have provided an example of each type.
 
-# Loki (LOKI) on BlokSpace (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
+# Loki (LOKI) on BlokSpace (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
   POOL1=stratum+tcp://loki.blokspace.io:4444
   USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
   PASS1=w=PimpWorker
+
 
 #### Cryptonight coins ####
 
@@ -68,11 +69,6 @@ NAME=xmr-stak
 #========== CryptoNight v7 ========== (CryptoDredge)
 #  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
 
-# Monero (XMR) on MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency cryptonight_v8 in FLAGS=)
-#  POOL1=stratum+tcp://mine.moneropool.com:7777
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL)  (Set --currency cryptonight_v8 in FLAGS=)
 #  POOL1=stratum+tcp://mine.xmrpool.net:80
 #  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
@@ -81,6 +77,16 @@ NAME=xmr-stak
 # Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL)  (Set --currency cryptonight_v8 in FLAGS=)
 #  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
 #  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+
+# Monero (XMR) on MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency cryptonight_v8 in FLAGS=)
+#  POOL1=stratum+tcp://mine.moneropool.com:7777
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+
+# Nanopool with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL (Set --currency cryptonight_v8 in FLAGS=)
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+#  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker)
 #  PASS1=x
 
 # Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
@@ -134,12 +140,12 @@ NAME=xmr-stak
 #========== CryptoNight Heavy ========== (CryptoDredge)
 #  Coins: Loki (LOKI), Saronite (XRN)
 
-# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
+# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
 #  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
 #  USER1=LokiWalletHere
 #  PASS1=WorkerName
 
-# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
+# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
 #  POOL1=stratum+tcp://loki.miner.rocks:5555
 #  USER1=LokiWalletHere
 #  PASS1=w=WorkerName
@@ -190,7 +196,7 @@ NAME=xmr-stak
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 
-FLAGS=--currency cryptonight_heavy -r PimpWorker
+FLAGS=--currency loki -r PimpWorker
 
 # For all options do: /opt/miners/xmrstak/xmr-stak --help:
 #
@@ -210,16 +216,16 @@ FLAGS=--currency cryptonight_heavy -r PimpWorker
 #  --currency NAME            currency to mine
 #
 # Supported coin options:
-#  aeon7, bbscoin, cryptonight, cryptonight_haven, cryptonight_bittube2, cryptonight_heavy, 
-#  cryptonight_lite, cryptonight_lite_v7, cryptonight_lite_v7_xor, cryptonight_v7, 
-#  cryptonight_v7_stellite, graft, haven, intense, cryptonight_v8
-#  monero, stellite, masari, ombre, ryo, qrl, turtlecoin
-#  
+#  aeon7, alloy, bbscoin, bitcoal, croat, cryptonight, cryptonight_heavy, 
+#  cryptonight_lite, cryptonight_lite_v7, cryptonight_lite_v7_xor, cryptonight_v8, 
+#  cryptonight_v8_stellite, dero, edollar, electroneum, graft, haven, intense, karbo,
+#  stellite, sumokoin, ipbc, leviarcoin, loki, masari, ombre, ryo,
+#  solace, turtlecoin, ultranote
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised 
 TYPE=GPU
-DIR=xmr-stak
+DIR=xmr-aeonstak
 BINARY=xmr-stak
 CONF=p1:o,u1:u,l1:p
 API=i
