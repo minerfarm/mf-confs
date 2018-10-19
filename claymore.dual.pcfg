@@ -33,11 +33,17 @@ NAME=Claymore Dual
 # USER1 is the username usually in form wallet.workername
 # PASS1 is usually x but can be used for parameters.
 
-# ETH Ethermine (USER1 is ETH wallet dot workername)
-  POOL1=stratum+tcp://us1.ethpool.org:3333
+# ETH Ethermine US (USER1 is ETH wallet dot workername)
+  POOL1=stratum+ssl://us1.ethermine.org:5555
   USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
   PASS1=x
   ALGO1=Ethereum
+
+# ETH Ethermine EU (USER1 is ETH wallet dot workername)
+#  POOL1=stratum+ssl://eu1.ethermine.org:5555
+#  USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
+#  PASS1=x
+#  ALGO1=Ethereum
 
 # ETH Nicehash (USER1 is BTC wallet dot worker) (Need FLAGS= -esm 3)
 #  POOL1=stratum+tcp://daggerhashimoto.usa.nicehash.com:3353
