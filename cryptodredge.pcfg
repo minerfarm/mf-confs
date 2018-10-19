@@ -220,51 +220,51 @@
 # PASS1=c=<COIN>,mc=<COIN>
 #
 
-#========== CryptoNight v7 ========== (CryptoDredge)
+#========== CryptoNight v7/v8 ========== (CryptoDredge)
 #  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
 # Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
 
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.xmrpool.net:80
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-#  ALGO1=cryptonightv7
+  POOL1=stratum+tcp://mine.xmrpool.net:80
+  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+  PASS1=x
+  ALGO1=cnv8
 
 # Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
 #  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
 #  PASS1=x
-#  ALGO1=cryptonightv7
+#  ALGO1=cnv8
 
 # Lethean (LTHN) on hashvault.pro (USER1 is LTHN address [dot paymentid if exchange])
 #  POOL1=stratum+tcp://pool.lethean.hashvault.pro:5555
 #  USER1=LetheanWalletHere
 #  PASS1=Workername
-#  ALGO1=cryptonightv7
+#  ALGO1=cnv7
 
 # Lethean (LTHN) on west-pool
 #  POOL1=stratum+tcp://intense.west-pool.org:6666
 #  USER1=LetheanWalletHere
 #  PASS1=Workername:Email
-#  ALGO1=cryptonightv7
+#  ALGO1=cnv7
 
 # Graft (GRFT) on graft.spacepools.org (USER1 is PUBLIC_GRF_ADDRESS@RIG_ID)
 #  POOL1=stratum+tcp://pool.graft.spacepools.org:1111
 #  USER1=GraftWalletHere@PimpWorker
 #  PASS1=x
-#  ALGO1=cryptonightv7
+#  ALGO1=cnv7
 
 # Graft (GRFT) on graft.ingest.cryptoknight.cc (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://graft.ingest.cryptoknight.cc:9112
 #  USER1=GraftWalletHere
 #  PASS1=Workername
-#  ALGO1=cryptonightv7
+#  ALGO1=cnv7
 
 # Graft (GRFT) on graft.miner.rocks:5555 (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://graft.miner.rocks:5555
 #  USER1=GraftWalletHere
 #  PASS1=w=Workername
-#  ALGO1=cryptonightv7
+#  ALGO1=cnv7
 
 #========== CryptoNight Classic ========== (CryptoDredge)
 #  Coins: Electroneum (ETN), Bytecoin (BCN), DigitalNote (XDN), Karbo (KRB),
@@ -354,7 +354,7 @@
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # Specify algorithm to use: aeon | allium | blake2s | cryptonighthaven | 
-# cryptonightheavy | cryptonightv7 | lyra2v2 | lyra2z | masari | neoscrypt | 
+# cryptonightheavy | cnv7 | lyra2v2 | lyra2z | masari | neoscrypt | 
 # phi | phi2 | skein | skunk | stellite | tribus
 
 FLAGS=--no-crashreport --log /var/log/cryptodredge.log
