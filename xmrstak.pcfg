@@ -68,11 +68,6 @@ NAME=xmr-stak
 #========== CryptoNight v7 ========== (CryptoDredge)
 #  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
 
-# Monero (XMR) on MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency cryptonight_v8 in FLAGS=)
-#  POOL1=stratum+tcp://mine.moneropool.com:7777
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL)  (Set --currency cryptonight_v8 in FLAGS=)
 #  POOL1=stratum+tcp://mine.xmrpool.net:80
 #  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker

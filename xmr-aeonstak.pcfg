@@ -56,7 +56,7 @@ NAME=xmr-aeonstak
 #  USER1=Your_sumo_address_here.PimpWorker
 #  PASS1=x
 
-# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency sumokoin in FLAGS=)
+3# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL (Set --currency sumokoin in FLAGS=)
 #  POOL1=stratum+tcp://sumo.sumominer.com:4444
 #  USER1=Your_sumo_address_here.PimpWorker
 #  PASS1=x
