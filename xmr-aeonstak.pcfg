@@ -196,7 +196,7 @@ NAME=xmr-aeonstak
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 
-FLAGS=--currency loki -r PimpWorker
+FLAGS=--currency cryptonight_heavy -r PimpWorker
 
 # For all options do: /opt/miners/xmrstak/xmr-stak --help:
 #
