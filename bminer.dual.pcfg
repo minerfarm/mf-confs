@@ -42,13 +42,13 @@ NAME=BMiner
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool. And put your own wallet and/or worker name instead. 
 
-# ETH Ethermine with SSL (USER1 is ETH wallet dot workername at pool:port)
+# ETH Ethermine US with SSL (USER1 is ETH wallet dot workername at pool:port)
 #   You can use ethash+ssl:// instead of ethash:// to connect to the pool via SSL connections:
-#  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us1.ethpool.org:3333
+#  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us1.ethermine.org:5555
 #  ALGO1=Ethash
 
-# ETH Ethermine (USER1 is ETH wallet dot workername at pool:port)
-  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us1.ethpool.org:3333
+# ETH Ethermine EU with SSL (USER1 is ETH wallet dot workername at pool:port)
+  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:5555
   ALGO1=Ethash
 
 # ETH Nanopool (USER1 is ETH wallet dot workername at pool:port)
