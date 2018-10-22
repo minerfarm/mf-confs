@@ -225,10 +225,10 @@
 # Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
 
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-  POOL1=stratum+tcp://mine.xmrpool.net:80
-  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-  PASS1=x
-  ALGO1=cnv8
+#  POOL1=stratum+tcp://mine.xmrpool.net:80
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+#  ALGO1=cnv8
 
 # Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
