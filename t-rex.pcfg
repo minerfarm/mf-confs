@@ -28,38 +28,6 @@ NAME=t-rex
 #
 # POOL INFORMATION: Put your pool and wallet here.
 
-#==================================================================
-# POOL Formatting:
-#
-# Zergpool 
-#       POOL1=stratum+tcp://<ALGO>.mine.zergpool.com:<PORT>
-#       USER1=<WALLET>
-#       PASS1=c=<COIN>,mc=<COIN>
-#       ALGO1=<ALGO>
-#
-#       *Supports Auto Exchange of coins. See examples below.
-#
-#   Note:  "c=<COIN>" is the payout coin. Must match wallet type.
-#          "mc=<COIN>" is the coin being mined.
-#
-#        1. "PASS1=c=RVN,mc=RVN" 
-#           Mining RVN. Payout in RVN. Wallet must be RVN wallet.
-#             
-#        2. "PASS1=c=BTC,mc=RVN"
-#           Mining RVN. Payout in BTC. Wallet must be BTC wallet.
-#
-# Protopool
-#       POOL1=stratum+tcp://eu1.protopool.net:<PORT>
-#       USER1=<WALLET>
-#       PASS1=c=<COIN>
-#       ALGO1=<ALGO>
-#       
-#       *Does not support auto exchange of coins.
-#
-#   Note:  "c=<COIN>" is the payout coin and the coin being mined.
-#                     Must match wallet type.
-#
-# ==================================================================
 
 # ========== x16r ========== 
 # RVN (Ravencoin) on Suprnova (USER1 is account username dot workername)
@@ -74,49 +42,6 @@ NAME=t-rex
 #  PASS1=x
 #  ALGO1=xevan
 #
-#========== x16r ========== (Zenemy)
-#  Coins: Ravencoin(RVN), Stonecoin(STONE), MotionProjec(XMN),
-#         Gravium(GRV), HTHCoin(HTH), Hilux(HLX), Anodos(ANDS),
-#         XChange(XCG)
-#
-# POOL1=stratum+tcp://x16r.mine.zergpool.com:3636
-# USER1=<WALLET>
-# ALGO1=x16r
-# PASS1=c=<COIN>,mc=<COIN>
-#
-#========== x16s ========== (Zenemy)
-#  Coins: ACeD(ACED), Shield(XSH-x16s), Rabbit(RABBIT),
-#         Reden(REDN), Pigeon(PGN)
-#
-# POOL1=stratum+tcp://x16s.mine.zergpool.com:3663
-# USER1=<WALLET>
-# ALGO1=x16s
-# PASS1=c=<COIN>,mc=<COIN>
-#
-#========== bitcore ========== (Zenemy)
-#  Coins: BitCore(BTX)
-#
-# POOL1=stratum+tcp://bitcore.mine.zergpool.com:3663
-# USER1=<WALLET>
-# ALGO1=bitcore
-# PASS1=c=<COIN>,mc=BTX
-#
-#========== phi ========== (Zenemy) and (CryptoDredge)
-#  Coins: Seraph(SERA), Fonero(FNO), Folm(FLM)
-#
-# POOL1=stratum+tcp://phi.mine.zergpool.com:8333
-# USER1=<WALLET>
-# ALGO1=phi
-# PASS1=c=<COIN>,mc=<COIN>
-#
-#========== sonoa ========== (Zenemy)
-#  Coins: Sonoa(SONO)
-#
-# POOL1=stratum+tcp://sonoa.mine.zergpool.com:8733
-# USER1=<WALLET>
-# ALGO1=sonoa
-# PASS1=c=<COIN>,mc=SONO
-#
 #========== renesis ========== (Zenemy)
 #  Coins: Renesis(RESS)
 #
@@ -125,56 +50,6 @@ NAME=t-rex
 # ALGO1=renesis
 # PASS1=c=RESS
 #
-#========== xevan ========== (Zenemy)
-#  Coins: Krait(KRAIT), Ellerium(ELP), B-hash(HASH), Elliot(ELLI),
-#         UralsCoin(URALS), BitSend(BSD)
-#
-# POOL1=stratum+tcp://xevan.mine.zergpool.com:3739
-# USER1=<WALLET>
-# ALGO1=xevan
-# PASS1=c=<COIN>,mc=<COIN>
-#
-#========== tribus ========== (Zenemy) and (CryptoDredge)
-#  Coins: Scriv(SCRIV), Tincoin(TIN), Denarius(DNR)
-#
-# POOL1=stratum+tcp://tribus.mine.zergpool.com:8533
-# USER1=<WALLET>
-# ALGO1=tribus
-# PASS1=c=<COIN>,mc=<COIN>
-#
-#========== hex ========== (Zenemy)
-#  Coins: XDNA(XDNA)
-#
-# POOL1=stratum+tcp://hex.mine.zergpool.com:5135
-# USER1=<WALLET>
-# ALGO1=hex
-# PASS1=c=<COIN>,mc=XDNA
-#
-#========== x17 ========== (Zenemy)
-#  Coins: Bitmark(MARKS), SHIELD(XSH-x17), MKTCoin(MLM), Verge(XVG)
-#
-# POOL1=stratum+tcp://x17.mine.zergpool.com:3737
-# USER1=<WALLET>
-# ALGO1=x17
-# PASS1=c=<COIN>,mc=<COIN>
-#
-#========== c11 ========== (Zenemy)
-#  Coins: A.M.P.(XMP), AXS(AXS), JoltGas(JLG), Bithold(BHD),
-#         Interzone(ITZ), Chaincoin(CHC), Flaxscript(FLAX)
-#
-# POOL1=stratum+tcp://c11.mine.zergpool.com:3573
-# USER1=<WALLET>
-# ALGO1=c11
-# PASS1=c=<COIN>,mc=<COIN>
-#
-#========== aergo ========== (Zenemy)
-#  Coins: AeriumX(AEX)
-#
-# POOL1=stratum+tcp://aergo.mine.zergpool.com:3691
-# USER1=<WALLET>
-# ALGO1=aergo
-# PASS1=c=<COIN>,mc=AEX
-
 #========== x13 ========== (Zenemy)
 #  Coins: BitCoinDiamond (BCD)
 #
@@ -187,7 +62,7 @@ NAME=t-rex
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # -i 19 is the default intensity. 
-# For more details, see: https://forum.getpimp.org/topic/3434/flags-command-line-options-for-z-enemy-in-the-zenemy-multi-pcfg
+# For more details, see: https://forum.getpimp.org/topic/5114/flags-command-line-options-for-t-rex-miner-nvidia
 
 FLAGS=--log-path /var/log/t-rex.log
 
