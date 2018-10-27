@@ -58,6 +58,13 @@ NAME=t-rex
 # ALGO1=bcd
 # PASS1=x
 
+#========== x22i ========== (Trex)
+#  Coins: SUQA
+#
+# POOL1=stratum+tcp://eu.bsod.pw:2460
+# USER1=SQvrmU5bsPdS9KFFph55gh7miDkQrWsSkM
+# ALGO1=x22i
+# PASS1=x
 
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
