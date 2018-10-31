@@ -225,10 +225,10 @@
 
 # ====== Exosis ======
 # Exosis (EXO) on BSOD
-POOL1=stratum+tcp://us.bsod.pw:2472
-USER1=WalletAddress.WorkerName
-PASS=x
-ALGO1=exosis
+#  POOL1=stratum+tcp://us.bsod.pw:2472
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=exosis
 
 # ====== C11 ======
 # AXS on BSOD 
