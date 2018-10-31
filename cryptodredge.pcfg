@@ -222,6 +222,54 @@
 #  PASS1=x
 #  ALGO1=masari
 
+
+# ====== Exosis ======
+# Exosis (EXO) on BSOD
+POOL1=stratum+tcp://us.bsod.pw:2472
+USER1=WalletAddress.WorkerName
+PASS=x
+ALGO1=exosis
+
+# ====== C11 ======
+# AXS on BSOD 
+#  POOL1=stratum+tcp://us.bsod.pw:2222
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=c11
+
+# Lexium (LEX) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2342
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=c11
+
+# GXX on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2468
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=c11
+
+# ZOO on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2346
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=c11
+
+# ====== Polytimos ======
+# Polytimos (POLY) on Zpool
+#  POOL1=stratum+tcp://polytimos.us.mine.zpool.ca:8463
+#  USER1=WalletAddress
+#  PASS=x
+#  ALGO1=polytimos
+
+# ====== BCD ======
+# BitcoinDiamond (BCD) on Zpool
+#  POOL1=stratum+tcp://bcd.us.mine.zpool.ca:3643
+#  USER1=WalletAddress
+#  PASS=x
+#  ALGO1=bcd
+
+
 # ==================================================================
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
