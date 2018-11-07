@@ -1,0 +1,78 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+#
+# Profile Description: Mine Various COINS using AMD
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is the username usually in form wallet.workername
+# PASS1 is usually x but can be used for parameters.
+# ALGO1 is the algorithm (supported algorithms: lyra2z, phi2, cnv8)
+
+### ATTENTION ### NO GPU TEMP/FANS CONTROL IN THIS MINER - USE GPUTOOL!!!
+
+#========== CryptoNight v7/v8 ========== (CryptoDredge)
+#  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
+# Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
+
+# Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+  POOL1=stratum+tcp://mine.xmrpool.net:80
+  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+  PASS1=x
+  ALGO1=cnv8
+
+# Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+#  ALGO1=cnv8
+
+# ZCoin (XZC) on Zpool (Username is XZC wallet)
+#  POOL1=stratum+tcp://lyra2z.mine.zpool.ca:4553
+#  USER1=aP6qk6bpjirPzF6NdaY1Fu1t1ySfgCMg1y
+#  PASS1=c=XZC
+#  ALGO1=lyra2z
+
+# ZCoin (XZC) MiningPoolHub (User.worker from pool account)
+#  POOL1=stratum+tcp://us-east.lyra2z-hub.miningpoolhub.com:20581
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=lyra2z
+
+# ZCoin (XZC) Suprnova (User.worker from pool account)
+#  POOL1=stratum+tcp://xzc.suprnova.cc:1569
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=lyra2z
+
+# ==================================================================
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+FLAGS=
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+NAME=teamredminer
+TYPE=GPU
+DIR=teamredminer
+BINARY=teamredminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api_listen=127.0.0.1:
