@@ -43,11 +43,17 @@ NAME=ewbfminer
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool.
 #
-# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 --pers BitcoinZ below)
-   POOL1=us1.zhash.pro
-   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+# AION (AION) at aionpool (USER1 is AION wallet) (set FLAGS=--port 3333 below)
+   POOL1=cluster.aionpool.tech
+   USER1=0xa031185ba89a0f2c9a77b6eb9612bb5b5e685bd160cd1ce747aa96790ecf4977.PimpWorker
    PASS1=x
-   ALGO1=144_5
+   ALGO1=aion
+
+# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 --pers BitcoinZ below)
+#   POOL1=us1.zhash.pro
+#   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+#   PASS1=x
+#   ALGO1=144_5
 
 # BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set FLAGS=--port 1445 --pers BgoldPoW below)
 #   POOL1=eu.btgpool.pro
@@ -64,7 +70,7 @@ NAME=ewbfminer
 # IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE --templimit
 #  Reason: EWBF will override gputool. But we didn't want to lose the failsafe defaults.
 
-FLAGS=--eexit 1 --fee 0 --templimit 80 --tempunits C --pec --port 3057 --pers BitcoinZ
+FLAGS=--eexit 1 --fee 0 --templimit 80 --tempunits C --pec --port 3333
 
 # Here is the CLI --help information provided by the miner's author:
 #+-------------------------------------------------+
@@ -77,9 +83,6 @@ FLAGS=--eexit 1 --fee 0 --templimit 80 --tempunits C --pec --port 3057 --pers Bi
 
 #--algo              Variant of equihash, supported values 192_7, 144_5.
 #--pers              Personalization for equihash, string 8 characters
-#Example1: miner --server server.com --port 7777 --user name --pass secret --cuda_devices 0 1 2 3 --eexit 1
-#Example2: miner --server server.com --port 7777 --user name --pass secret --eexit 1 --log 2 --solver 1
-
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
 TYPE=GPU
