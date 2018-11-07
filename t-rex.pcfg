@@ -31,10 +31,10 @@ NAME=t-rex
 
 # ========== x16r ========== 
 # RVN (Ravencoin) on Suprnova (USER1 is account username dot workername)
-#  POOL1=stratum+tcp://rvn.suprnova.cc:6667
-#  USER1=pimp.pimp
-#  PASS1=x
-#  ALGO1=x16r
+  POOL1=stratum+tcp://rvn.suprnova.cc:6667
+  USER1=pimp.pimp
+  PASS1=x
+  ALGO1=x16r
 #
 #========== xevan ========== BSD (BitSend) Omegapool (USER1 is BSD wallet)
 #  POOL1=stratum+tcp://omegapool.cc:8005
@@ -61,10 +61,17 @@ NAME=t-rex
 #========== x22i ========== (Trex)
 #  Coins: SUQA
 #
- POOL1=stratum+tcp://eu.bsod.pw:2460
- USER1=SQvrmU5bsPdS9KFFph55gh7miDkQrWsSkM
- ALGO1=x22i
- PASS1=x
+#  POOL1=stratum+tcp://eu.bsod.pw:2460
+#  USER1=SQvrmU5bsPdS9KFFph55gh7miDkQrWsSkM
+#  ALGO1=x22i
+#  PASS1=x
+
+# ====== BitCore ======
+# BitCore (BTX) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:3556
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=bitcore
 
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
