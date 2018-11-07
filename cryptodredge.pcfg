@@ -269,13 +269,36 @@
 #  PASS=x
 #  ALGO1=bcd
 
+#========== x22i ========== (Trex / CryptoDredge)
+#  Coins: SUQA
+# SUQA on BSOD
+#  POOL1=stratum+tcp://eu.bsod.pw:2460
+#  USER1=SQvrmU5bsPdS9KFFph55gh7miDkQrWsSkM
+#  ALGO1=x22i
+#  PASS1=x
+
+# ====== X17 ======
+# Coins: Verge (XVG), Shield (XSH), MktCoin (MLM), Volvox (VVX)
+# Verge (XVG) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2420
+#  USER1=DQ5knWYNmGYrkqkjAU3buq2jhXAMXmrUev.WorkerName
+#  PASS=x
+#  ALGO1=x17
+
+# Shield (XSH) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:3737
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=x17
 
 # ==================================================================
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# Specify algorithm to use: aeon | allium | blake2s | cryptonighthaven | 
-# cryptonightheavy | cnv7 | lyra2v2 | lyra2z | masari | neoscrypt | 
-# phi | phi2 | skein | skunk | stellite | tribus
+# Specify algorithm to use: aeon, allium, bcd,
+# bitcore, blake2s, c11, cnfast, cnhaven, cnheavy, cnsaber,
+# cnv7, cnv8, exosis, lbk3, lyra2v2, lyra2z, neoscrypt,
+# phi, phi2, polytimos, skein, skunk, stellite, tribus,
+# x17, x22i
 
 FLAGS=--no-crashreport --log /var/log/cryptodredge.log
 
