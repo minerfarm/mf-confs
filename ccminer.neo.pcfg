@@ -33,22 +33,31 @@ NAME=CCMiner
 # PASS1 is usually x but can be used for parameters.
 # ALGO1 is the algorithm 
 
-# PiMPtesting Nicehash neoscrypt put BTC wallet as user
+# NeoScrypt Coins: GoByte (GBX), Trezarcoin (TZC), VIVO (VIVO), Crowdcoin (CRC), Dinero (DIN),
+#  Phoenixcoin (PXC), Feathercoin (FTC), Orbitcoin (ORB), Traid (TRAID), Halcyon (HAL)
+
+# PiMPtesting Nicehash neoscrypt (USER1 is BTC address dot workername)
   POOL1=stratum+tcp://neoscrypt.usa.nicehash.com:3341
   USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
   PASS1=x
   ALGO1=neoscrypt
 
-# PiMPtesting FTC neoscrypt put FTC wallet as user
+# PiMPtesting FTC neoscrypt (USER1 is FTC address dot workername)
 #  POOL1=stratum+tcp://p2pool.neoscrypt.de:19327
 #  USER1=6vddTG4KoXGYA71MBSJKfa2jvm7Gnn4jF8
 #  PASS1=x
 #  ALGO1=neoscrypt
 
-#Feathercoin miningpoolhub, you must login and make account+worker
+#Feathercoin miningpoolhub (you must login and make account+worker)
 #  POOL1=stratum+tcp://hub.miningpoolhub.com:20510
 #  USER1=weblogin.workername (replace weblogin to your actual login id)
 #  PASS1=x
+#  ALGO1=neoscrypt
+
+# GoByte (GBX) on BSOD (USER1 is GBX address dot workername)
+#  POOL1=stratum+tcp://us.bsod.pw:1932
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
 #  ALGO1=neoscrypt
 
 # Here is where you can add command line parameters such as intensity and mining modes.

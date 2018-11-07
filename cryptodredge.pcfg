@@ -291,6 +291,15 @@
 #  PASS=x
 #  ALGO1=x17
 
+# ====== NeoScrypt ======
+# Coins: GoByte (GBX), Trezarcoin (TZC), VIVO (VIVO), Crowdcoin (CRC), Dinero (DIN),
+#  Phoenixcoin (PXC), Feathercoin (FTC), Orbitcoin (ORB), Traid (TRAID), Halcyon (HAL)
+# GoByte (GBX) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:1932
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=neoscrypt
+
 # ==================================================================
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
