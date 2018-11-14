@@ -307,6 +307,15 @@
 #  PASS=x
 #  ALGO1=bitcore
 
+# ====== HMQ1725 ======
+# Coins: Espers (ESP), Doubloon BOAT (BOAT), Veggie Coin (VEGGIE), PlusOneCoin (PLUS1), 
+#   Nomad Coin (NMD), ERA (ERA), Brazio (BRAZ), xCoin (XCOIN)
+# HMQ1725 auto pay to BTC on zpool.ca
+#  POOL1=stratum+tcp://hmq1725.na.mine.zpool.ca:3747
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir
+#  PASS=c=BTC
+#  ALGO1=hmq1725
+
 # ==================================================================
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
