@@ -1,0 +1,175 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+#
+# Profile Description: Mine Cryptonights using AMD
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+#
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form url:port
+# USER1 is the username usually in form wallet.workername
+# PASS1 is usually x but can be used for parameters.
+# ALGO1 is the algorithm (supported algorithm codes below)
+
+### ATTENTION ### NO GPU TEMP/FANS CONTROL IN THIS MINER - USE GPUTOOL!!!
+
+
+#========== CryptoNight v7/v8 ========== 
+#  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
+# Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
+
+# Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+  POOL1=mine.xmrpool.net:80
+  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+  PASS1=x
+  ALGO1=10
+
+# Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=xmr-eu1.nanopool.org:14444
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+#  ALGO1=10
+
+# Lethean (LTHN) on hashvault.pro (USER1 is LTHN address [dot paymentid if exchange])
+#  POOL1=pool.lethean.hashvault.pro:5555
+#  USER1=LetheanWalletHere
+#  PASS1=Workername
+#  ALGO1=1
+
+# Lethean (LTHN) on west-pool
+#  POOL1=intense.west-pool.org:6666
+#  USER1=LetheanWalletHere
+#  PASS1=Workername:Email
+#  ALGO1=1
+
+# Graft (GRFT) on graft.spacepools.org (USER1 is PUBLIC_GRF_ADDRESS@RIG_ID)
+#  POOL1=pool.graft.spacepools.org:1111
+#  USER1=GraftWalletHere@PimpWorker
+#  PASS1=x
+#  ALGO1=1
+
+# Graft (GRFT) on graft.ingest.cryptoknight.cc (USER1 is PUBLIC_ADDRESS)
+#  POOL1=graft.ingest.cryptoknight.cc:9112
+#  USER1=GraftWalletHere
+#  PASS1=Workername
+#  ALGO1=1
+
+# Graft (GRFT) on graft.miner.rocks:5555 (USER1 is PUBLIC_ADDRESS)
+#  POOL1=graft.miner.rocks:5555
+#  USER1=GraftWalletHere
+#  PASS1=w=Workername
+#  ALGO1=1
+
+#========== CryptoNight Classic ========== 
+#  Coins: Electroneum (ETN), Bytecoin (BCN), DigitalNote (XDN), Karbo (KRB),
+#   LeviarCoin (XLC)
+
+# Electroneum (ETN) on etn.spacepools.org (USER1 is PUBLIC_ADDRESS)
+#  POOL1=pool.etn.spacepools.org:1111
+#  USER1=EtnWalletHere
+#  PASS1=x
+#  ALGO1=0
+
+#========== CryptoNight XTL ========== 
+#  Coins: Stellite (XTL)
+# Stellite (XTL) on CryptoPoolSpace (USER1 is PUBLIC_ADDRESS)
+#  POOL1=Pool.XTL.CryptoPool.Space:3333
+#  USER1=StelliteWalletHere
+#  PASS1=x
+#  ALGO1=6
+
+# Stellite (XTL) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stellite.ingest-us.cryptoknight.cc:16222
+#  USER1=StelliteWalletHere
+#  PASS1=WorkerName
+#  ALGO1=6
+
+#========== CryptoNight Heavy ========== 
+#  Coins: Loki (LOKI), Saronite (XRN)
+
+# Loki (LOKI) on MinerRocks  not supported with this miner (rejected nonce)
+# Loki (LOKI) on Blokspace not supported with this miner (rejected nonce)
+
+# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
+#  POOL1=loki.ingest-us.cryptoknight.cc:7732
+#  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+#  PASS1=Pimpworker
+#  ALGO1=2
+
+# Saronite (XRN) on MinerRocks (USER1 is PUBLIC_ADDRESS)
+#  POOL1=saronite.miner.rocks:5555
+#  USER1=XRNWalletHere
+#  PASS1=w=WorkerName
+#  ALGO1=2
+
+#========== CryptoNight v7 lite ========== 
+#  Coins: Aeon (AEON), Turtlecoin (TRTL)
+
+# Aeon (AEON) on aeon-pool (USER1 is PUBLIC_ADDRESS)
+#  POOL1=mine.aeon-pool.com:5555
+#  USER1=AeonWalletHere
+#  PASS1=x
+#  ALGO1=4
+
+# Turtlecoin (TRTL) on eu.turtlepool.space (USER1 is PUBLIC_ADDRESS)
+#  POOL1=eu.turtlepool.space:5555
+#  USER1=TurtleWalletHere
+#  PASS1=x
+#  ALGO1=4
+
+# Turtlecoin (TRTL) on cryptoknight (USER1 is PUBLIC_ADDRESS)
+#  POOL1=turtle.ingest.cryptoknight.cc:4902
+#  USER1=TurtleWalletHere
+#  PASS1=x
+#  ALGO1=4
+
+#========== CryptoNight Fast ========== 
+#  Coins: Masari (MSR)
+
+# Masari (MSR) on masaricoin (USER1 is PUBLIC_ADDRESS)
+#  POOL1=pool.masaricoin.com:9999
+#  USER1=MasariWalletHere
+#  PASS1=x
+#  ALGO1=8
+
+# ==================================================================
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# 
+# -a [ --algo ] arg (=-1)       hash algorithm to use: -1 for auto detect,
+# Algos: 0 CryptoNight (Classic), 1 CryptoNightV7 (CNv1), 2 CryptoNight-Heavy,
+# 3 CryptoNight-Lite, 4 CryptoNightV7-Lite, 5 CryptoNightTUBE-Heavy, 6 CryptoNightXTL, 
+# 7 CryptoNightXHV-Heavy, 8 CryptoNight-Fast, 9 CryptoNightFEST, 10 CryptoNightV8 (CNv2)
+#  -O [ --opencl ] arg           index of the OpenCL plattform to use (-1 for auto detect)
+#  -G [ --gpu ] arg (=0)         index of the GPUs to use. Separate by comma to
+#  -I [ --intensity ] arg (=-1)  intensity levels. Separate by comma to specify
+#                                for each GPU. Range 0 to 10 (-1 = auto detect)
+#Optimizations:
+#  --fastjobswitch               use fast job switching mode to prevent outdated shares
+#  --ratewatchdog                enable watchdog on hash rate which resets a GPU if necessary
+
+FLAGS=--log /var/log/cast-xmr.log --fastjobswitch --ratewatchdog
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+NAME=cast-xmr
+TYPE=GPU
+DIR=cast-xmr
+BINARY=cast-xmr
+CONF=p1:S,u1:u,l1:p,a1:a
+API=R --remoteport
