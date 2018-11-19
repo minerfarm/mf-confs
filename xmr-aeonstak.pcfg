@@ -33,8 +33,8 @@ NAME=xmr-aeonstak
 # If you are mining to your own wallet like Monero-Core, you can generate an 
 # integrated wallet address. We have provided an example of each type.
 
-# Loki (LOKI) on BlokSpace (USER1 is PUBLIC_ADDRESS) (Set --currency loki in FLAGS=)
-  POOL1=stratum+tcp://loki.blokspace.io:4444
+# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight_heavy in FLAGS=)
+  POOL1=stratum+tcp://loki.miner.rocks:5555
   USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
   PASS1=w=PimpWorker
 
@@ -66,7 +66,7 @@ NAME=xmr-aeonstak
 #  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
 #  PASS1=x
 
-#========== CryptoNight v7 ========== (CryptoDredge)
+#========== CryptoNight v7/v8 ========== (CryptoDredge)
 #  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
 
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL)  (Set --currency cryptonight_v8 in FLAGS=)
@@ -123,6 +123,11 @@ NAME=xmr-aeonstak
 # Electroneum (ETN) on etn.spacepools.org (USER1 is PUBLIC_ADDRESS) (Set --currency electroneum in FLAGS=)
 #  POOL1=stratum+tcp://pool.etn.spacepools.org:1111
 #  USER1=EtnWalletHere
+#  PASS1=x
+
+# LeviarCoin (XLC) on CC Club (USER1 is PUBLIC_ADDRESS) (Set --currency cryptonight in FLAGS=)
+#  POOL1=stratum+tcp://xlc.crypto-coins.club:6666
+#  USER1=XLCWalletHere
 #  PASS1=x
 
 #========== CryptoNight XTL ========== (CryptoDredge)
