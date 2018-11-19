@@ -214,8 +214,8 @@ FLAGS=--currency cryptonight_heavy -r PimpWorker
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised 
-TYPE=GPU
+TYPE=CPU
 DIR=xmr-stak
 BINARY=xmr-stak
 CONF=p1:o,u1:u,l1:p
-API=i
+API=--noAMD --noVIDIA i
