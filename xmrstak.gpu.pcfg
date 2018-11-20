@@ -218,4 +218,4 @@ TYPE=GPU
 DIR=xmr-stak
 BINARY=xmr-stak
 CONF=p1:o,u1:u,l1:p
-API=--noCPU i
+API=-noCPU -i

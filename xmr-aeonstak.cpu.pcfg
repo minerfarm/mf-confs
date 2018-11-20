@@ -233,4 +233,4 @@ TYPE=CPU
 DIR=xmr-aeonstak
 BINARY=xmr-stak
 CONF=p1:o,u1:u,l1:p
-API=--noAMD --noVIDIA i
+API=-noAMD --noNVIDIA -i
