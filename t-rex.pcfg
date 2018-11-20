@@ -73,6 +73,13 @@ NAME=t-rex
 #  PASS=x
 #  ALGO1=bitcore
 
+# ====== Geek ======
+# GeekCash (GEEK) on GeekCash Official Pool
+#  POOL1=stratum+tcp://us.mining.geekcash.org:3333
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=geek
+
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # -i 19 is the default intensity. 
