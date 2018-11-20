@@ -101,11 +101,6 @@ ALGO1=Equihash
 #   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
 #   PASS1=x
 
-# Hush (HUSH) on Miningspeed (USER1 is HUSH wallet) FLAGS=--port 3092
-#   POOL1=us.miningspeed.com
-#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
-#   PASS1=x
-
 # Komodo (KMD) on Luckpool (USER1 is KMD wallet) FLAGS=--port 3857
 #   POOL1=luckpool.org
 #   USER1=R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk.PimpWorker

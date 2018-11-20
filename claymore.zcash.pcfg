@@ -114,11 +114,6 @@ ALGO1=Equihash
 #   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
 #   PASS1=x
 
-# Hush (HUSH) on Miningspeed (USER1 is HUSH wallet)
-#   POOL1=us.miningspeed.com:3092
-#   USER1=t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD.PimpWorker
-#   PASS1=x
-
 # Komodo (KMD) on Luckpool (USER1 is KMD wallet)
 #   POOL1=luckpool.org:3857
 #   USER1=R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk.PimpWorker

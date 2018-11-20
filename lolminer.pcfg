@@ -80,21 +80,21 @@ NAME=lolminer
 #   PASS1=x
 #   ALGO1=LTZ
 
-# SnowGem (XSG) at MiningSpeed (USER1 is Wallet.Worker, Pass is email address) (set FLAGS=--port 3022 below)
-#   POOL1=us.miningspeed.com
+# SnowGem (XSG) at Snowgem Official Pool (USER1 is XSG Wallet) (set FLAGS=--port 3082 below)
+#   POOL1=us-pool.snowgem.org
 #   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
 #   PASS1=yourmail@domain.com
 #   ALGO1=XSG
 
 # SnowGem (XSG) at Voidr (USER1 is Wallet.Worker) (set FLAGS=--port 3032 below)
 #   POOL1=us.voidr.net
-#   USER1=YourWalletHere.PimpWorker
+#   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
 #   PASS1=yourmail@domain.com
 #   ALGO1=XSG
 
 # SnowGem (XSG) at YouMine (USER1 is Wallet.Worker, Pass is email) (set FLAGS=--port 3032 below)
 #   POOL1=xsg.youmine.xyz
-#   USER1=YourWalletHere.PimpWorker
+#   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
 #   PASS1=yourmail@domain.com
 #   ALGO1=XSG
 
