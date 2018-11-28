@@ -66,7 +66,7 @@
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 
-FLAGS=
+FLAGS=--log_file=/var/log/teamredminer.log
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
