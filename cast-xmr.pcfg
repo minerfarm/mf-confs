@@ -27,7 +27,8 @@
 # ALGO1 is the algorithm (supported algorithm codes below)
 
 ### ATTENTION ### NO GPU TEMP/FANS CONTROL IN THIS MINER - USE GPUTOOL!!!
-
+### You MUST define the GPU device by decimal number (not bus ID) in FLAGS below
+### CastXMR does not mine to all GPU by default (Who knows why)
 
 #========== CryptoNight v7/v8 ========== 
 #  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
@@ -162,8 +163,10 @@
 #Optimizations:
 #  --fastjobswitch               use fast job switching mode to prevent outdated shares
 #  --ratewatchdog                enable watchdog on hash rate which resets a GPU if necessary
+# For more Details: http://www.gandalph3000.com/
 
-FLAGS=--log /var/log/cast-xmr.log --fastjobswitch --ratewatchdog
+# YOU MUST SPECIFY GPU Devices here using -G 0,1,2,3,4 etc. 
+FLAGS=--log /var/log/cast-xmr.log --fastjobswitch --ratewatchdog -G 0
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
