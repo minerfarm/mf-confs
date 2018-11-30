@@ -24,16 +24,25 @@
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
 # ==================================================================
 # NAME = This is the way the miner will appear in miner farm
-NAME=Zenemy
+NAME=Wildrig
 #
 # POOL INFORMATION: Put your pool and wallet here.
 
 # ========== x16r ========== 
+# Coins: Ravencoin, HelpTheHomeless, Motion, WikiCoin, Moondex, xGalaxy, StoneCoin
+#
 # RVN (Ravencoin) on Suprnova (USER1 is account username dot workername)
   POOL1=stratum+tcp://rvn.suprnova.cc:6667
   USER1=pimp.pimp
   PASS1=x
   ALGO1=x16r
+
+# XGalaxy (XGCS) on Blockify
+#  POOL1=stratum+tcp://blockify.xyz:3632
+#  USER1=XWNaNZ4UrYNxrdkZf45gQE23pfLamibuer.PimpWorker
+#  PASS1=d=4
+#  ALGO1=x16r
+
 #
 # HelpTheHomeless(HTH) on BSOD
 #  POOL1=stratum+tcp://us.bsod.pw:2338
@@ -86,10 +95,11 @@ NAME=Zenemy
 
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# -i 19 is the default intensity. 
+# -i 19 is the default intensity.
 # For more details, type: /opt/miners/wildrig-multi/wildrig-multi --help
+# use --opencl-threads 2 --opencl-launch 20x0 for RX470/480
 
-FLAGS=--watchdog --log-file=/var/log/wildrig-multi.log
+FLAGS=--watchdog
 
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
