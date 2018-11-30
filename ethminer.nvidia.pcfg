@@ -31,7 +31,7 @@ USER1=pimp # needed for ethminer compatibility with miner.farm
 # POOL1 is in form protocol://username:password@url:port
 
 # ETH Ethermine (USER1 is ETH wallet dot workername)
-  POOL1=stratum+tcp://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91:x@us1.ethpool.org:3333
+  POOL1=stratum+tcp://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91:x@us1.ethermine.org:4444
 
 # ETH Ethpool (USER1 is ETH wallet dot workername)
 #  POOL1=stratum+tcp://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker:x@us1.ethpool.org:3333
