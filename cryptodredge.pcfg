@@ -316,6 +316,29 @@
 #  PASS=c=BTC
 #  ALGO1=hmq1725
 
+# ====== dedal ======
+# Coins: Numus (NMS)
+# Numus (NMS) on HashFaster
+#  POOL1=stratum+tcp://hashfaster.com:30000
+#  USER1=Wallet.Workername
+#  PASS=c=NMS
+#  ALGO1=dedal
+
+# ====== pipe ======
+# Coins: UOUCoin (UOU)
+# UOUCoin (UOU) on Goscx
+#  POOL1=stratum+tcp://us.gos.cx:8334
+#  USER1=Wallet.Workername
+#  PASS=x
+#  ALGO1=pipe
+#
+# UOUCoin (UOU) on c3pool
+#  POOL1=stratum+tcp://pool.c3pool.com:3033
+#  USER1=Wallet
+#  PASS=C=UOU,worker=Workername
+#  ALGO1=pipe
+
+
 # ==================================================================
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
