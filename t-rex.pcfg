@@ -83,13 +83,13 @@ NAME=t-rex
 # ====== x21s ======
 # RitoCoin (RITO) on Blockify
 #  POOL1=stratum+tcp://blockify.xyz:3120
-#  USER1=WalletAddress.WorkerName
+#  USER1=BNFU4LrCXJ8Un2WE1ZhNya6iSdpVYMQksp.PimpWorker
 #  PASS=x
 #  ALGO1=x21s
 #
 # RitoCoin (RITO) on MinerMore
 #  POOL1=stratum+tcp://pool.minermore.com:4545
-#  USER1=WalletAddress.WorkerName
+#  USER1=BNFU4LrCXJ8Un2WE1ZhNya6iSdpVYMQksp.PimpWorker
 #  PASS=x
 #  ALGO1=x21s
 
