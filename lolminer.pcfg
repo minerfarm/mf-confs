@@ -41,11 +41,12 @@ NAME=lolminer
 # Simply remove the # from the pool/user/pass that you want to use and put the #
 #  in front of every other pool.
 #
-# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 below)
-   POOL1=us1.zhash.pro
-   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+
+# AION (AION) at aionpool (USER1 is AION wallet) (set FLAGS=--port 3333 below)
+   POOL1=cluster.aionpool.tech
+   USER1=0xa031185ba89a0f2c9a77b6eb9612bb5b5e685bd160cd1ce747aa96790ecf4977.PimpWorker
    PASS1=x
-   ALGO1=BTCZ
+   ALGO1=AION
 
 # ZelCash (ZEL) at pickaxe.pro (USER1 is ZEL wallet) (set FLAGS=--port 3044 below)
 #   POOL1=equihash.pickaxe.pro
@@ -79,7 +80,13 @@ NAME=lolminer
 #   USER1=L1Ucd8BU7KfeoGWXFjgwerQHVHQS6uMVzfA.PimpWorker
 #   PASS1=x
 #   ALGO1=LTZ
-
+# 
+# BitcoinZ at zenhash (USER1 is BitcoinZ wallet) (set FLAGS=--port 3057 below)
+#   POOL1=us1.zhash.pro
+#   USER1=znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker
+#   PASS1=x
+#   ALGO1=BTCZ
+#
 # SnowGem (XSG) at Snowgem Official Pool (USER1 is XSG Wallet) (set FLAGS=--port 3082 below)
 #   POOL1=us-pool.snowgem.org
 #   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
@@ -105,12 +112,6 @@ NAME=lolminer
 #   PASS1=x
 #   ALGO1=MNX
 
-# AION (AION) at aionpool (USER1 is AION wallet) (set FLAGS=--port 3333 below)
-#   POOL1=cluster.aionpool.tech
-#   USER1=0xa031185ba89a0f2c9a77b6eb9612bb5b5e685bd160cd1ce747aa96790ecf4977.PimpWorker
-#   PASS1=x
-#   ALGO1=AION
-
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
 # Here is where you can add command line parameters such as intensity and mining modes.
@@ -118,7 +119,7 @@ NAME=lolminer
 # You have to define the pool's Stratum port here as well. 
 # Do not remove kernelsdir option or lolminer will break.
 
-FLAGS=--kernelsdir /opt/miners/lolminer/kernels --log 1 --logfile /var/log/lolminer.log --port 3057
+FLAGS=--kernelsdir /opt/miners/lolminer/kernels --log 1 --logfile /var/log/lolminer.log --port 3333
 
 # Here is the CLI --help information provided by the miner's author:
 #+-------------------------------------------------+
