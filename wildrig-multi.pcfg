@@ -1,0 +1,110 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine PHI/X16/X17/X22i/more using AMD
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=Wildrig
+#
+# POOL INFORMATION: Put your pool and wallet here.
+
+# ========== x16r ========== 
+# Coins: Ravencoin, HelpTheHomeless, Motion, WikiCoin, Moondex, xGalaxy, StoneCoin
+#
+# RVN (Ravencoin) on Suprnova (USER1 is account username dot workername)
+  POOL1=stratum+tcp://rvn.suprnova.cc:6667
+  USER1=pimp.pimp
+  PASS1=x
+  ALGO1=x16r
+
+# XGalaxy (XGCS) on Blockify
+#  POOL1=stratum+tcp://blockify.xyz:3632
+#  USER1=XWNaNZ4UrYNxrdkZf45gQE23pfLamibuer.PimpWorker
+#  PASS1=d=4
+#  ALGO1=x16r
+
+#
+# HelpTheHomeless(HTH) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2338
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=x16r
+#
+# Gravium (GRV) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2294
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=x16r
+#
+# ========== x16s ========== (T-rex / Zenemy)
+#  Coins: QUAR (QUAR), Shield (XSH), PigeonCoin (PGN), RESQ (RESQ)
+# PigeonCoin (PGN) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2196
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=x16s
+#
+#========== bcd ========== (T-rex / Zenemy)
+#  Coins: BitCoinDiamond (BCD)
+#
+# POOL1=stratum+tcp://bcd.vvpool.com:5610
+# USER1=<WALLET>.<WORKER>
+# ALGO1=bcd
+# PASS1=x
+
+# ====== X17 ====== (Cryptodredge / T-rex / Zenemy)
+# Coins: Verge (XVG), Shield (XSH), MktCoin (MLM), Volvox (VVX)
+# Verge (XVG) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:2420
+#  USER1=DQ5knWYNmGYrkqkjAU3buq2jhXAMXmrUev.WorkerName
+#  PASS=x
+#  ALGO1=x17
+
+# Shield (XSH) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:3737
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=x17
+
+# ====== BitCore ======
+# BitCore (BTX) on BSOD
+#  POOL1=stratum+tcp://us.bsod.pw:3556
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=bitcore
+
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# -i 19 is the default intensity.
+# For more details, type: /opt/miners/wildrig-multi/wildrig-multi --help
+# use --opencl-threads 2 --opencl-launch 20x0 for RX470/480
+
+FLAGS=--watchdog
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=wildrig-multi
+BINARY=wildrig-multi
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-port
