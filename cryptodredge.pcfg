@@ -92,7 +92,7 @@
 #  PASS1=d=8
 #  ALGO1=lyra2v2
 
-#========== CryptoNight v7/v8 ========== (CryptoDredge)
+#========== CryptoNight v7/v8 ========== 
 #  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
 # Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
 
@@ -138,7 +138,7 @@
 #  PASS1=w=Workername
 #  ALGO1=cnv7
 
-#========== CryptoNight Classic ========== (CryptoDredge)
+#========== CryptoNight Classic ========== 
 #  Coins: Electroneum (ETN), Bytecoin (BCN), DigitalNote (XDN), Karbo (KRB),
 #   LeviarCoin (XLC)
 
@@ -148,7 +148,7 @@
 #  PASS1=x
 #  ALGO1=cryptonight
 
-#========== CryptoNight XTL ========== (CryptoDredge)
+#========== CryptoNight XTL ========== 
 #  Coins: Stellite (XTL)
 # Stellite (XTL) on CryptoPoolSpace (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://Pool.XTL.CryptoPool.Space:3333
@@ -162,14 +162,8 @@
 #  PASS1=WorkerName
 #  ALGO1=stellite
 
-#========== CryptoNight Heavy ========== (CryptoDredge)
+#========== CryptoNight Heavy ========== 
 #  Coins: Loki (LOKI), Saronite (XRN)
-
-# LOKI on Blokspace (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stratum+tcp://loki.blokspace.io:4444
-# USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
-# PASS1=melt
-# ALGO1=cryptonightheavy
 
 # Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
@@ -183,7 +177,7 @@
 #  PASS1=w=WorkerName
 #  ALGO1=cryptonightheavy
 
-#========== CryptoNight XHV Heavy ========== (CryptoDredge)
+#========== CryptoNight XHV Heavy ========== 
 #  Coins: Haven (XHV)
 
 # Haven (XHV) on MinerRocks (USER1 is PUBLIC_ADDRESS)
@@ -192,7 +186,7 @@
 #  PASS1=w=WorkerName
 #  ALGO1=cryptonighthaven
 
-#========== CryptoNight v7 lite ========== (CryptoDredge)
+#========== CryptoNight v7 lite ========== 
 #  Coins: Aeon (AEON), Turtlecoin (TRTL)
 
 # Aeon (AEON) on aeon-pool (USER1 is PUBLIC_ADDRESS)
@@ -213,7 +207,7 @@
 #  PASS1=x
 #  ALGO1=aeon
 
-#========== CryptoNight Fast ========== (CryptoDredge)
+#========== CryptoNight Fast ========== 
 #  Coins: Masari (MSR)
 
 # Masari (MSR) on masaricoin (USER1 is PUBLIC_ADDRESS)

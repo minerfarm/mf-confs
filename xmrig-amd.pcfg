@@ -1,0 +1,119 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine CRYPTONIGHT/CRYPTONIGHT-LITE/CRYPTONIGHT-HEAVY using AMD
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=xmrig-amd
+#
+# POOL INFORMATION: Put your pool and wallet here.
+
+#========== CryptoNight Heavy ========== 
+#  Coins: Loki (LOKI), Saronite (XRN)
+
+# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS)
+  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+  POOL1=stratum+tcp://loki.miner.rocks:5555
+  PASS1=w=PimpWorker
+  ALGO1=cryptonight-heavy
+
+# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
+#  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+#  PASS1=Pimpworker
+#  ALGO1=cryptonightheavy
+
+# Saronite (XRN) on MinerRocks (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://saronite.miner.rocks:5555
+#  USER1=XRNWalletHere
+#  PASS1=w=WorkerName
+#  ALGO1=cryptonightheavy
+
+#========== CryptoNight v8 ========== 
+
+# Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://mine.xmrpool.net:80
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+#  ALGO1=cnv8
+
+# Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+#  ALGO1=cnv8
+
+
+# ==================================================================
+
+FLAGS=-l /var/log/xmrig-amd.log --donate-level 1 --api-worker-id PimpWorker -k
+
+# ==================================================================
+#
+# Options:
+#  -a, --algo=ALGO          specify the algorithm to use
+#                             cryptonight
+#                             cryptonight-lite
+#                             cryptonight-heavy
+#      --rig-id=ID          rig identifier for pool-side statistics (needs pool support)
+#  -t, --threads=N          number of miner threads
+#  -v, --av=N               algorithm variation, 0 auto select
+#  -k, --keepalive          send keepalived packet for prevent timeout (needs pool support)
+#      --nicehash           enable nicehash.com support
+#      --tls                enable SSL/TLS support (needs pool support)
+#      --tls-fingerprint=F  pool TLS certificate fingerprint, if set enable strict certificate pinning
+#  -r, --retries=N          number of times to retry before switch to backup server (default: 5)
+#  -R, --retry-pause=N      time to pause between retries (default: 5)
+#      --cpu-affinity       set process affinity to CPU core(s), mask 0x3 for cores 0 and 1
+#      --cpu-priority       set process priority (0 idle, 2 normal to 5 highest)
+#      --no-huge-pages      disable huge pages support
+#      --no-color           disable colored output
+#      --variant            algorithm PoW variant
+#      --donate-level=N     donate level, default 5% (5 minutes in 100 minutes)
+#      --user-agent         set custom user-agent string for pool
+#  -B, --background         run the miner in the background
+#  -c, --config=FILE        load a JSON-format configuration file
+#  -l, --log-file=FILE      log all output to a file
+#  -S, --syslog             use system log for output messages
+#      --max-cpu-usage=N    maximum CPU usage for automatic threads mode (default 75)
+#      --safe               safe adjust threads and av settings for current CPU
+#      --asm=ASM            ASM code for cn/2, possible values: auto, none, intel, ryzen.
+#      --print-time=N       print hashrate report every N seconds
+#      --api-port=N         port for the miner API
+#      --api-access-token=T access token for API
+#      --api-worker-id=ID   custom worker-id for API
+#      --api-id=ID          custom instance ID for API
+#      --api-ipv6           enable IPv6 support for API
+#      --api-no-restricted  enable full remote access (only if API token set)
+#      --dry-run            test configuration and exit
+#  -h, --help               display this help and exit
+#  -V, --version            output version information and exit
+
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=xmrig-amd
+BINARY=xmrig-amd
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-port
