@@ -91,8 +91,6 @@ NAME=BMiner
 # DUAL MINING CONFIG: You can mine a 2nd coin at the same time as the first coin.
 # DISCLAIMER: THIS IS DANGEROUS AND VERY HARD ON EQUIPMENT - MONITOR CLOSELY!!! 
 
-
-
 # Decred (DCR) as 2nd coin (USER2 is DECRED wallet dot workername colon password at pool:port)
 #  USER2=blake14r://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@dcr.coinmine.pl:2222
 
@@ -101,6 +99,9 @@ NAME=BMiner
 #  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@mine.luckypool.xyz:5766
 #  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@mine.nlpool.nl:5766
 #  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@xvg2.coinfoundry.org:3165
+
+# Bytom (BTM) as 2nd coin (use -dual-intensity 2 in FLAGS= below)
+#  USER2=tensority://bm1q4fcqllxe0k05utju0r8uyd9ysm3y8tdu6al6ta.worker@btm.f2pool.com:9221
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
