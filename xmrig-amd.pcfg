@@ -29,10 +29,10 @@ NAME=xmrig-amd
 # POOL INFORMATION: Put your pool and wallet here.
 
 # Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-#  ALGO1=cryptonight
+  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
+  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+  PASS1=x
+  ALGO1=cryptonight
 
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://mine.xmrpool.net:80
@@ -48,44 +48,44 @@ FLAGS=-l /var/log/xmrig-amd.log --donate-level 1 --api-worker-id PimpWorker -k
 # ==================================================================
 #
 # Options:
-  -a, --algo=ALGO              specify the algorithm to use
-                                 cryptonight
-                                 cryptonight-lite
-                                 cryptonight-heavy
-      --rig-id=ID              rig identifier for pool-side statistics (needs pool support)
-  -k, --keepalive              send keepalived for prevent timeout (needs pool support)
-      --nicehash               enable nicehash.com support
-      --tls                    enable SSL/TLS support (needs pool support)
-      --tls-fingerprint=F      pool TLS certificate fingerprint, if set enable strict certificate pinning
-  -r, --retries=N              number of times to retry before switch to backup server (default: 5)
-  -R, --retry-pause=N          time to pause between retries (default: 5)
-      --opencl-devices=N       list of OpenCL devices to use.
-      --opencl-launch=IxW      list of launch config, intensity and worksize
-      --opencl-strided-index=N list of strided_index option values for each thread
-      --opencl-mem-chunk=N     list of mem_chunk option values for each thread
-      --opencl-comp-mode=N     list of comp_mode option values for each thread
-      --opencl-affinity=N      list of affinity GPU threads to a CPU
-      --opencl-platform=N      OpenCL platform index
-      --opencl-loader=N        path to OpenCL-ICD-Loader (OpenCL.dll or libOpenCL.so)
-      --print-platforms        print available OpenCL platforms and exit
-      --no-cache               disable OpenCL cache
-      --no-color               disable colored output
-      --variant                algorithm PoW variant
-      --donate-level=N         donate level, default 5% (5 minutes in 100 minutes)
-      --user-agent             set custom user-agent string for pool
-  -c, --config=FILE            load a JSON-format configuration file
-  -l, --log-file=FILE          log all output to a file
-  -S, --syslog                 use system log for output messages
-      --print-time=N           print hashrate report every N seconds
-      --api-port=N             port for the miner API
-      --api-access-token=T     access token for API
-      --api-worker-id=ID       custom worker-id for API
-      --api-id=ID              custom instance ID for API
-      --api-ipv6               enable IPv6 support for API
-      --api-no-restricted      enable full remote access (only if API token set)
-      --dry-run                test configuration and exit
-  -h, --help                   display this help and exit
-  -V, --version                output version information and exit
+#  -a, --algo=ALGO              specify the algorithm to use
+#                                 cryptonight
+#                                 cryptonight-lite
+#                                 cryptonight-heavy
+#      --rig-id=ID              rig identifier for pool-side statistics (needs pool support)
+#  -k, --keepalive              send keepalived for prevent timeout (needs pool support)
+#      --nicehash               enable nicehash.com support
+#      --tls                    enable SSL/TLS support (needs pool support)
+#      --tls-fingerprint=F      pool TLS certificate fingerprint, if set enable strict certificate pinning
+#  -r, --retries=N              number of times to retry before switch to backup server (default: 5)
+#  -R, --retry-pause=N          time to pause between retries (default: 5)
+#      --opencl-devices=N       list of OpenCL devices to use.
+#      --opencl-launch=IxW      list of launch config, intensity and worksize
+#      --opencl-strided-index=N list of strided_index option values for each thread
+#      --opencl-mem-chunk=N     list of mem_chunk option values for each thread
+#      --opencl-comp-mode=N     list of comp_mode option values for each thread
+#      --opencl-affinity=N      list of affinity GPU threads to a CPU
+#      --opencl-platform=N      OpenCL platform index
+#      --opencl-loader=N        path to OpenCL-ICD-Loader (OpenCL.dll or libOpenCL.so)
+#      --print-platforms        print available OpenCL platforms and exit
+#      --no-cache               disable OpenCL cache
+#      --no-color               disable colored output
+#      --variant                algorithm PoW variant
+#      --donate-level=N         donate level, default 5% (5 minutes in 100 minutes)
+#      --user-agent             set custom user-agent string for pool
+#  -c, --config=FILE            load a JSON-format configuration file
+#  -l, --log-file=FILE          log all output to a file
+#  -S, --syslog                 use system log for output messages
+#      --print-time=N           print hashrate report every N seconds
+#      --api-port=N             port for the miner API
+#      --api-access-token=T     access token for API
+#      --api-worker-id=ID       custom worker-id for API
+#      --api-id=ID              custom instance ID for API
+#      --api-ipv6               enable IPv6 support for API
+#      --api-no-restricted      enable full remote access (only if API token set)
+#      --dry-run                test configuration and exit
+#  -h, --help                   display this help and exit
+#  -V, --version                output version information and exit
 
 
 # ==================================================================
