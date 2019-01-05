@@ -28,14 +28,37 @@ NAME=xmrig-amd
 #
 # POOL INFORMATION: Put your pool and wallet here.
 
-# Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-  PASS1=x
-  ALGO1=cryptonight
+#========== CryptoNight Heavy ========== 
+#  Coins: Loki (LOKI), Saronite (XRN)
+
+# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS)
+  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+  POOL1=stratum+tcp://loki.miner.rocks:5555
+  PASS1=w=PimpWorker
+  ALGO1=cryptonight-heavy
+
+# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
+#  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+#  PASS1=Pimpworker
+#  ALGO1=cryptonight-heavy
+
+# Saronite (XRN) on MinerRocks (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://saronite.miner.rocks:5555
+#  USER1=XRNWalletHere
+#  PASS1=w=WorkerName
+#  ALGO1=cryptonight-heavy
+
+#========== CryptoNight v8 ========== 
 
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://mine.xmrpool.net:80
+#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+#  PASS1=x
+#  ALGO1=cryptonight
+
+# Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
+#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
 #  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
 #  PASS1=x
 #  ALGO1=cryptonight
