@@ -93,6 +93,14 @@ NAME=Wildrig
 #  PASS=x
 #  ALGO1=bitcore
 
+# ========== x16rt ========== 
+# Coins: Veil
+# Veil (VEIL) on Suprnova (USER1 is account username dot workername)
+#  POOL1=stratum+tcp://veil.suprnova.cc:7220
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=x16rt
+
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # -i 19 is the default intensity.
