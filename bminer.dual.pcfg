@@ -16,7 +16,7 @@
 # ==================================================================
 # Profile Description:
 # 
-# Mine ETH, BYTOM, AND/OR DCR/XVG using NVIDIA
+# Mine ETH, BYTOM, BEAM, GRIN, EQUIHASH, AND/OR DCR/XVG using NVIDIA
 #
 # DISCLAIMER: MINING IS DANGEROUS!!! ESPECIALLY DUAL MINING!
 # PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
@@ -86,6 +86,110 @@ NAME=BMiner
 # Bytom (BTM)  F2pool (USER1 is BTM wallet dot workername at pool:port)
 #  USER1=tensority://bm1qgryyzvnphwqqndcva4uzpfptgcd06uuau6y48j.pimpworker@btm.f2pool.com:9221
 #  ALGO1=tensority
+
+#### Equihash Coins ####
+
+# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet)
+#  USER1=zhash://GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker@eu.btgpool.pro:1445
+#  ALGO1=Equihash
+
+# Zcash (ZEC) on Flypool (Use ZEC wallet)
+#  USER1=stratum://t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD@eu1-zcash.flypool.org:3333
+#  ALGO1=Equihash
+
+# Zcash (ZEC) on nanopool (Use ZEC wallet)
+#  USER1=stratum://t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD@zec-eu1.nanopool.org:6666
+#  ALGO1=Equihash
+
+# Zcash (ZEC) on nicehash  (Use ZEC wallet)
+#  USER1=stratum://1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir@equihash.usa.nicehash.com:3357
+#  ALGO1=Equihash
+
+# Hush (HUSH) on Luckpool (USER1 is HUSH wallet)
+#  USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@luckpool.org:3757
+#  ALGO1=Equihash
+
+# Hush (HUSH) on Hushpool (USER1 is HUSH wallet)
+#  USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@us.hushpool.cloud:5551
+#  ALGO1=Equihash
+
+# Hush (HUSH) on Hushmine (USER1 is HUSH wallet)
+#  USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@us.hushmine.pro:9009
+#  ALGO1=Equihash
+
+# Komodo (KMD) on Luckpool (USER1 is KMD wallet)
+#  USER1=stratum://R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk@luckpool.org:3857
+#  ALGO1=Equihash
+
+# Komodo (KMD) on KomodoMiningPool (USER1 is KMD wallet)
+#  USER1=stratum://R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk@us.komodominingpool.com:5555
+#  ALGO1=Equihash
+
+# Zclassic (ZCL) on LuckPool (USER1 is ZCL wallet)
+#  USER1=stratum://t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ@luckpool.org:3557
+#  ALGO1=Equihash
+
+# Zclassic (ZCL) on ZCLMine (USER1 is ZCL wallet)
+#  USER1=stratum://t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ@us.zclmine.pro:9009
+#  ALGO1=Equihash
+
+# Zencash (ZEN) on LuckPool (USER1 is ZEN wallet)
+#  USER1=stratum://znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y@luckpool.org:3057
+#  ALGO1=Equihash
+
+# Zencash (ZEN) on Zenpool (USER1 is ZEN wallet)
+#  USER1=stratum://znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y@zenpool.org:3033
+#  ALGO1=Equihash
+
+# Bitcoin Gold (BTG) on suprnova (USER1 is username.worker)
+# This will mine towards the account foo which has the password pwd.
+#  USER1=stratum://foo.worker:pwd@btg.suprnova.cc:8816
+#  ALGO1=Equihash
+
+# Mining Zcash over SSL connections
+# To connect to the mining pool over SSL, you can use stratum+ssl:// instead of stratum:// in the URI.
+#  USER1=stratum+ssl://t1ZBtpkUy1y1deYsNJnzdW4tk7HiJEcfUzr.worker@zec-eu1.nanopool.org:6633
+#  ALGO1=Equihash
+
+# BitcoinZ at zenhash (USER1 is BitcoinZ wallet)
+#  USER1=zhash://znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker@us1.zhash.pro:3057
+#  ALGO1=Equihash
+
+# LitecoinZ (LTZ) at Equipool (USER1 is LTZ Wallet)
+#  USER1=zhash+ssl://1SRNyNM5sgnmrGAQNnm3FRMQfakTPgz3nj.PimpWorker@mine-ltz-na.equipool.1ds.us:50092
+#  ALGO1=Equihash
+
+# LitecoinZ (LTZ) at MagPool (USER1 is LTZ Wallet)
+#  USER1=zhash+ssl://1SRNyNM5sgnmrGAQNnm3FRMQfakTPgz3nj.PimpWorker@ltz.magnificentpool.com:1983
+#  ALGO1=Equihash
+
+# Safecoin (SAFE) at Equipool (USER1 is SAFE Wallet)
+#  USER1=zhash+ssl://putSafeCoinWalletHere.PimpWorker@mine-safe-na.equipool.1ds.us:50112
+#  ALGO1=Equihash
+
+# SnowGem (XSG) at Snowgem Official Pool (USER1 is XSG Wallet)
+#  USER1=zhash+ssl://s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker@us-pool.snowgem.org:3083
+#  ALGO1=Equihash
+
+# SnowGem (XSG) at Equipool (USER1 is XSG Wallet)
+#  USER1=zhash+ssl://s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker@mine-xsg-na.equipool.1ds.us:50082
+#  ALGO1=Equihash
+
+# ZELcash (ZEL) at Equipool (USER1 is ZEL Wallet)
+#  USER1=zhash+ssl://putZELWalletHere.PimpWorker@mine-zel-na.equipool.1ds.us:50052
+#  ALGO1=Equihash
+
+# Aeternity f2pool (USER1 is AETERNITY wallet dot workername at pool:port)
+#  USER1=aeternity://ak_27we6r5KVGpErVGedqFByq2GAEYrUP39G51jnadMRrDux1YDay.worker@ae.f2pool.com:7898
+#  ALGO1=aeternity
+
+# BEAM (BEAM) (USER1 is Your BEAM wallet dot workername at pool:port)
+#  USER1=beam+ssl://1a4ff3c72dda9113e831d364cd13a45eb45c2a9e66d951d45e021f68dc0a3c674a.PimpWorker@beam.sparkpool.com:2222
+#  ALGO1=beam
+
+# GRIN (GRIN) (USER1 is Your GRIN wallet dot workername at pool:port)
+#  USER1=cuckaroo29://YourGRINaddress.Yourworker:x@grin.f2pool.com:8898
+#  ALGO1=grin
 
 #################################################################################
 # DUAL MINING CONFIG: You can mine a 2nd coin at the same time as the first coin.
