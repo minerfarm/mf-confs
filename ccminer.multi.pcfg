@@ -1,0 +1,233 @@
+# ==================================================================
+#       .__
+#______ |__| _____ ______  Portable Instant Mining Platform
+#\____ \|  |/     \____  \              PiMP OS
+#|  |_> >  |  Y Y  \  |_> >
+#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
+#|__|            \/|__|           https://getPiMP.org
+#
+#
+# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
+# License: This code is licensed for use with getPiMP.org only.
+# Description: PIMP CLI miner module config file.
+# A .pcfg is a specially formatted PIMP Config mining profile.
+# This file makes it easy for you to pick your wallet and pool
+# and mine to it with this miner. 
+# ==================================================================
+# Profile Description:
+# 
+# Mine MULTIPLE ALGOS using your NVIDIA GPU 
+#
+# DISCLAIMER: MINING IS DANGEROUS!!!
+# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
+# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+# NAME = This is the way the miner will appear in miner farm
+NAME=AEON NVIDIA
+# ALGO1 Needs to be cryptonight-light
+
+# POOL INFORMATION: Put your AEON pool / wallet info here.
+# ---------------------------------------------------------------------
+# POOL1 is in form stratum+tcp://url:port
+# USER1 is usually in form walletid
+# PASS1 is usually x but can be used for parameters.
+
+# Aeon-Pool: Username is AEON Address only, no dot workername.
+#  POOL1=stratum+tcp://mine.aeon-pool.com:3333
+#  USER1=WmsdkVJhNbvSNkKAWoSXWjbqTQiFqU21nL5nK3tjvtFX5SWpQhkipbjhFaaEttMUt9c61Em6dP1WeHkyDtyRgWf11Q6LGb7N5
+#  PASS1=x
+#  ALGO1=cryptolight
+
+# DASH on Suprnova (Username is user dot workername, must setup account)
+#  POOL1=stratum+tcp://dash.suprnova.cc:9995
+#  USER1=pimp.dash
+#  PASS1=x
+#  ALGO1=x11
+
+# GroestlCoin (GRS) on Miningpoolhub (USER1 is pool username dot worker)
+#  POOL1=stratum+tcp://hub.miningpoolhub.com:20486
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=groestl
+
+# GroestlCoin (GRS) on Suprnova (USER1 is pool username dot worker)
+#  POOL1=stratum+tcp://grs.suprnova.cc:5544
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=groestl
+
+# GroestlCoin (GRS) on Coinmine.pl (USER1 is pool username dot worker)
+#  POOL1=stratum+tcp://mine1.coinmine.pl:13000
+#  USER1=youruser.yourworker
+#  PASS1=x
+#  ALGO1=groestl
+
+# LBRY on Nicehash (USER1 is BTC wallet dot worker)
+#  POOL1=stratum+tcp://lbry.usa.nicehash.com:3356
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimpworker
+#  PASS1=x
+#  ALGO1=lbry
+
+# LBRY on Zpool (USER1 is BTC wallet dot worker)
+#  POOL1=stratum+tcp://lbry.mine.zpool.ca:3334
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimpworker
+#  PASS1=c=btc
+#  ALGO1=lbry
+
+# LBRY on Lbrypool (USER1 is LBRY wallet dot worker)
+#  POOL1=stratum+tcp://lbrypool.com:3334
+#  USER1=YourLbryWallet.Workername
+#  PASS1=x
+#  ALGO1=lbry
+
+# ZCoin (XZC) Lyra2z on Zpool (USER1 is XZC wallet)
+#  POOL1=stratum+tcp://lyra2z.mine.zpool.ca:4553
+#  USER1=aP6qk6bpjirPzF6NdaY1Fu1t1ySfgCMg1y
+#  PASS1=c=XZC
+#  ALGO1=lyra2z
+
+# ZCoin (XZC) Lyra2z on Miningpoolhub (Create an account)
+#  POOL1=stratum+tcp://us-east.lyra2z-hub.miningpoolhub.com:20581
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=lyra2z
+
+# ZCoin (XZC) Lyra2z on Suprnova (Create an account)
+#  POOL1=stratum+tcp://xzc.suprnova.cc:1569
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=lyra2z
+
+# Lyra2v2 multi on Miningpoolhub (Create an account)
+#  POOL1=stratum+tcp://hub.miningpoolhub.com:20593
+#  USER1=username.workername
+#  PASS1=x
+#  ALGO1=lyra2v2
+
+# MonaCoin (MONA) on Zpool (USER1 is MONA wallet)
+#  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533 
+#  USER1=MRBWgynUWqL5xdwGxUZMt6yunKr2dwnojE.Pimp
+#  PASS1=c=MONA
+#  ALGO1=lyra2v2
+
+# MonaCoin (MONA) on CoinFoundry (USER1 is MONA wallet)
+#  POOL1=stratum+tcp://mona.coinfoundry.org:3093
+#  USER1=MRBWgynUWqL5xdwGxUZMt6yunKr2dwnojE.Pimp
+#  PASS1=d=8
+#  ALGO1=lyra2v2
+
+# MonaCoin (MONA) on Suprnova (Create an account)
+#  POOL1=stratum+tcp://mona.suprnova.cc:2995
+#  USER1=username.workername
+#  PASS1=x
+#  ALGO1=lyra2v2
+
+# Unitus (UIS) on Zpool (USER1 is UIS wallet)
+#  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533 
+#  USER1=UeT1zJUSmmtahXbQRAWsdMAxkkyPSbV9ZS.Pimp
+#  PASS1=c=UIS-lyra
+#  ALGO1=lyra2v2
+
+# VertCoin (VTC) on Zpool (USER1 is VTC wallet)
+#  POOL1=stratum+tcp://lyra2v2.mine.zpool.ca:4533
+#  USER1=VdxmUu21iWftsXw348VZgAqjogEJSQR9M2.Pimp
+#  PASS1=c=VTC
+#  ALGO1=lyra2v2
+
+# VertCoin (VTC) on CoinFoundry (USER1 is VTC wallet)
+#  POOL1=stratum+tcp://vtc.coinfoundry.org:3096
+#  USER1=VdxmUu21iWftsXw348VZgAqjogEJSQR9M2.Pimp
+#  PASS1=d=8
+#  ALGO1=lyra2v2
+
+# PiMPtesting Nicehash neoscrypt (USER1 is BTC address dot workername)
+#  POOL1=stratum+tcp://neoscrypt.usa.nicehash.com:3341
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
+#  PASS1=x
+#  ALGO1=neoscrypt
+
+# PiMPtesting FTC neoscrypt (USER1 is FTC address dot workername)
+#  POOL1=stratum+tcp://p2pool.neoscrypt.de:19327
+#  USER1=6vddTG4KoXGYA71MBSJKfa2jvm7Gnn4jF8
+#  PASS1=x
+#  ALGO1=neoscrypt
+
+#Feathercoin miningpoolhub (you must login and make account+worker)
+#  POOL1=stratum+tcp://hub.miningpoolhub.com:20510
+#  USER1=weblogin.workername (replace weblogin to your actual login id)
+#  PASS1=x
+#  ALGO1=neoscrypt
+
+# GoByte (GBX) on BSOD (USER1 is GBX address dot workername)
+#  POOL1=stratum+tcp://us.bsod.pw:1932
+#  USER1=WalletAddress.WorkerName
+#  PASS=x
+#  ALGO1=neoscrypt
+
+# Nist5 multi on Nicehash (USER1 is BTC wallet dot worker)
+#  POOL1=stratum+tcp://nist5.usa.nicehash.com:3340
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimp
+#  PASS1=x
+#  ALGO1=nist5
+
+# BulwarkCoin (BWK)  on BSOD (USER1 is BWK wallet)
+#  POOL1=stratum+tcp://pool.bsod.pw:3833
+#  USER1=
+#  PASS1=c=BWK
+#  ALGO1=nist5
+
+# LuxCoin (LUX) to Yiimp (PHI algo) (USER1 is LUX wallet)
+#  POOL1=stratum+tcp://yiimp.eu:8333
+#  USER1=LKGhQvonaQL5fxZnv4b8rHNLb3g41vnmHN.pimpworker
+#  PASS1=x
+#  ALGO1=phi
+
+# X11Gost to Nicehash (X11Gost algo) (USER1 is BTC wallet dot worker)
+#  POOL1=stratum+tcp://x11gost.usa.nicehash.com:3359
+#  USER1=1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir.pimpworker
+#  PASS1=x
+#  ALGO1=sib
+
+# Sibcoin/SiberianChervonets (SIB) (X11Gost algo) to p2pool (USER1 is SIB wallet)
+#  POOL1=stratum+tcp://crypto.mine.nu:9345
+#  USER1=SX6bMPbedpaJjLnAmG3qc99yPRJ2bdL8Em
+#  PASS1=x
+#  ALGO1=sib
+
+# Sibcoin/SiberianChervonets (SIB) (X11Gost algo) to Suprnova Using X11Gost algo (USER1 is pool username dot worker)
+#  POOL1=stratum+tcp://sib.suprnova.cc:3458 
+#  USER1=username.workername
+#  PASS1=password
+#  ALGO1=sib
+
+# RavenCoin (RVN) to Suprnova (USER1 is username.workername)
+#  POOL1=stratum+tcp://rvn.suprnova.cc:6667
+#  USER1=pimp.pimp
+#  PASS1=x
+#  ALGO1=x16r
+
+# Skein to Suprnova (User1 is username.workername)
+#  POOL1=stratum+tcp://dgbs.suprnova.cc:5226
+#  USER1=pimp.dgbskein
+#  PASS1=x
+#  ALGO1=skein
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+# Default is for temp target 75C and temp stop 90C.
+# IF YOU WANT TO MANAGE FANS WITH gputool DONT PUT FAN OPTIONS IN FLAGS
+#  Reason: miner will override gputool. But we didn't want to lose the failsafe defaults.
+# For all options read cpuminer-multi documentation:
+# https://github.com/tpruvot/cpuminer-multi/blob/linux/README.md
+
+FLAGS=
+
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=ccminer
+BINARY=ccminer
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-api-remote -b
