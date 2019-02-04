@@ -40,7 +40,7 @@ POOL1=stratum+tcp://iAPj8JmHrgnjFUeH1ezWorYnUdnusj9Git.PimpWorker@bci-us.coinblo
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 
-FLAGS=-U --farm-recheck 2000
+FLAGS=-X --farm-recheck 2000
 
 # Mining configuration:
 #    -U,--cuda  When mining use the GPU via CUDA.
