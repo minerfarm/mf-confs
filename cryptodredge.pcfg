@@ -26,34 +26,16 @@
 # PASS1 is usually x but can be used for parameters.
 # ALGO1 is the algorithm (see list below for choices.)
 
-# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS)
-  POOL1=stratum+tcp://loki.miner.rocks:5555
-  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
-  PASS1=w=Pimpworker
-  ALGO1=cryptonightheavy
-
-# BitTube (cnsaber) on Fairhash (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stratum+tcp://pool.tube.fairhash.org:5555
-#  USER1=bxdLhsWY56SNjVN2aQ5Yyb6hhCFfAQJVbYszWCUjeDTJMgHad8wZbNJBdrvujZzPvRY2X5AiWdTDCP626s4WbHcG1TYdEot9f+f2a4f42b8cf040c4888f3a06aa3b9124223c99faee6f4e809e0e8b525080cfda.Pimpworker
-#  PASS1=x
-#  ALGO1=cnsaber
-
-# BitTube (cnsaber) on BitTube (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stratum+tcp://mining.bit.tube:15555
-#  USER1=bxdLhsWY56SNjVN2aQ5Yyb6hhCFfAQJVbYszWCUjeDTJMgHad8wZbNJBdrvujZzPvRY2X5AiWdTDCP626s4WbHcG1TYdEot9f
-#  PASS1=x
-#  ALGO1=cnsaber
-
 
 #========== CryptoNight v7/v8 ========== 
 #  Coins: Monero (XMR), Lethean (LTHN) (former Intense), Graft (GRFT)
 # Monero (XMR) also has many other pools: MoriaXMR.com, xmr.suprnova.cc, xmrpool.eu
 
 # Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.xmrpool.net:80
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-#  ALGO1=cnv8
+  POOL1=stratum+tcp://mine.xmrpool.net:80
+  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
+   PASS1=x
+  ALGO1=cnv8
 
 # Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
 #  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
@@ -101,27 +83,34 @@
 #  PASS1=x
 #  ALGO1=cryptonight
 
-#========== CryptoNight XTL ========== 
+#========== CryptoNight Fast 2 ==========
 #  Coins: Stellite (XTL)
-# Stellite (XTL) on CryptoPoolSpace (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stratum+tcp://Pool.XTL.CryptoPool.Space:3333
-#  USER1=StelliteWalletHere
+
+# Stellite (XTL) on MinerRocks (USER1 is PUBLIC_ADDRESS.PaymentID)
+#  POOL1=stratum+tcp://stellite.miner.rocks:5005
+#  USER1=Se2yTxiaHNwbmPabD2TvzEKwL5HB5RTJ9CsMh6VxbV9gQqmgFw3N1H74qoNzZpY6qp1ZpSDkZXAcGQotpwudfrwF13KBouVqm.44becfe1686d3643
 #  PASS1=x
-#  ALGO1=stellite
+#  ALGO1=cnfast2
 
-# Stellite (XTL) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
+# Stellite (XTL) on CryptoKnight (USER1 is PUBLIC_ADDRESS.PaymentID)
 #  POOL1=stratum+tcp://stellite.ingest-us.cryptoknight.cc:16222
-#  USER1=StelliteWalletHere
+#  USER1=Se2yTxiaHNwbmPabD2TvzEKwL5HB5RTJ9CsMh6VxbV9gQqmgFw3N1H74qoNzZpY6qp1ZpSDkZXAcGQotpwudfrwF13KBouVqm.44becfe1686d3643
 #  PASS1=WorkerName
-#  ALGO1=stellite
+#  ALGO1=cnfast2
 
-#========== CryptoNight Heavy ========== 
+#========== CryptoNight Heavy ==========
 #  Coins: Loki (LOKI), Saronite (XRN)
 
 # Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
 #  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
 #  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
 #  PASS1=Pimpworker
+#  ALGO1=cryptonightheavy
+
+# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://loki.miner.rocks:5555
+#  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+#  PASS1=w=Pimpworker
 #  ALGO1=cryptonightheavy
 
 # Saronite (XRN) on MinerRocks (USER1 is PUBLIC_ADDRESS)
@@ -168,7 +157,6 @@
 #  USER1=MasariWalletHere
 #  PASS1=x
 #  ALGO1=masari
-
 
 # ====== C11 ======
 # AXS on BSOD 
@@ -283,6 +271,19 @@
 #  USER1=BNFU4LrCXJ8Un2WE1ZhNya6iSdpVYMQksp.PimpWorker
 #  PASS=x
 #  ALGO1=x21s
+
+# BitTube (cnsaber) on Fairhash (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://pool.tube.fairhash.org:5555
+#  USER1=bxdLhsWY56SNjVN2aQ5Yyb6hhCFfAQJVbYszWCUjeDTJMgHad8wZbNJBdrvujZzPvRY2X5AiWdTDCP626s4WbHcG1TYdEot9f+f2a4f42b8cf040c4888f3a06aa3b9124223c99faee6f4e809e0e8b525080cfda.Pimpworker
+#  PASS1=x
+#  ALGO1=cnsaber
+
+# ====== cryptonight saber ======
+# BitTube (cnsaber) on BitTube (USER1 is PUBLIC_ADDRESS)
+#  POOL1=stratum+tcp://mining.bit.tube:15555
+#  USER1=bxdLhsWY56SNjVN2aQ5Yyb6hhCFfAQJVbYszWCUjeDTJMgHad8wZbNJBdrvujZzPvRY2X5AiWdTDCP626s4WbHcG1TYdEot9f
+#  PASS1=x
+#  ALGO1=cnsaber
 
 # ==================================================================
 # Here is where you can add command line parameters such as intensity and mining modes.

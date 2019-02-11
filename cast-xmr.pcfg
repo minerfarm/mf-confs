@@ -86,17 +86,18 @@
 #  PASS1=x
 #  ALGO1=0
 
-#========== CryptoNight XTL ========== 
+#========== CryptoNight Fast 2 ==========
 #  Coins: Stellite (XTL)
-# Stellite (XTL) on CryptoPoolSpace (USER1 is PUBLIC_ADDRESS)
-#  POOL1=Pool.XTL.CryptoPool.Space:3333
-#  USER1=StelliteWalletHere
+
+# Stellite (XTL) on MinerRocks (USER1 is PUBLIC_ADDRESS.PaymentID)
+#  POOL1=stratum+tcp://stellite.miner.rocks:5005
+#  USER1=Se2yTxiaHNwbmPabD2TvzEKwL5HB5RTJ9CsMh6VxbV9gQqmgFw3N1H74qoNzZpY6qp1ZpSDkZXAcGQotpwudfrwF13KBouVqm.44becfe1686d3643
 #  PASS1=x
 #  ALGO1=6
 
-# Stellite (XTL) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stellite.ingest-us.cryptoknight.cc:16222
-#  USER1=StelliteWalletHere
+# Stellite (XTL) on CryptoKnight (USER1 is PUBLIC_ADDRESS.PaymentID)
+#  POOL1=stratum+tcp://stellite.ingest-us.cryptoknight.cc:16222
+#  USER1=Se2yTxiaHNwbmPabD2TvzEKwL5HB5RTJ9CsMh6VxbV9gQqmgFw3N1H74qoNzZpY6qp1ZpSDkZXAcGQotpwudfrwF13KBouVqm.44becfe1686d3643
 #  PASS1=WorkerName
 #  ALGO1=6
 
@@ -152,10 +153,19 @@
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # 
-# -a [ --algo ] arg (=-1)       hash algorithm to use: -1 for auto detect,
-# Algos: 0 CryptoNight (Classic), 1 CryptoNightV7 (CNv1), 2 CryptoNight-Heavy,
-# 3 CryptoNight-Lite, 4 CryptoNightV7-Lite, 5 CryptoNightTUBE-Heavy, 6 CryptoNightXTL, 
-# 7 CryptoNightXHV-Heavy, 8 CryptoNight-Fast, 9 CryptoNightFEST, 10 CryptoNightV8 (CNv2)
+#  -a [ --algo ] arg (=-1)       hash algorithm to use: -1 for auto detect,
+#                                  0 = CryptoNight
+#                                  1 = CryptoNightV7
+#                                  2 = CryptoNight-Heavy
+#                                  3 = CryptoNight-Lite
+#                                  4 = CryptoNightV7-Lite
+#                                  5 = CryptoNightTUBE-Heavy
+#                                  6 = CryptoNightV8-Fast
+#                                  7 = CryptoNightXHV-Heavy
+#                                  8 = CryptoNight-Fast
+#                                  9 = CryptoNight-Turtle
+#                                 10 = CryptoNightV8
+#                                 11 = CryptoNight-SuperFast
 #  -O [ --opencl ] arg           index of the OpenCL plattform to use (-1 for auto detect)
 #  -G [ --gpu ] arg (=0)         index of the GPUs to use. Separate by comma to
 #  -I [ --intensity ] arg (=-1)  intensity levels. Separate by comma to specify
