@@ -88,6 +88,17 @@ FLAGS=--logfile /var/log/gminer.log --templimit 85 --port 3333 --pers AION0PoW
 
 #--algo              Variant of equihash, supported values 192_7, 144_5.
 #--pers              Personalization for equihash, string 8 characters
+#
+# Supported algorithms (GPU types supported):
+# Cuckaroo29 (Grin) (Nvidia/Amd)
+# Cuckatoo31 (Grin) (Nvidia only)
+# Cuckoo29 (Aeternity) (Nvidia/Amd)
+# Cuckaroo29s (Swap) (Nvidia/Amd)
+# Equihash 96,5 (MinexCoin) (Nvidia only)
+# Equihash 144,5 (Bitcoin Gold, BitcoinZ, SnowGem, ZelCash) (Nvidia only)
+# Beam Hash (BEAM) (Nvidia/Amd)
+# Equihash 192,7 (Zero, Genesis) (Nvidia only)
+# Equihash 210,9 (Aion) (Nvidia only)
 # ==================================================================
 # INTERNAL USE ONLY: modification below here is unadvised
 TYPE=GPU
