@@ -44,7 +44,7 @@ NAME=gminer
 
 # ---------------------------------------------------------------------
 # COMMAND LINE PARAMETERS:
-3# Here is where you can add command line parameters such as intensity and mining modes.
+# Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # You have to define the pool's Stratum port here as well.
 # IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE --templimit
