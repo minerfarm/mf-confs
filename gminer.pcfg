@@ -20,7 +20,7 @@ NAME=gminer
 # YCash (YEC) at 1ds (USER1 is YEC wallet) (set --port 50152 --pers ZcashPoW below)
    POOL1=mine-yec-na.equipool.1ds.us
    USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
-   PASS1=--minpayout=625
+   PASS1=minpayout=625
    ALGO1=192_7
 
 # YCash (YEC) at flypool (USER1 is YEC wallet) (set --port 3333 --pers ZcashPoW below)
@@ -28,6 +28,12 @@ NAME=gminer
 #   USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
 #   PASS1=x
 #   ALGO1=192_7
+
+# SnowGem (XSG) at Snowgem Official Pool (USER1 is XSG Wallet) (set --port 3082 --pers sngemPoW below)
+#   POOL1=us-pool.snowgem.org
+#   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
+#   PASS1=yourmail@domain.com
+#   ALGO1=144_5
 
 # AION (AION) at aionpool (USER1 is AION wallet) (set --port 3333 --pers AION0PoW below)
 #   POOL1=cluster.aionpool.tech
@@ -47,14 +53,25 @@ NAME=gminer
 #   PASS1=x
 #   ALGO1=125_4
 
+# LiteCoinZ (LTZ) at 1ds (USER1 is LitecoinZ wallet) (set FLAGS=--port 50092 --pers undefined below)
+#   POOL1=mine-ltz-na.equipool.1ds.us
+#   USER1=L1Ucd8BU7KfeoGWXFjgwerQHVHQS6uMVzfA.PimpWorker
+#   PASS1=minpayout=5
+#   ALGO1=144_5
+
+# MinexCoin (MNX) on Minexpool (USER1 is MNX wallet) (set FLAGS=--port 9999 below)
+#   POOL1=stratum.minexpool.eu
+#   USER1=XQZoBeGPZJoLhTdkcF8bScsNH5Wyesd9g4.PimpWorker
+#   PASS1=x
+#   ALGO1=96_5
 
 # ---------------------------------------------------------------------
-# COMMAND LINE PARAMETERS:
+# FLAGS / COMMAND LINE PARAMETERS:
 # Here is where you can add command line parameters such as intensity and mining modes.
 # NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
 # You have to define the pool's Stratum port here as well.
 # IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE --templimit
-#  Reason: GMINER will override gputool. But we didn't want to lose the failsafe defaults.
+#  Reason: MINER will override gputool. But we didn't want to lose the failsafe defaults.
 
 FLAGS=--logfile /var/log/gminer.log --templimit 85 --port 50152 --pers ZcashPoW
 
