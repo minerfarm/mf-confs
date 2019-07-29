@@ -17,25 +17,31 @@ NAME=gminer
 # PASS1 is usually x but can be used for parameters on some pools.
 # Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
 
-# YCash (YEC) at 1ds (USER1 is YEC wallet) (set  --port 50152 --pers ZcashPoW below)
+# YCash (YEC) at 1ds (USER1 is YEC wallet) (set --port 50152 --pers ZcashPoW below)
    POOL1=mine-yec-na.equipool.1ds.us
    USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
    PASS1=--minpayout=625
    ALGO1=192_7
 
-# AION (AION) at aionpool (USER1 is AION wallet) (set FLAGS=--port 3333 --pers AION0PoW below)
+# YCash (YEC) at flypool (USER1 is YEC wallet) (set --port 3333 --pers ZcashPoW below)
+#   POOL1=us1-ycash.flypool.org
+#   USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
+#   PASS1=x
+#   ALGO1=192_7
+
+# AION (AION) at aionpool (USER1 is AION wallet) (set --port 3333 --pers AION0PoW below)
 #   POOL1=cluster.aionpool.tech
 #   USER1=0xa031185ba89a0f2c9a77b6eb9612bb5b5e685bd160cd1ce747aa96790ecf4977.PimpWorker
 #   PASS1=x
 #   ALGO1=210_9
 
-# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set FLAGS=--port 1445 --pers BgoldPoW below)
+# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set --port 1445 --pers BgoldPoW below)
 #   POOL1=eu.btgpool.pro
 #   USER1=GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker
 #   PASS1=x
 #   ALGO1=144_5
 
-# ZELcash (ZEL) at Equihash.Pro (USER1 is ZELcash wallet) (set  --port 20500 --pers ZelProof below)
+# ZELcash (ZEL) at Equihash.Pro (USER1 is ZELcash wallet) (set --port 20500 --pers ZelProof below)
 #   POOL1=zel.equihash.pro
 #   USER1=ZELwalletHere.PimpWorker
 #   PASS1=x
