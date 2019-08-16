@@ -1,0 +1,192 @@
+# ==================================================================
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform  
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2019 getPiMP.org
+# |__|            \/|__|
+# This file makes it easy for you to pick your wallet and pool.
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+NAME=nbminer
+
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
+# USER1 is the username usually in form wallet.workername 
+# PASS1 is usually x but can be used for parameters on some pools.
+# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
+
+### ===== ETHASH ===== ###
+
+## Sparkpool
+ POOL1=ethproxy+tcp://cn.sparkpool.com:3333
+ USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
+ ALGO1=ethash
+
+## Ethermine
+# POOL1=ethproxy+tcp://asia1.ethermine.org
+# USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
+# ALGO1=ethash
+
+## F2pool
+# POOL1=ethproxy+tcp://eth.f2pool.com:8008
+# USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
+# ALGO1=ethash
+
+## Nanopool
+# POOL1=ethproxy+tcp://eth-asia1.nanopool.org:9999
+# USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
+# ALGO1=ethash
+
+## Nicehash
+# POOL1=nicehash+tcp://daggerhashimoto.eu.nicehash.com:3353
+# USER1=0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.PimpWorker
+# ALGO1=ethash
+
+### ===== BYTOM ===== ###
+
+## F2pool
+# POOL1=stratum+tcp://btm.f2pool.com:9221
+# USER1=bm1xxxxxxxxxx.PimpWorker
+# ALGO1=tensority
+
+## Antpool
+# POOL1=stratum+tcp://stratum-btm.antpool.com:6666
+# USER1=username.PimpWorker
+# ALGO1=tensority
+
+## Matpool.io
+# POOL1=stratum+tcp://btm.matpool.io:8118
+# USER1=bm1xxxxxxxxxxx.PimpWorker
+# ALGO1=tensority
+
+## ===== Grin29 ===== ##
+
+## sparkpool
+# POOL1=stratum+tcp://grin.sparkpool.com:6666
+# USER1=123@qq.com/PimpWorker
+# ALGO1=cuckarood
+
+## f2pool
+# POOL1=stratum+tcp://grin29.f2pool.com:13654
+# USER1=username.PimpWorker:passwd
+# ALGO1=cuckarood
+
+## btc.com
+# POOL1=stratum+tcp://sz-grin.ss.btc.com:1800
+# USER1=username.PimpWorker:passwd
+# ALGO1=cuckarood
+
+## nicehash
+# POOL1=nicehash+tcp://grincuckaroo29.eu.nicehash.com:3371
+# USER1=btc_address.PimpWorker
+# ALGO1=cuckarood
+
+## ===== Grin31 ===== ##
+
+## sparkpool
+# POOL1=stratum+tcp://grin.sparkpool.com:66667
+# USER1=123@qq.com/PimpWorker
+# ALGO1=cuckatoo
+
+## f2pool
+# POOL1=stratum+tcp://grin31.f2pool.com:13654
+# USER1=username.PimpWorker:passwd
+# ALGO1=cuckatoo
+
+## btc.com
+# POOL1=stratum+tcp://sz-grin.ss.btc.com:1800
+# USER1=username.PimpWorker:passwd
+# ALGO1=cuckatoo
+
+## nicehash
+# POOL1=nicehash+tcp://grincuckaroo31.eu.nicehash.com:3372
+# USER1=btc_address.PimpWorker
+# ALGO1=cuckatoo
+
+## ===== AE ===== ##
+
+## f2pool
+# POOL1=stratum+tcp://ae.f2pool.com:7898
+# USER1=ak_xxxxxxx.PimpWorker:passwd
+# ALGO1=cuckoo_ae
+
+## beepool
+# POOL1=stratum+tcp://ae-pool.beepool.org:9505
+# USER1=ak_xxxx.PimpWorker:passwd
+# ALGO1=cuckoo_ae
+
+## uupool
+# POOL1=stratum+tcp://ae.uupool.cn:6210
+# USER1=ak_xxxxxx.PimpWorker:passwd
+# ALGO1=cuckoo_ae
+
+## nicehash
+# POOL1=nicehash+tcp://cuckoocycle.eu.nicehash.com:3376
+# USER1=btc_address.test
+# ALGO1=cuckoo_ae
+
+## ===== SWAP ===== ##
+
+## luckypool
+# POOL1=stratum+tcp://swap2.luckypool.io:4466
+# USER1=wallet_address.test
+# ALGO1=cuckaroo_swap
+
+## herominers
+# POOL1=stratum+tcp://swap.herominers.com:10441
+# USER1=wallet_address.test
+# ALGO1=cuckaroo_swap
+
+## herominers solo
+# POOL1=stratum+tcp://swap.herominers.com:10441
+# USER1=solo:wallet_address.test:arbitrary
+# ALGO1=cuckaroo_swap
+
+## ===== SERO ===== ##
+
+## beepool
+# POOL1=stratum+tcp://sero-pool.beepool.org:9515
+# USER1=wallet_address.PimpWorker:pswd
+# ALGO1=progpow_sero
+
+## f2pool
+# POOL1=stratum+tcp//sero.f2pool.com:4200
+# USER1=wallet_address.PimpWorker:pswd
+# ALGO1=progpow_sero
+
+# ---------------------------------------------------------------------
+# COMMAND LINE PARAMETERS:
+# Here is where you can add command line parameters such as intensity and mining modes.
+# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
+
+
+FLAGS=--log-file /var/log/nbminer.log
+
+
+# Here is the CLI information provided by the miner's author:
+# -d, --devices <devices>           - Specify GPU list to use. Format: "-d 0,1,2,3" to use first 4 GPU.
+# -i, --intensity <intensities>     - Comma-separated list of intensities (1 -100).
+# --strict-ssl                      - Check validity of certificate when use SSL connection.
+# --cuckoo-intensity <intensity>    - Set intensity of cuckoo, cuckaroo, cuckatoo, [1, 12]. Smaller value means higher 
+#                                     CPU usage to gain more hashrate. Set to 0 means autumatically adapt. Default: 0.
+# --cuckatoo-power-optimize         - Set this option to reduce the range of power consumed by rig when minining with algo cuckatoo. 
+#                                     This feature can reduce the chance of power supply shutdown caused by overpowered. 
+#                                     Warning: Setting this option may cause drop on minining performance.
+# --temperature-limit <temp-limit>  - Set temperature limit of GPU, if exceeds, stop GPU for 10 seconds and continue.
+# --log                             - Generate log file named logs/log_<timestamp>.txt.
+# --log-file <filename>             - Generate custom log file. Note: This option will override --log.
+# --no-nvml                         - Do not query cuda device health status.
+# --fidelity-timeframe <timeframe>  - Set timeframe for the calculation of fidelity, unit in hour. Default: 24.
+# --long-format                     - Use 'yyyy-MM-dd HH:mm:ss,zzz' for log time format.
+# --device-info                     - Print device cuda information.
+# --no-watchdog                     - Disable watchdog process.
+
+# ==================================================================
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=GPU
+DIR=nbminer
+BINARY=nbminer
+CONF=p1:-url,u1:-user,a1:-algo
+API=-api 127.0.0.1:
