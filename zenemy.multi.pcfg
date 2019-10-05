@@ -1,39 +1,28 @@
 # ==================================================================
-#       .__
-#______ |__| _____ ______  Portable Instant Mining Platform
-#\____ \|  |/     \____  \              PiMP OS
-#|  |_> >  |  Y Y  \  |_> >
-#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
-#|__|            \/|__|           https://getPiMP.org
-#
-#
-# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
-# License: This code is licensed for use with getPiMP.org only.
-# Description: PIMP CLI miner module config file.
-# A .pcfg is a specially formatted PIMP Config mining profile.
-# This file makes it easy for you to pick your wallet and pool
-# and mine to it with this miner. 
-# ==================================================================
-# Profile Description:
-# 
-# Mine PHI/X16R/X17/XEVAN/more using NVIDIA
-#
-# DISCLAIMER: MINING IS DANGEROUS!!!
-# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
-# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform  
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2019 getPiMP.org
+# |__|            \/|__|
+# This file makes it easy for you to pick your wallet and pool.
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
 # ==================================================================
-# NAME = This is the way the miner will appear in miner farm
-NAME=Zenemy
-#
+NAME=gminer
+
 # POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
+# USER1 is the username usually in form wallet.workername 
+# PASS1 is usually x but can be used for parameters on some pools.
+# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
 
 # ========== x16r ========== 
-# RVN (Ravencoin) on Suprnova (USER1 is account username dot workername)
-  POOL1=stratum+tcp://rvn.suprnova.cc:6667
-  USER1=pimp.pimp
-  PASS1=x
-  ALGO1=x16r
+# RVN (Ravencoin) (USER1 is RVN wallet dot workername)
+ POOL1=stratum+tcp://us.ravenminer.com:3737
+ USER1=RBwQmLMcAnwjhbAnsrZy9hGHBADVDE2AcU.PimpWorker
+ PASS1=x
+ ALGO1=x16rv2
 #
 # HelpTheHomeless(HTH) on BSOD
 #  POOL1=stratum+tcp://us.bsod.pw:2338
