@@ -9,7 +9,7 @@
 # DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
 # ==================================================================
-NAME=gminer
+NAME=Zenemy
 
 # POOL INFORMATION: Put your pool and wallet here.
 # POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
