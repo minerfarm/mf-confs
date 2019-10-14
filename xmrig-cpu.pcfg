@@ -119,4 +119,4 @@ TYPE=CPU
 DIR=xmrig-cpu
 BINARY=xmrig-cpu
 CONF=p1:o,u1:u,l1:p,a1:a
-API=-api-port
+API=-http-enabled --http-port
