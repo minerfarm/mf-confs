@@ -1,122 +1,115 @@
 # ==================================================================
-#       .__
-#______ |__| _____ ______  Portable Instant Mining Platform
-#\____ \|  |/     \____  \              PiMP OS
-#|  |_> >  |  Y Y  \  |_> >
-#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
-#|__|            \/|__|           https://getPiMP.org
-#
-#
-# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
-# License: This code is licensed for use with getPiMP.org only.
-# Description: PIMP CLI miner module config file.
-# A .pcfg is a specially formatted PIMP Config mining profile.
-# This file makes it easy for you to pick your wallet and pool
-# and mine to it with this miner. 
-# ==================================================================
-# Profile Description:
-# 
-# Mine CRYPTONIGHT/CRYPTONIGHT-LITE/CRYPTONIGHT-HEAVY using CPU
-#
-# DISCLAIMER: MINING IS DANGEROUS!!!
-# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
-# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform  
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
+# This file makes it easy for you to pick your wallet and pool.
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
 # ==================================================================
-# NAME = This is the way the miner will appear in miner farm
 NAME=xmrig-cpu
-#
+
 # POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form url   (no stratum://)
+# USER1 is the username usually in form wallet.workername 
+# PASS1 is usually x but can be used for parameters on some pools.
+# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
 
-#========== CryptoNight Heavy ========== 
-#  Coins: Loki (LOKI), Saronite (XRN)
-
-# Loki (LOKI) on MinerRocks (USER1 is PUBLIC_ADDRESS)
-  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
-  POOL1=stratum+tcp://loki.miner.rocks:5555
-  PASS1=w=PimpWorker
-  ALGO1=cryptonight-heavy
-
-# Loki (LOKI) on CryptoKnight (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stratum+tcp://loki.ingest-us.cryptoknight.cc:7732
-#  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
-#  PASS1=Pimpworker
-#  ALGO1=cryptonight-heavy
-
-# Saronite (XRN) on MinerRocks (USER1 is PUBLIC_ADDRESS)
-#  POOL1=stratum+tcp://saronite.miner.rocks:5555
-#  USER1=XRNWalletHere
-#  PASS1=w=WorkerName
-#  ALGO1=cryptonight-heavy
-
-#========== CryptoNight v8 ========== 
-
-# Monero (XMR) on XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.xmrpool.net:80
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-#  ALGO1=cryptonight
-
-# Monero (XMR) on Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-#  ALGO1=cryptonight
+ # Loki (LOKI) on HeroMiners
+  POOL1=ca.loki.herominers.com:10111
+  USER1=L7Z7XYqQPoHNH9JLveaykjVZqiyCzh2Ke7tadT3JEThxJKXFGugC4c8G556y7RJ77G6teg2hLDeT2PW7jZ347xNjGotvNRi.PimpWorker
+  PASS1=x
+  ALGO1=rx/loki
 
 # ==================================================================
 
-FLAGS=-l /var/log/xmrig-cpu.log --donate-level 1 --api-worker-id PimpWorker -k
+FLAGS=-l /var/log/xmrig-amd.log --donate-level 1 --api-worker-id PimpWorker -k
 
 # ==================================================================
 #
-# Options:
-#  -a, --algo=ALGO          specify the algorithm to use
-#                             cryptonight
-#                             cryptonight-lite
-#                             cryptonight-heavy
-#  -o, --url=URL            URL of mining server
-#  -O, --userpass=U:P       username:password pair for mining server
-#  -u, --user=USERNAME      username for mining server
-#  -p, --pass=PASSWORD      password for mining server
-#      --rig-id=ID          rig identifier for pool-side statistics (needs pool support)
-#  -t, --threads=N          number of miner threads
-#  -v, --av=N               algorithm variation, 0 auto select
-#  -k, --keepalive          send keepalived packet for prevent timeout (needs pool support)
-#      --nicehash           enable nicehash.com support
-#      --tls                enable SSL/TLS support (needs pool support)
-#      --tls-fingerprint=F  pool TLS certificate fingerprint, if set enable strict certificate pinning
-#  -r, --retries=N          number of times to retry before switch to backup server (default: 5)
-#  -R, --retry-pause=N      time to pause between retries (default: 5)
-#      --cpu-affinity       set process affinity to CPU core(s), mask 0x3 for cores 0 and 1
-#      --cpu-priority       set process priority (0 idle, 2 normal to 5 highest)
-#      --no-huge-pages      disable huge pages support
-#      --no-color           disable colored output
-#      --variant            algorithm PoW variant
-#      --donate-level=N     donate level, default 5% (5 minutes in 100 minutes)
-#      --user-agent         set custom user-agent string for pool
-#  -B, --background         run the miner in the background
-#  -c, --config=FILE        load a JSON-format configuration file
-#  -l, --log-file=FILE      log all output to a file
-#  -S, --syslog             use system log for output messages
-#      --max-cpu-usage=N    maximum CPU usage for automatic threads mode (default 75)
-#      --safe               safe adjust threads and av settings for current CPU
-#      --asm=ASM            ASM code for cn/2, possible values: auto, none, intel, ryzen.
-#      --print-time=N       print hashrate report every N seconds
-#      --api-port=N         port for the miner API
-#      --api-access-token=T access token for API
-#      --api-worker-id=ID   custom worker-id for API
-#      --api-id=ID          custom instance ID for API
-#      --api-ipv6           enable IPv6 support for API
-#      --api-no-restricted  enable full remote access (only if API token set)
-#      --dry-run            test configuration and exit
-#  -h, --help               display this help and exit
-#  -V, --version            output version information and exit
-
-
+# Supported ALGOs:
+#	Algo:		Mem:	Vers.	Notes:
+#	-------------	------	------	--------------------------------------------
+#	rx/arq		256 KB	4.3.0+	RandomARQ (RandomX variant for ArQmA).
+#	rx/0		2 MB	3.2.0+	RandomX (Monero).
+#	argon2/chukwa	512 KB	3.1.0+	Argon2id (Chukwa).
+#	argon2/wrkz	256 KB	3.1.0+	Argon2id (WRKZ)
+#	rx/wow		1 MB	3.0.0+	RandomWOW (RandomX variant for Wownero).
+#	rx/loki		2 MB	3.0.0+	RandomXL (RandomX variant for Loki).
+#	cn/fast		2 MB	3.0.0+	CryptoNight variant 1 with half iterations.
+#	cn/rwz		2 MB	2.14.0+	CryptoNight variant 2 with 3/4 iterations and reversed shuffle operation.
+#	cn/zls		2 MB	2.14.0+	CryptoNight variant 2 with 3/4 iterations.
+#	cn/double	2 MB	2.14.0+	CryptoNight variant 2 with double iterations.
+#	cn/r		2 MB	2.13.0+	CryptoNightR (Monero's variant 4).
+#	cn/wow		2 MB	2.12.0+	CryptoNightR (Wownero).
+#	cn/gpu		2 MB	2.11.0+	CryptoNight-GPU.
+#	cn-pico		256 KB	2.10.0+	CryptoNight-Pico.
+#	cn/half		2 MB	2.9.0+	CryptoNight variant 2 with half iterations.
+#	cn/2		2 MB	2.8.0+	CryptoNight variant 2.
+#	cn/xao		2 MB	2.6.4+	CryptoNight variant 0 (modified).
+#	cn/rto		2 MB	2.6.4+	CryptoNight variant 1 (modified).
+#	cn-heavy/tube	4 MB	2.6.4+	CryptoNight-Heavy (modified).
+#	cn-heavy/xhv	4 MB	2.6.3+	CryptoNight-Heavy (modified).
+#	cn-heavy/0	4 MB	2.6.0+	CryptoNight-Heavy.
+#	cn/1		2 MB	2.5.0+	CryptoNight variant 1.
+#	cn-lite/1	1 MB	2.5.0+	CryptoNight-Lite variant 1.
+#	cn-lite/0	1 MB	0.8.0+	CryptoNight-Lite variant 0.
+#	cn/0		2 MB	0.5.0+	CryptoNight (original).
+#
+# Network:
+#  -k, --keepalive               send keepalived packet for prevent timeout (needs pool support)
+#      --nicehash                enable nicehash.com support
+#      --rig-id=ID               rig identifier for pool-side statistics (needs pool support)
+#      --tls                     enable SSL/TLS support (needs pool support)
+#      --tls-fingerprint=HEX     pool TLS certificate fingerprint for strict certificate pinning
+#      --daemon                  use daemon RPC instead of pool for solo mining
+#      --daemon-poll-interval=N  daemon poll interval in milliseconds (default: 1000)
+#      --self-select=URL         self-select block templates from URL
+#  -r, --retries=N               number of times to retry before switch to backup server (default: 5)
+#  -R, --retry-pause=N           time to pause between retries (default: 5)
+#      --user-agent              set custom user-agent string for pool
+#      --donate-level=N          donate level, default 5%% (5 minutes in 100 minutes)
+#      --donate-over-proxy=N     control donate over xmrig-proxy feature
+#
+# API:
+#      --api-worker-id=ID        custom worker-id for API
+#
+# CPU backend:
+#  -t, --threads=N               number of CPU threads
+#  -v, --av=N                    algorithm variation, 0 auto select
+#      --cpu-affinity            set process affinity to CPU core(s), mask 0x3 for cores 0 and 1
+#      --cpu-priority            set process priority (0 idle, 2 normal to 5 highest)
+#      --cpu-max-threads-hint=N  maximum CPU threads count (in percentage) hint for autoconfig
+#      --cpu-memory-pool=N       number of 2 MB pages for persistent memory pool, -1 (auto), 0 (disable)
+#      --cpu-no-yield            prefer maximum hashrate rather than system response/stability
+#      --no-huge-pages           disable huge pages support
+#      --asm=ASM                 ASM optimizations, possible values: auto, none, intel, ryzen, bulldozer
+#      --randomx-init=N          threads count to initialize RandomX dataset
+#      --randomx-no-numa         disable NUMA support for RandomX
+#      --randomx-mode=MODE       RandomX mode: auto, fast, light
+#      --randomx-1gb-pages       use 1GB hugepages for dataset (Linux only)
+#      --randomx-wrmsr=N         write value (0-15) to Intel MSR register 0x1a4 or do nothing (-1) (Linux only)
+#
+# Logging:
+#  -S, --syslog                  use system log for output messages
+#  -l, --log-file=FILE           log all output to a file
+#      --print-time=N            print hashrate report every N seconds
+#      --health-print-time=N     print health report every N seconds
+#      --no-color                disable colored output
+#
+# Misc:
+#  -V, --version                 output version information and exit
+#  -h, --help                    display this help and exit
+#      --dry-run                 test configuration and exit
+#      --export-topology         export hwloc topology to a XML file and exit
+#
 # ==================================================================
+#
 # INTERNAL USE ONLY: modification below here is unadvised
 TYPE=CPU
-DIR=xmrig-cpu
-BINARY=xmrig-cpu
+DIR=xmrig
+BINARY=xmrig
 CONF=p1:o,u1:u,l1:p,a1:a
-API=-http-enabled --http-port
+API=-http-port
