@@ -1,0 +1,109 @@
+# ==================================================================
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
+# This file makes it easy for you to pick your wallet and pool.
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+NAME=xmrig-proxy
+
+# POOL INFORMATION: Put your pool and wallet here.
+# POOL1 is in form url   (no stratum://)
+# USER1 is the username usually in form wallet.workername
+# PASS1 is usually x but can be used for parameters on some pools.
+# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
+
+
+# Loki (LOKI) on HeroMiners
+  POOL1=ca.loki.herominers.com:10111
+  USER1=L72Cs7MiNqvfEuH9hh8DRrPkfeXCMvm5E4MvKHNNh9YFNfojNSCFqimMKhZa4u5ZHrgHhwgo5aMsJh9bg2pQpXJVE6qN5wP
+  PASS1=WorkerName
+  ALGO1=rx/loki
+
+# ==================================================================
+
+FLAGS=-l /var/log/xmrig-proxy.log --donate-level 1 --api-worker-id PimpWorker -k
+
+# ==================================================================
+#
+#Usage: xmrig-proxy [OPTIONS]
+#Options:
+#  -b, --bind=ADDR           bind to specified address, example "0.0.0.0:3333"
+#      --coin=COIN           specify coin instead of algorithm
+#  -m, --mode=MODE           proxy mode, nicehash (default) or simple
+#      --rig-id=ID           rig identifier for pool-side statistics (needs pool support)
+#      --tls-fingerprint=F   pool TLS certificate fingerprint, if set enable strict certificate pinning
+#  -k, --keepalive           prevent timeout (needs pool support)
+#  -r, --retries=N           number of times to retry before switch to backup server (default: 1)
+#  -R, --retry-pause=N       time to pause between retries (default: 1 second)
+#      --custom-diff=N       override pool diff
+#      --reuse-timeout=N     timeout in seconds for reuse pool connections in simple mode
+#      --verbose             verbose output
+#      --user-agent=AGENT    set custom user-agent string for pool
+#      --no-color            disable colored output
+#      --no-workers          disable per worker statistics
+#      --variant             algorithm PoW variant
+#      --donate-level=N      donate level, default 2%%
+#  -B, --background          run the miner in the background
+#  -c, --config=FILE         load a JSON-format configuration file
+#  -l, --log-file=FILE       log all output to a file
+#  -S, --syslog              use system log for output messages
+#  -A  --access-log-file=N   log all workers access to a file
+#      --access-password=P   set password to restrict connections to the proxy
+#      --no-algo-ext         disable "algo" protocol extension
+#      --api-worker-id=ID    custom worker-id (instance name) for API
+#      --api-id=ID           custom instance ID for API
+#      --http-access-token=T access token for HTTP API
+#      --http-no-restricted  enable full remote access to HTTP API (only if access token set)
+#      --tls                 enable SSL/TLS support for pool connection (needs pool support)
+#      --tls-bind=ADDR       bind to specified address with enabled TLS
+#      --tls-cert=FILE       load TLS certificate chain from a file in the PEM format
+#      --tls-cert-key=FILE   load TLS certificate private key from a file in the PEM format
+#      --tls-dhparam=FILE    load DH parameters for DHE ciphers from a file in the PEM format
+#      --tls-protocols=N     enable specified TLS protocols, example: "TLSv1 TLSv1.1 TLSv1.2 TLSv1.3"
+#      --tls-ciphers=S       set list of available ciphers (TLSv1.2 and below)
+#      --tls-ciphersuites=S  set list of available TLSv1.3 ciphersuites
+#  -h, --help                display this help and exit
+#  -V, --version             output version information and exit
+#
+# Supported ALGOs:
+#	Algo:		Mem:	Vers.	Notes:
+#	-------------	------	------	--------------------------------------------
+#	rx/arq		256 KB	4.3.0+	RandomARQ (RandomX variant for ArQmA).
+#	rx/0		2 MB	3.2.0+	RandomX (Monero).
+#	argon2/chukwa	512 KB	3.1.0+	Argon2id (Chukwa).
+#	argon2/wrkz	256 KB	3.1.0+	Argon2id (WRKZ)
+#	rx/wow		1 MB	3.0.0+	RandomWOW (RandomX variant for Wownero).
+#	rx/loki		2 MB	3.0.0+	RandomXL (RandomX variant for Loki).
+#	cn/fast		2 MB	3.0.0+	CryptoNight variant 1 with half iterations.
+#	cn/rwz		2 MB	2.14.0+	CryptoNight variant 2 with 3/4 iterations and reversed shuffle operation.
+#	cn/zls		2 MB	2.14.0+	CryptoNight variant 2 with 3/4 iterations.
+#	cn/double	2 MB	2.14.0+	CryptoNight variant 2 with double iterations.
+#	cn/r		2 MB	2.13.0+	CryptoNightR (Monero's variant 4).
+#	cn/wow		2 MB	2.12.0+	CryptoNightR (Wownero).
+#	cn/gpu		2 MB	2.11.0+	CryptoNight-GPU.
+#	cn-pico		256 KB	2.10.0+	CryptoNight-Pico.
+#	cn/half		2 MB	2.9.0+	CryptoNight variant 2 with half iterations.
+#	cn/2		2 MB	2.8.0+	CryptoNight variant 2.
+#	cn/xao		2 MB	2.6.4+	CryptoNight variant 0 (modified).
+#	cn/rto		2 MB	2.6.4+	CryptoNight variant 1 (modified).
+#	cn-heavy/tube	4 MB	2.6.4+	CryptoNight-Heavy (modified).
+#	cn-heavy/xhv	4 MB	2.6.3+	CryptoNight-Heavy (modified).
+#	cn-heavy/0	4 MB	2.6.0+	CryptoNight-Heavy.
+#	cn/1		2 MB	2.5.0+	CryptoNight variant 1.
+#	cn-lite/1	1 MB	2.5.0+	CryptoNight-Lite variant 1.
+#	cn-lite/0	1 MB	0.8.0+	CryptoNight-Lite variant 0.
+#	cn/0		2 MB	0.5.0+	CryptoNight (original).
+#
+# ==================================================================
+#
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE=EXT
+DIR=xmrig-proxy
+BINARY=xmrig-proxy
+CONF=p1:o,u1:u,l1:p,a1:a
+API=-http-enabled --http-port
