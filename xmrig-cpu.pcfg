@@ -25,7 +25,7 @@ NAME=xmrig-cpu
 
 # ==================================================================
 
-FLAGS=-l /var/log/xmrig-amd.log --donate-level 1 --api-worker-id PimpWorker -k
+FLAGS=-l /var/log/xmrig-amd.log --donate-level 1 --api-worker-id PimpWorker -k --randomx-1gb-pages
 
 # ==================================================================
 #
