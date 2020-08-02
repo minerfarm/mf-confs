@@ -1,0 +1,48 @@
+# ==================================================================
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
+# This file makes it easy for you to pick your wallet and pool.
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+# ==================================================================
+
+NAME={{.NAME}}
+
+# ==================================================================
+# POOL INFORMATION:
+
+# {{.POOLNAME}}
+  POOL1={{.POOLURL}}
+  USER1={{.WALLET}}.{{.WORKER}}
+  PASS1={{.PASS}}
+  ALGO1={{.ALGO}}
+
+# Custom Pool 
+#  (No Stratum in POOL1. Pool port number goes into FLAGS --port <port>.)
+# POOL1=<<poolurl>
+# USER1=<wallet>.<worker>
+# PASS1=<pass>
+# ALGO1=<algo>
+#
+# ==================================================================
+# FLAG INFORMATION:
+
+FLAGS={{.FLAGS}} --port {{.PORT}}
+
+# ==================================================================
+# Notes:
+#
+#  {{.NOTES}}
+#
+# ==================================================================
+#
+# INTERNAL USE ONLY: modification below here is unadvised
+TYPE={{.TYPE}}
+DIR={{.DIR}}
+BINARY={{.BINARY}}
+CONF={{.CONF}}
+API={{.API}}

@@ -1,0 +1,16 @@
+{
+"pools" : [{
+	"name" : "{{.POOLNAME}}",
+	"url" : "{{.STRATUM}}://{{.POOLURL}}:{{.PORT}}",
+	"user" : "{{.WALLET}}.{{.WORKER}}",
+	"pass" : "{{.PASS}}",
+	"profile":"Default"
+}],
+"profiles" : [{
+	"name":"Default",
+	"algorithm":"{{.ALGO}}",
+    "gpu-threads" : "1" 
+}],
+"default-profile" : "Default",
+{{.CONF}}
+}
