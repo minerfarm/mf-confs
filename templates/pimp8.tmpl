@@ -5,39 +5,58 @@
 # |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
 # |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
 # |__|            \/|__|
-# This file makes it easy for you to pick your wallet and pool.
+#
+# This file makes it easy for you to setup your wallet and pool.
+#
 # DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
 # ==================================================================
+## CONFIG NAME: (Do Not Change)
 
 NAME={{.NAME}}
 
 # ==================================================================
-# POOL INFORMATION:
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
 
 # {{.POOLNAME}}
-  USER1={{.ALGO}}://{{.WALLET}}.{{.WORKER}}:{{.PASS}}@{{.POOLURL}}:{{.PORT}}
-  ALGO1={{.ALGO}}
 
-# Custom Pool
-# USER1=<stratum>://<wallet>.<worker>:<pass>@<poolurl>:<port>
-# ALGO1=<algo>
+	USER1={{.ALGO}}://{{.WALLET}}.{{.WORKER}}:{{.PASS}}@{{.POOLURL}}:{{.PORT}}
+	ALGO1={{.ALGO}}
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	USER1=<algo>://<wallet>.<worker>:<pass>@<poolurl>:<port>
+#	ALGO1=<algo>
+
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS={{.FLAGS}}
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+{{.NOTES}}
 #
 # ==================================================================
-# FLAG INFORMATION:
-
-FLAGS={{.FLAGS}}
-
-# ==================================================================
-# Notes:
+## INTERNAL USE ONLY: (Do Not Change)
 #
-#  {{.NOTES}}
-#
-# ==================================================================
-#
-# INTERNAL USE ONLY: modification below here is unadvised
 TYPE={{.TYPE}}
 DIR={{.DIR}}
 BINARY={{.BINARY}}
 CONF={{.CONF}}
 API={{.API}}
+
+# {{.TIMESTAMP}}
