@@ -1,115 +1,130 @@
 # ==================================================================
 #        .__
 # ______ |__| _____ ______
-# \____ \|  |/     \____  \   Portable Instant Mining Platform  
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
 # |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
-# |   __/|__|__|_|  /   __/    Copyright (c) 2019 getPiMP.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
 # |__|            \/|__|
-# This file makes it easy for you to pick your wallet and pool.
+#
+# This file makes it easy for you to setup your wallet and pool.
+#
 # DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
 # ==================================================================
+## CONFIG NAME: (Do Not Change)
+
 NAME=lolminer
 
-# POOL INFORMATION: Put your pool and wallet here.
-# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
-# USER1 is the username usually in form wallet.workername 
-# PASS1 is usually x but can be used for parameters on some pools.
-# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
+# ==================================================================
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
 
-# YCash (YEC) at 1ds (USER1 is YEC wallet) (set --port 50152 --overwritePersonal ZcashPoW below)
-   POOL1=mine-yec-na.equipool.1ds.us
-   USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
-   PASS1=minpayout=625
-   ALGO1=AUTO192_7
+# Sandbox Pool (cuckAToo31)
 
-# YCash (YEC) at flypool (USER1 is YEC wallet) (set --port 3333 --overwritePersonal ZcashPoW below)
-#   POOL1=us1-ycash.flypool.org
-#   USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
-#   PASS1=x
-#   ALGO1=AUTO192_7
+	POOL1=eu.sandbox.pool.ms:4474
+	USER1=1234567890.MyPiMPWorker
+	PASS1=x
+	ALGO1=C31
 
-# SnowGem (XSG) at Snowgem Official Pool (USER1 is XSG Wallet) (set --port 3082 below)
-#   POOL1=us-pool.snowgem.org
-#   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
-#   PASS1=yourmail@domain.com
-#   ALGO1=XSG
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
 
-# AION (AION) at aionpool (USER1 is AION wallet) (set --port 3333 below)
-#   POOL1=cluster.aionpool.tech
-#   USER1=0xa031185ba89a0f2c9a77b6eb9612bb5b5e685bd160cd1ce747aa96790ecf4977.PimpWorker
-#   PASS1=x
-#   ALGO1=AION
+# <pool_name> - <coin>
 
-# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set --port 1445 below)
-#   POOL1=eu.btgpool.pro
-#   USER1=GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker
-#   PASS1=x
-#   ALGO1=BTG
+#	POOL1=<poolurl>:<port>
+#	USER1=<wallet>.<worker>
+#	PASS1=<pass>
+#	ALGO1=<algo>
 
-# ZELcash (ZEL) at Equihash.Pro (USER1 is ZELcash wallet) (set --port 20500 below)
-#   POOL1=zel.equihash.pro
-#   USER1=ZELwalletHere.PimpWorker
-#   PASS1=x
-#   ALGO1=ZEL
+# Notes:
+#	No Stratum in POOL1=
+	
+# ==================================================================
+## FLAG INFORMATION:
 
-# LiteCoinZ (LTZ) at 1ds (USER1 is LitecoinZ wallet) (set FLAGS=--port 50092 below)
-#   POOL1=mine-ltz-na.equipool.1ds.us
-#   USER1=L1Ucd8BU7KfeoGWXFjgwerQHVHQS6uMVzfA.PimpWorker
-#   PASS1=minpayout=5
-#   ALGO1=LTZ
-
-# MinexCoin (MNX) on Minexpool (USER1 is MNX wallet) (set FLAGS=--port 9999 below)
-#   POOL1=stratum.minexpool.eu
-#   USER1=XQZoBeGPZJoLhTdkcF8bScsNH5Wyesd9g4.PimpWorker
-#   PASS1=x
-#   ALGO1=MNX
-
-# ---------------------------------------------------------------------
-# FLAGS / COMMAND LINE PARAMETERS:
-# Here is where you can add command line parameters such as intensity and mining modes.
-# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# You have to define the pool's Stratum port here as well. 
-# Do not remove kernelsdir option or lolminer will break.
-
-FLAGS=--kernelsdir /opt/miners/lolminer/kernels --logs 1 --logfile /var/log/lolminer.log --port 50152 --overwritePersonal ZcashPoW
-
-# Here is the CLI --help information provided by the miner's author:
-# Accepted values for --coin (ALGO1= line above) (as of 0.8.5)
-# Short Name Full Coin Name Algorithm TLS
-# AUTO144_5 See sections “Use Pool Selection”
-# and “Use a Custom Personalization
-# String” on the usage of this options.
-# Equihash 144/5 off
-# AUTO192_7 Equihash 192/7 off
-# AION Aion Mainnet Equihash 210/9 off
-# ANON Anon Equihash 144/5 off
-# ASF Asofe Equihash 144/5 off
-# BEAM Beam EquihashR 150/5/0 on
-# BTCZ BitcoinZ Equihash 144/5 off
-# BTG Bitcoin Gold Equihash 144/5 off
-# BTH Bithereum Equihash 144/5 off
-# EXCC ExchangeCoin Equihash 144/5 E off
-# GRIN-AD29 Grin CuckarooD 29 off
-# GRIN-AT31 Grin Cuckatoo 31 off
-# LTZ Litecoin Z Equihash 144/5 off
-# HEPTA Heptacoin Equihash 144/5 off
-# MNX MinexCoin Equihash 96/5 off
-# SAFE SafeCoin Equihash 192/7 off
-# GENX Genesis Equihash 192/7 off
-# XSG SnowGem Equihash 144/5 off
-# VDL Vidulum Equihash 192/7 off
-# ZEL Zelcash EquihashR 125/4/0 off
-# ZER Zero Equihash 192/7 off%
-# Other options:
-# --devices 0,2,3 choose specific gpus to use for mining
-# --rigname $HOSTNAME  sets rig name
+ FLAGS=--log 1 --logfile /var/log/lolminer.log
 
 # ==================================================================
-# INTERNAL USE ONLY: modification below here is unadvised
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# +---------------------------------------------------------+
+# |   _       _ __  __ _                   _   ___   __     |
+# |  | | ___ | |  \/  (_)_ __   ___ _ __  / | / _ \ / /_    |
+# |  | |/ _ \| | |\/| | | '_ \ / _ \ '__| | || | | | '_ \   |
+# |  | | (_) | | |  | | | | | |  __/ |    | || |_| | (_) |  |
+# |  |_|\___/|_|_|  |_|_|_| |_|\___|_|    |_(_)___/ \___/   |
+# |                                                         |
+# |              This software is for mining                |
+# |              Equihash 144/5, 192/7, 210/9               |
+# |              BeamHash I, II, III                        |
+# |              ZelHash     (EquihashR 125/4/0)            |
+# |              CuckarooD 29                               |
+# |              CuckarooM 29                               |
+# |              Cuckaroo  30 CTX                           |
+# |              Cuckatoo  31/32                            |
+# |                                                         |
+# |                                                         |
+# |            Made by Lolliedieb, August 2020              |
+# +---------------------------------------------------------+
+# Allowed options:
+# 
+# General:
+#   -h [ --help ]                       Help screen
+#   --config arg (=./lolMiner.cfg)      Config file
+#   --json arg (=./user_config.json)    Config file in Json format
+#   --profile arg                       Profile to load from Json file
+#   --list-coins                        List all supported coin profiles
+#   --list-algos                        List all supported algorithms
+#   --list-devices                      List all supported & detected GPUs in 
+#                                       your system
+#   -v [ --version ]                    Print lolMiner version number
+# 
+# Mining:
+#   -c [ --coin ] arg                   The coin to mine
+#   -p [ --pool ] arg                   Mining pool to mine on
+#                                       Format: <pool>:<port>
+#   -u [ --user ] arg                   Wallet or pool user account to mine on
+#   --pass arg                          Pool user account password (Optional)
+#   --tls arg                           Toggle TLS ("on" / "off")
+#   --devices arg                       The devices to mine on (ALL / AMD / 
+#                                       NVIDIA or a comma separated list of 
+#                                       indexces)
+#   --devicesbypcie [=arg(=on)] (=off)  Interpret --devices as list of PCIE 
+#                                       BUS:SLOT pair
+#   -a [ --algo ] arg                   The algorithm to mine. 
+#                                       This is an alternative to --coin. 
+#   --pers arg                          The personalization string. 
+#                                       Required when using --algo for Equihash 
+#                                       algorithms
+#   --benchmark arg                     The algorithm to benchmark
+# 
+# Statistics:
+#   --apiport arg (=0)                  The port the API will use
+#   --longstats arg (=150)              Long statistics interval
+#   --shortstats arg (=30)              Short statistics interval
+#   --digits arg                        Number of digits in hash speed after 
+#                                       delimiter
+#   --timeprint [=arg(=on)] (=off)      Enables time stamp on short statistics
+#   --compactaccept [=arg(=on)] (=off)  Enables compact accept notification
+#   --log [=arg(=on)]                   Enables printing a log file
+#   --logfile arg                       Path to a custom log file location
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
 TYPE=GPU
 DIR=lolminer
 BINARY=lolminer
-CONF=p1:-pool,u1:-user,l1:-pass,a1:-coin
+CONF=p1:-pool,u1:-user,l1:-pass,a1:a
 API=-apiport
 
+# 2020-10-01 21:08:26

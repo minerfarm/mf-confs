@@ -1,113 +1,175 @@
 # ==================================================================
-#       .__
-#______ |__| _____ ______  Portable Instant Mining Platform
-#\____ \|  |/     \____  \      by miners, for miners.
-#|  |_> >  |  Y Y  \  |_> >
-#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
-#|__|            \/|__|           https://getPiMP.org
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
 #
+# This file makes it easy for you to setup your wallet and pool.
 #
-# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
-# License: This code is licensed for use with getPiMP.org only.
-# Description: PIMP CLI miner module config file.
-# A .pcfg is a specially formatted PIMP Config mining profile.
-# This file makes it easy for you to pick your wallet and pool
-# and mine to it with this miner. 
-# ==================================================================
-# Profile Description:
-# 
-# Mine CryptoNight using your CPU 
-#
-# DISCLAIMER: MINING IS DANGEROUS!!!
-# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
-# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
 # ==================================================================
-# NAME = This is the way the miner will appear in miner farm
-NAME=Cpuminer
-# ALGO1 Needs to be Cryptonight.
-ALGO1=Cryptonight
+## CONFIG NAME: (Do Not Change)
 
-# CRYPTONIGHT POOL INFORMATION: Put your pool / wallet info here.
-# ---------------------------------------------------------------------
-# POOL1 is in form stratum+tcp://url:port
-# USER1 is usually in form wallet.workername MAKE SURE IT IS AN XMR WALLET!
-# PASS1 is usually x but can be used for parameters.
-
-# With XMR, if you are mining to an exchange wallet you must include the payment ID.
-# If you are mining to your own wallet like Monero-Core, you can generate an 
-# integrated wallet address. We have provided an example of each type.
-
-# MoneroPool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-  POOL1=stratum+tcp://mine.moneropool.com:7777
-  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-  PASS1=x
-
-# XMRpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.xmrpool.net:80
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-
-# Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-#  USER1=4AkxPmLWKtyQ7hagDJ3CMRevKUvtDpe8XcABaJRYfXvLHCWFtyChdxhMNXuhEpp6aPXgg7AEpFSRCEAHqNhkBuP66qqVNP1.PimpWorker
-#  PASS1=x
-
-# Nanopool with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://xmr-eu1.nanopool.org:14444
-#  USER1=463tWEBn5XZJSxLU6uLQnQ2iY9xuNcDbjLSjkn3XAXHCbLrTTErJrBWYgHJQyrCwkNgYvyV3z8zctJLPCZy24jvb3NiTcTJ.bc6acc30661a4f68be7625f1ecaec09f426c508e233f4a16961710f3af5b3bf9.PimpWorker
-#  PASS1=x
-
-
-#### Other Cryptonight coins ####
-
-# Sumokoin (SUMO) Fairpool with with Exchange wallet: Username is EXCHANGE_WALLET.YOUR_PAYMENTID.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://mine.sumo.fairpool.xyz:5555
-#  USER1=Sumoo5H59i819DcLT3DjZVToKneE2UE5xFSGCZkzwmdkdg1W8KPF4s8CmAiNzhmEKW9VLupxAvk56JZYp64wTKEgKufmGzsAeq9.845e48022c728a433e65bcf420c5058a68c3a9c145980005afd7bf35716ce581+PimpWorker
-#  PASS1=x
-
-# Electroneum (ETN) Nanopool with Exchange Wallet: Username is YOUR_WALLET.YOU_PAYMENTID_YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
-#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.01c50c450fe03eb9fae48af51b2a41de5ca94e9ca9da2ae0e25439be165bc86c.PimpWorker
-#  PASS1=x
-
-# Sumokoin (SUMO) Sumopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://sumopool.sonofatech.com:3333
-#  USER1=Your_sumo_address_here.PimpWorker
-#  PASS1=x
-
-# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://pool.sumokoin.net:3333
-#  USER1=Your_sumo_address_here.PimpWorker
-#  PASS1=x
-
-# Sumokoin (SUMO) Sumokoinpool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://sumo.sumominer.com:4444
-#  USER1=Your_sumo_address_here.PimpWorker
-#  PASS1=x
-
-# Electroneum (ETN) Nanopool with Local Wallet: Username is YOUR_WALLET.YOUR_WORKER/YOUR_EMAIL
-#  POOL1=stratum+tcp://etn-us-east1.nanopool.org:13333
-#  USER1=etnjzKFU6ogESSKRZZbdqraPdcKVxEC17Cm1Xvbyy76PARQMmgrgceH4krAH6xmjKwJ3HtSAKuyFm1BBWYqtchtq9tBap8Qr4M.PimpWorker
-#  PASS1=x
-
-# ---------------------------------------------------------------------
-# COMMAND LINE PARAMETERS:
-# Here is where you can add command line parameters such as intensity and mining modes.
-# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# Default is for temp target 75C and temp stop 90C.
-# IF YOU WANT TO MANAGE FANS WITH gputool DONT PUT FAN OPTIONS IN FLAGS
-#  Reason: miner will override gputool. But we didn't want to lose the failsafe defaults.
-# For all options read cpuminer-multi documentation:
-# https://github.com/tpruvot/cpuminer-multi/blob/linux/README.md
-
-FLAGS=
+NAME=cpuminer-multi
 
 # ==================================================================
-# INTERNAL USE ONLY: modification below here is unadvised
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
+
+# Sandbox Pool (CryptoNight)
+
+	POOL1=stratum+tcp://eu.sandbox.pool.ms:4447
+	USER1=1234567890.MyPiMPWorker
+	PASS1=x
+	ALGO1=cryptoNight
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	POOL1=<stratum>://<poolurl>:<port>
+#	USER1=<wallet>.<worker>
+#	PASS1=<pass>
+#	ALGO1=<algo>
+
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS=
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# ** cpuminer-multi 1.3.5 by tpruvot@github **
+# BTC donation address: 1FhDPLPpw18X4srecguG3MxJYe4a1JsZnd (tpruvot)
+# 
+# Usage: cpuminer-multi [OPTIONS]
+# Options:
+#   -a, --algo=ALGO       specify the algorithm to use
+#                           allium       Garlicoin double lyra2
+#                           axiom        Shabal-256 MemoHash
+#                           bitcore      Timetravel with 10 algos
+#                           blake        Blake-256 14-rounds (SFR)
+#                           blakecoin    Blake-256 single sha256 merkle
+#                           blake2s      Blake2-S (256)
+#                           bmw          BMW 256
+#                           c11/flax     C11
+#                           cryptolight  Cryptonight-light
+#                           cryptonight  Monero
+#                           decred       Blake-256 14-rounds 180 bytes
+#                           dmd-gr       Diamond-Groestl
+#                           drop         Dropcoin
+#                           fresh        Fresh
+#                           groestl      GroestlCoin
+#                           heavy        Heavy
+#                           jha          JHA
+#                           keccak       Keccak (Old and deprecated)
+#                           keccakc      Keccak (CreativeCoin)
+#                           luffa        Luffa
+#                           lyra2re      Lyra2RE
+#                           lyra2rev2    Lyra2REv2 (Vertcoin)
+#                           myr-gr       Myriad-Groestl
+#                           neoscrypt    NeoScrypt(128, 2, 1)
+#                           nist5        Nist5
+#                           pluck        Pluck:128 (Supcoin)
+#                           pentablake   Pentablake
+#                           phi          LUX initial algo
+#                           phi2         LUX newer algo
+#                           quark        Quark
+#                           qubit        Qubit
+#                           rainforest   RainForest (256)
+#                           scrypt       scrypt(1024, 1, 1) (default)
+#                           scrypt:N     scrypt(N, 1, 1)
+#                           scrypt-jane:N (with N factor from 4 to 30)
+#                           shavite3     Shavite3
+#                           sha256d      SHA-256d
+#                           sia          Blake2-B
+#                           sib          X11 + gost (SibCoin)
+#                           skein        Skein+Sha (Skeincoin)
+#                           skein2       Double Skein (Woodcoin)
+#                           sonoa        A series of 97 hashes from x17
+#                           s3           S3
+#                           timetravel   Timetravel (Machinecoin)
+#                           vanilla      Blake-256 8-rounds
+#                           x11evo       Permuted x11
+#                           x11          X11
+#                           x12          X12
+#                           x13          X13
+#                           x14          X14
+#                           x15          X15
+#                           x16r         X16R (Raven)
+#                           x16s         X16S (Pigeon)
+#                           x17          X17
+#                           xevan        Xevan (BitSend)
+#                           yescrypt     Yescrypt
+#                           zr5          ZR5
+#   -o, --url=URL         URL of mining server
+#   -O, --userpass=U:P    username:password pair for mining server
+#   -u, --user=USERNAME   username for mining server
+#   -p, --pass=PASSWORD   password for mining server
+#       --cert=FILE       certificate for mining server using SSL
+#   -x, --proxy=[PROTOCOL://]HOST[:PORT]  connect through a proxy
+#   -t, --threads=N       number of miner threads (default: number of processors)
+#   -r, --retries=N       number of times to retry if a network call fails
+#                           (default: retry indefinitely)
+#   -R, --retry-pause=N   time to pause between retries, in seconds (default: 30)
+#       --time-limit=N    maximum time [s] to mine before exiting the program.
+#   -T, --timeout=N       timeout for long poll and stratum (default: 300 seconds)
+#   -s, --scantime=N      upper bound on time spent scanning current work when
+#                           long polling is unavailable, in seconds (default: 5)
+#       --randomize       Randomize scan range start to reduce duplicates
+#   -f, --diff-factor     Divide req. difficulty by this factor (std is 1.0)
+#   -m, --diff-multiplier Multiply difficulty by this factor (std is 1.0)
+#   -n, --nfactor         neoscrypt N-Factor
+#       --coinbase-addr=ADDR  payout address for solo mining
+#       --coinbase-sig=TEXT  data to insert in the coinbase when possible
+#       --max-log-rate    limit per-core hashrate logs (default: 5s)
+#       --no-longpoll     disable long polling support
+#       --no-getwork      disable getwork support
+#       --no-gbt          disable getblocktemplate support
+#       --no-stratum      disable X-Stratum support
+#       --no-extranonce   disable Stratum extranonce support
+#       --no-redirect     ignore requests to change the URL of the mining server
+#   -q, --quiet           disable per-thread hashmeter output
+#       --no-color        disable colored output
+#   -D, --debug           enable debug output
+#   -P, --protocol-dump   verbose dump of protocol-level activities
+#       --hide-diff       Hide submitted block and net difficulty
+#   -S, --syslog          use system log for output messages
+#   -B, --background      run the miner in the background
+#       --benchmark       run in offline benchmark mode
+#       --cputest         debug hashes from cpu algorithms
+#       --cpu-affinity    set process affinity to cpu core(s), mask 0x3 for cores 0 and 1
+#       --cpu-priority    set process priority (default: 0 idle, 2 normal to 5 highest)
+#   -b, --api-bind        IP/Port for the miner API (default: 127.0.0.1:4048)
+#       --api-remote      Allow remote control
+#       --max-temp=N      Only mine if cpu temp is less than specified value (linux)
+#       --max-rate=N[KMG] Only mine if net hashrate is less than specified value
+#       --max-diff=N      Only mine if net difficulty is less than specified value
+#   -c, --config=FILE     load a JSON-format configuration file
+#   -V, --version         display version information and exit
+#   -h, --help            display this help text and exit
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
 TYPE=CPU
 DIR=cpuminer-multi
 BINARY=cpuminer
 CONF=p1:o,u1:u,l1:p,a1:a
 API=-api-remote --api-bind 127.0.0.1:
 
+# 2020-10-01 21:08:26

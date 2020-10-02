@@ -1,105 +1,177 @@
 # ==================================================================
 #        .__
 # ______ |__| _____ ______
-# \____ \|  |/     \____  \   Portable Instant Mining Platform  
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
 # |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
-# |   __/|__|__|_|  /   __/    Copyright (c) 2019 getPiMP.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
 # |__|            \/|__|
-# This file makes it easy for you to pick your wallet and pool.
+#
+# This file makes it easy for you to setup your wallet and pool.
+#
 # DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
 # ==================================================================
+## CONFIG NAME: (Do Not Change)
+
 NAME=t-rex
 
-# POOL INFORMATION: Put your pool and wallet here.
-# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
-# USER1 is the username usually in form wallet.workername 
-# PASS1 is usually x but can be used for parameters on some pools.
-# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
-
-# ========== x16r ========== 
-# RVN (Ravencoin) (USER1 is RVN wallet dot workername)
- POOL1=stratum+tcp://us.ravenminer.com:3737
- USER1=RBwQmLMcAnwjhbAnsrZy9hGHBADVDE2AcU.PimpWorker
- PASS1=x
- ALGO1=x16rv2
+# ==================================================================
+## POOL INFORMATION:
 #
-#========== xevan ========== BSD (BitSend) Omegapool (USER1 is BSD wallet)
-#  POOL1=stratum+tcp://omegapool.cc:8005
-#  USER1=iE72zgiBtUCg63TSYaSHMxK16QTeTBQGoJ
-#  PASS1=x
-#  ALGO1=xevan
-#
-#========== renesis ========== (Zenemy)
-#  Coins: Renesis(RESS)
-#
-# POOL1=stratum+tcp://eu1.protopool.net:5252
-# USER1=<WALLET>
-# ALGO1=renesis
-# PASS1=c=RESS
-#
-#========== x13 ========== (Zenemy)
-#  Coins: BitCoinDiamond (BCD)
-#
-# POOL1=stratum+tcp://bcd.vvpool.com:5610
-# USER1=<WALLET>.<WORKER>
-# ALGO1=bcd
-# PASS1=x
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
 
-#========== x22i ========== (Trex)
-#  Coins: SUQA
-#
-#  POOL1=stratum+tcp://eu.bsod.pw:2460
-#  USER1=SQvrmU5bsPdS9KFFph55gh7miDkQrWsSkM
-#  ALGO1=x22i
-#  PASS1=x
+# Sandbox Pool (C11)
 
-# ====== BitCore ======
-# BitCore (BTX) on BSOD
-#  POOL1=stratum+tcp://us.bsod.pw:3556
-#  USER1=WalletAddress.WorkerName
-#  PASS=x
-#  ALGO1=bitcore
+	POOL1=stratum+tcp://eu.sandbox.pool.ms:4459
+	USER1=1234567890.MyPiMPWorker
+	PASS1=x
+	ALGO1=c11
 
-# ====== Geek ======
-# GeekCash (GEEK) on GeekCash Official Pool
-#  POOL1=stratum+tcp://us.mining.geekcash.org:3333
-#  USER1=WalletAddress.WorkerName
-#  PASS=x
-#  ALGO1=geek
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
 
-# ====== x21s ======
-# RitoCoin (RITO) on Blockify
-#  POOL1=stratum+tcp://blockify.xyz:3120
-#  USER1=BNFU4LrCXJ8Un2WE1ZhNya6iSdpVYMQksp.PimpWorker
-#  PASS=x
-#  ALGO1=x21s
-#
-# RitoCoin (RITO) on MinerMore
-#  POOL1=stratum+tcp://pool.minermore.com:4545
-#  USER1=BNFU4LrCXJ8Un2WE1ZhNya6iSdpVYMQksp.PimpWorker
-#  PASS=x
-#  ALGO1=x21s
+# <pool_name> - <coin>
 
-# ========== x16rt ========== 
-# Coins: Veil
-# Veil (VEIL) on Suprnova (USER1 is account username dot workername)
-#  POOL1=stratum+tcp://veil.suprnova.cc:7220
-#  USER1=pimp.pimp
-#  PASS1=x
-#  ALGO1=x16rt
-
-# Here is where you can add command line parameters such as intensity and mining modes.
-# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# -i 19 is the default intensity. 
-# For more details, see: https://forum.getpimp.org/topic/5114/flags-command-line-options-for-t-rex-miner-nvidia
-
-FLAGS=--log-path /var/log/t-rex.log
+#	POOL1=<stratum>://<poolurl>:<port>
+#	USER1=<wallet>.<worker>
+#	PASS1=<pass>
+#	ALGO1=<algo>
 
 # ==================================================================
-# INTERNAL USE ONLY: modification below here is unadvised
+## FLAG INFORMATION:
+
+ FLAGS=--log-path /var/log/t-rex.log
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# 
+#   This is T-Rex NVIDIA GPU miner version 0.15.8 rev.8dbb1eefa84a.
+# 
+#   We hope you enjoy our miner.
+#   We promise to do our best to make it as fast as possible.
+# 
+#   However, in order to maximise the hashrate our software utilises all
+#   available GPU resources, so it is important that you review your overclock
+#   settings before you start mining. Our general recommendation is to start
+#   from GPU stock settings (no overclock, default power limit), and then after
+#   making sure it is stable, slowly increase your overclock to find the
+#   "sweet spot" where the miner performs at its best and still does not crash.
+#       
+# 
+#   Usage of command line options
+#   Options:
+#     -a, --algo                     Specify the hash algorithm to use.
+#                                    alterhash
+#                                    astralhash
+#                                    balloon
+#                                    bcd
+#                                    bitcore
+#                                    c11
+#                                    dedal
+#                                    geek
+#                                    hmq1725
+#                                    honeycomb
+#                                    jeonghash
+#                                    kawpow
+#                                    lyra2z
+#                                    mtp
+#                                    mtp-tcr
+#                                    padihash
+#                                    pawelhash
+#                                    phi
+#                                    polytimos
+#                                    progpow
+#                                    sha256q
+#                                    sha256t
+#                                    skunk
+#                                    sonoa
+#                                    tensority
+#                                    timetravel
+#                                    tribus
+#                                    x11r
+#                                    x16r
+#                                    x16rt
+#                                    x16rv2
+#                                    x16s
+#                                    x17
+#                                    x21s
+#                                    x22i
+#                                    x25x
+#         --coin                     [ProgPOW] Set coin name.
+#         --nonce-start              [ProgPOW] Starting nonce for the solution search.
+#         --nonce-range-size         [ProgPOW] Nonce range size for nonce search. The range will be split between all devices.
+#     -d, --devices                  Comma separated list of CUDA devices to use.
+#                                    Device IDs start counting from 0.
+#         --ab-indexing              Afterburner indexing (Sort devices by bus ID. First device starts with 1).
+#     -i, --intensity                GPU intensity 8-25 (default: auto).
+# 
+#     -o, --url                      URL of mining server.
+#     -u, --user                     Username for mining server.
+#     -p, --pass                     Password for mining server.
+#     -r, --retries                  Number of times to retry if a network call fails.
+#     -R, --retry-pause              Pause in seconds between retries.
+#     -T, --timeout                  Network timeout, in seconds (default: 300)
+#         --time-limit               Miner shutdown interval in seconds. (default: 0 - disabled)
+# 
+#         --temperature-color        Set temperature color for GPUs stat. Example: 55,65 - it means that
+#                                    temperatures above 55 will have yellow color, above 65 - red color. (default: 67,77)
+#         --temperature-limit        GPU shutdown temperature. (default: 0 - disabled)
+#         --temperature-start        GPU temperature to enable card after disable. (default: 0 - disabled)
+# 
+#     -b, --api-bind-telnet          IP:port for the miner API via telnet (default: 0.0.0.0:4068). Set to 0 to disable.
+#         --api-bind-http            IP:port for the miner API via HTTP (default: 0.0.0.0:4067). Set to 0 to disable.
+#     -J  --json-response            Telnet API server will make json responses.
+# 
+#     -N, --hashrate-avr             Sliding window length in seconds used to compute average hashrate (default: 60).
+#         --sharerate-avr            Sliding window length in seconds used to compute sharerate (default: 600).
+#         --gpu-report-interval      GPU stats report frequency. (default: 5. every 5th share)
+#     -q, --quiet                    Quiet mode. No GPU stats at all.
+#         --hide-date                Don't show date in console.
+#         --no-color                 Disable color output for console.
+#         --no-nvml                  Disable NVML GPU stats.
+#         --no-watchdog              Disable built-in watchdog.
+# 
+#     -B, --benchmark                Benchmark mode.
+#     -P, --protocol-dump            User protocol logging.
+#     -c, --config                   Load a JSON-format configuration file.
+#     -l, --log-path                 Full path of the log file.
+#         --cpu-priority             Set process priority (default: 2) 0 idle, 2 normal to 5 highest.
+# 
+#         --autoupdate               Perform auto update whenever a newer version of the miner is available.
+#         --back-to-main-pool-sec    Forces miner to switch back to main pool in case working with failover pool.
+#                                    Parameter is set in seconds. (default: 600)
+#         --exit-on-cuda-error       Forces miner to immediately exit on CUDA error.
+#         --exit-on-connection-lost  Forces miner to immediately exit on connection lost.
+#         --reconnect-on-fail-shares Forces miner to immediately reconnect to pool on N successively failed shares (default: 10).
+# 
+#         --fork-at                  Forces miner to change algorithm on predefined condition.
+#                                    Time condition: algo_name=YYYY-MM-DDTHH:MM:SS (eg: --fork-at x16rv2=2019-10-01T16:00:00).
+#                                    Time must be set in UTC+0.
+#                                    Block condition: algo_name=integer_block_number (eg: --fork-at x16rv2=6526421).
+#                                    To change main pool port you must write it right after algo: algo_name:integer_port_number
+#                                    (eg: --fork-at x16rv2:4081=2019-10-01T16:00:00).
+# 
+# 
+#         --version                  Display version information and exit.
+#     -h, --help                     Display this help text and exit.
+# 
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
 TYPE=GPU
 DIR=t-rex
 BINARY=t-rex
 CONF=p1:o,u1:u,l1:p,a1:a
 API=-json-response --api-bind-http 0.0.0.0:
+
+# 2020-10-01 21:08:26

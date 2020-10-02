@@ -1,244 +1,108 @@
 # ==================================================================
-#       .__
-#______ |__| _____ ______  Portable Instant Mining Platform
-#\____ \|  |/     \____  \       by miners, for miners.
-#|  |_> >  |  Y Y  \  |_> >
-#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
-#|__|            \/|__|           https://getPiMP.org
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
 #
+# This file makes it easy for you to setup your wallet and pool.
 #
-# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
-# License: This code is licensed for use with getPiMP.org only.
-# Description: PIMP CLI miner module config file.
-# A .pcfg is a specially formatted PIMP Config mining profile.
-# This file makes it easy for you to pick your wallet and pool
-# and mine to it with this miner.
-# ==================================================================
-# Profile Description:
-# 
-# Mine ETH, BYTOM, BEAM, GRIN, EQUIHASH, AND/OR DCR/XVG using NVIDIA
-#
-# DISCLAIMER: MINING IS DANGEROUS!!! ESPECIALLY DUAL MINING!
-# PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY 
-# SO YOU DO NOT BURN OR DAMAGE YOUR HARDWARE!!!
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
 # ==================================================================
-# NAME = This is the way the miner will appear in miner farm
-NAME=BMiner
-# ALGO1 is the algorithm, needs to be Equihash for this miner.
-#
-# POOL INFORMATION: Put your pool and wallet here.
-# USER1 is in form stratum://wallet@url:port   (No worker names supported by this miner)
-# THERE IS NO POOL1 IT IS PART OF THE USER1 FIELD FOR THIS MINER.
-# NOTE: SOME EXCHANGES CANNOT BE MINED TO, like Bittrex.
-# PASS1 is not used for this miner. 
+## CONFIG NAME: (Do Not Change)
 
-# PRIMARY/ETH/ETC/UBQ POOLS:
-# ---------------------------------------------------------------------
-# PRIMARY POOL INFORMATION: Put your ETHASH pool and wallet here.
-#
-# FORMAT: protocol://wallet.pimpworker@pool:port
-#
-# Simply remove the # from the pool/user/pass that you want to use and put the #
-#  in front of every other pool. And put your own wallet and/or worker name instead. 
-
-# ETH Ethermine US with SSL (USER1 is ETH wallet dot workername at pool:port)
-#   You can use ethash+ssl:// instead of ethash:// to connect to the pool via SSL connections:
-#  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us1.ethermine.org:5555
-#  ALGO1=Ethash
-
-# ETH Ethermine EU with SSL (USER1 is ETH wallet dot workername at pool:port)
-  USER1=ethash+ssl://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eu1.ethermine.org:5555
-  ALGO1=Ethash
-
-# ETH Nanopool (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethash://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth-us-west1.nanopool.org:9999
-#  ALGO1=Ethash
-
-# ETH f2pool (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.f2pool.com:8008
-#  ALGO1=Ethash
-
-# ETH 2miners (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.2miners.com:2020
-#  ALGO1=Ethash
-
-# ETH dwarfpool (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth-eu.dwarfpool.com:8008
-#  ALGO1=Ethash
-
-# ETH sparkpool (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethproxy://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@us-west.sparkpool.com:3333
-#  ALGO1=Ethash
-
-# ETH coinfoundry (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethstratum://0xe8C128B81B26bA1614f4CF2292A5D754Ca352c91.pimpworker@eth.coinfoundry.org:3072
-#  ALGO1=Ethash
-
-# ETH coinotron (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethstratum://foo.pimpworker@coinotron.com:3344
-#  ALGO1=Ethash
-
-# ETH miningpoolhub (USER1 is ETH wallet dot workername at pool:port)
-#  USER1=ethstratum://foo.pimpworker:x@us-east.ethash-hub.miningpoolhub.com:20535
-#  ALGO1=Ethash
-
-# Bytom (BTM)  F2pool (USER1 is BTM wallet dot workername at pool:port)
-#  USER1=tensority://bm1qgryyzvnphwqqndcva4uzpfptgcd06uuau6y48j.pimpworker@btm.f2pool.com:9221
-#  ALGO1=tensority
-
-#### Equihash Coins ####
-
-# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet)
-#  USER1=zhash://GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker@eu.btgpool.pro:1445
-#  ALGO1=Equihash
-
-# Zcash (ZEC) on Flypool (Use ZEC wallet)
-#  USER1=stratum://t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD@eu1-zcash.flypool.org:3333
-#  ALGO1=Equihash
-
-# Zcash (ZEC) on nanopool (Use ZEC wallet)
-#  USER1=stratum://t1PezPss2cUJezeiHmydeh6CNsu4CT11qZD@zec-eu1.nanopool.org:6666
-#  ALGO1=Equihash
-
-# Zcash (ZEC) on nicehash  (Use ZEC wallet)
-#  USER1=stratum://1JiPutZrDBLW4YwXY5GbwgLJrpAQTMUUir@equihash.usa.nicehash.com:3357
-#  ALGO1=Equihash
-
-# Hush (HUSH) on Luckpool (USER1 is HUSH wallet)
-#  USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@luckpool.org:3757
-#  ALGO1=Equihash
-
-# Hush (HUSH) on Hushpool (USER1 is HUSH wallet)
-#  USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@us.hushpool.cloud:5551
-#  ALGO1=Equihash
-
-# Hush (HUSH) on Hushmine (USER1 is HUSH wallet)
-#  USER1=stratum://t1cBSBzTeoK2ZGmJpYM3v743ZWR2wM7mdXD@us.hushmine.pro:9009
-#  ALGO1=Equihash
-
-# Komodo (KMD) on Luckpool (USER1 is KMD wallet)
-#  USER1=stratum://R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk@luckpool.org:3857
-#  ALGO1=Equihash
-
-# Komodo (KMD) on KomodoMiningPool (USER1 is KMD wallet)
-#  USER1=stratum://R9JBqE3vrVpta2dzRUmP7PQLgdC9vXDqnk@us.komodominingpool.com:5555
-#  ALGO1=Equihash
-
-# Zclassic (ZCL) on LuckPool (USER1 is ZCL wallet)
-#  USER1=stratum://t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ@luckpool.org:3557
-#  ALGO1=Equihash
-
-# Zclassic (ZCL) on ZCLMine (USER1 is ZCL wallet)
-#  USER1=stratum://t1bCVxzCxc4BUHdMnaBSpyaHEpuRK43cudQ@us.zclmine.pro:9009
-#  ALGO1=Equihash
-
-# Zencash (ZEN) on LuckPool (USER1 is ZEN wallet)
-#  USER1=stratum://znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y@luckpool.org:3057
-#  ALGO1=Equihash
-
-# Zencash (ZEN) on Zenpool (USER1 is ZEN wallet)
-#  USER1=stratum://znnHr1XeLXHZ3FUdowX6cuqthz6yjndgB5Y@zenpool.org:3033
-#  ALGO1=Equihash
-
-# Bitcoin Gold (BTG) on suprnova (USER1 is username.worker)
-# This will mine towards the account foo which has the password pwd.
-#  USER1=stratum://foo.worker:pwd@btg.suprnova.cc:8816
-#  ALGO1=Equihash
-
-# Mining Zcash over SSL connections
-# To connect to the mining pool over SSL, you can use stratum+ssl:// instead of stratum:// in the URI.
-#  USER1=stratum+ssl://t1ZBtpkUy1y1deYsNJnzdW4tk7HiJEcfUzr.worker@zec-eu1.nanopool.org:6633
-#  ALGO1=Equihash
-
-# BitcoinZ at zenhash (USER1 is BitcoinZ wallet)
-#  USER1=zhash://znhZk16YgiC5dWKgszALRRWQmaZG7yKwMDN.PimpWorker@us1.zhash.pro:3057
-#  ALGO1=Equihash
-
-# LitecoinZ (LTZ) at Equipool (USER1 is LTZ Wallet)
-#  USER1=zhash+ssl://1SRNyNM5sgnmrGAQNnm3FRMQfakTPgz3nj.PimpWorker@mine-ltz-na.equipool.1ds.us:50092
-#  ALGO1=Equihash
-
-# LitecoinZ (LTZ) at MagPool (USER1 is LTZ Wallet)
-#  USER1=zhash+ssl://1SRNyNM5sgnmrGAQNnm3FRMQfakTPgz3nj.PimpWorker@ltz.magnificentpool.com:1983
-#  ALGO1=Equihash
-
-# Safecoin (SAFE) at Equipool (USER1 is SAFE Wallet)
-#  USER1=zhash+ssl://putSafeCoinWalletHere.PimpWorker@mine-safe-na.equipool.1ds.us:50112
-#  ALGO1=Equihash
-
-# SnowGem (XSG) at Snowgem Official Pool (USER1 is XSG Wallet)
-#  USER1=zhash+ssl://s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker@us-pool.snowgem.org:3083
-#  ALGO1=Equihash
-
-# SnowGem (XSG) at Equipool (USER1 is XSG Wallet)
-#  USER1=zhash+ssl://s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker@mine-xsg-na.equipool.1ds.us:50082
-#  ALGO1=Equihash
-
-# ZELcash (ZEL) at Equipool (USER1 is ZEL Wallet)
-#  USER1=zhash+ssl://putZELWalletHere.PimpWorker@mine-zel-na.equipool.1ds.us:50052
-#  ALGO1=Equihash
-
-# OTHER COINS (GRIN, BEAM, AETERNITY)
-
-# Aeternity f2pool (USER1 is AETERNITY wallet dot workername at pool:port)
-#  USER1=aeternity://ak_27we6r5KVGpErVGedqFByq2GAEYrUP39G51jnadMRrDux1YDay.worker@ae.f2pool.com:7898
-#  ALGO1=aeternity
-
-# BEAM (BEAM) (USER1 is Your BEAM wallet dot workername at pool:port)
-#  USER1=beam+ssl://1a4ff3c72dda9113e831d364cd13a45eb45c2a9e66d951d45e021f68dc0a3c674a.PimpWorker@beam.sparkpool.com:2222
-#  ALGO1=beam
-
-# GRIN (GRIN) (USER1 is Your GRIN wallet dot workername at pool:port)
-#  USER1=cuckaroo29://YourGRINaddress.Yourworker:x@grin.f2pool.com:8898
-#  ALGO1=grin
-
-# GRIN (GRIN) (USER1 is Your GRIN wallet dot workername at pool:port)
-#  USER1=cuckaroo29://YourGRINaddress.Yourworker:x@grin.f2pool.com:8898
-#  ALGO1=grin
-
-# GRIN (GRIN) on F2pool (USER1 is Your Username dot worker number at pool:port)
-#  USER1=cuckatoo31://pimp.001:x@grin.f2pool.com:8898
-#  ALGO1=grin
-
-# GRIN (GRIN) on Nicehash (USER1 is Your BTC wallet at pool:port)
-#  USER1=cuckaroo29://1GewwgzK5zAuDWGro34ZMHY9qd5edWGQmT@grincuckaroo29.usa.nicehash.com:3371
-#  ALGO1=grin
-
-# GRIN (GRIN) on Nicehash (USER1 is Your BTC wallet at pool:port)
-#  USER1=cuckatoo31://1GewwgzK5zAuDWGro34ZMHY9qd5edWGQmT@grincuckatoo31.usa.nicehash.com:3372
-#  ALGO1=grin
-
-#################################################################################
-# DUAL MINING CONFIG: You can mine a 2nd coin at the same time as the first coin.
-# DISCLAIMER: THIS IS DANGEROUS AND VERY HARD ON EQUIPMENT - MONITOR CLOSELY!!! 
-
-# Decred (DCR) as 2nd coin (USER2 is DECRED wallet dot workername colon password at pool:port)
-#  USER2=blake14r://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@dcr.coinmine.pl:2222
-
-# Verge (XVG) as 2nd coin (USER2 is VERGE wallet dot workername colon password at pool:port)
-#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@xvg.antminepool.com:9008
-#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@mine.luckypool.xyz:5766
-#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@mine.nlpool.nl:5766
-#  USER2=blake2s://DsTMbXbMwD8QRH5inCPXbGK4jEoEvxtCtoa.pimpworker:pwd@xvg2.coinfoundry.org:3165
-
-# Bytom (BTM) as 2nd coin (use -dual-intensity 2 in FLAGS= below)
-#  USER2=tensority://bm1q4fcqllxe0k05utju0r8uyd9ysm3y8tdu6al6ta.worker@btm.f2pool.com:9221
-
-# ---------------------------------------------------------------------
-# COMMAND LINE PARAMETERS:
-# Here is where you can add command line parameters such as intensity and mining modes.
-# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# All flags documentation for bminer: https://bminer.me/references/
-# DUAL MINING FLAGS: -dual-subsolver X : The sub-solver for dual mining. Valid values are 0, 1, 2, 3. Default is -1, which is to tune automatically
-# -dual-intensity X : The intensity of the secondary mining. Valid values are 0 to 300. Default is 0, which is to tune automatically.
-
-FLAGS=-logfile /var/log/bminer.log
+NAME=bminer
 
 # ==================================================================
-# INTERNAL USE ONLY: modification below here is unadvised
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
+
+# Sandbox Pool (Ethash)
+
+	USER1=ethash://1234567890.MyPiMPWorker:x@eu.sandbox.pool.ms:4445
+	ALGO1=ethash
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	USER1=<algo>://<wallet>.<worker>:<pass>@<poolurl>:<port>
+#	ALGO1=<algo>
+
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS=-logfile /var/log/bminer.log
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+#   -api <host>:<port>
+#     	The endpoint (i.e., <host>:<port>) that bminer serves its REST API. The REST API is disabled if it is unspecified.
+#   -devices GPUs
+#     	List of GPUs that Bminer should run on. By default bminer runs on all GPUs available on the system.
+#   -dual-intensity int
+#     	The intensity of the secondary mining. Valid values are 0 to 300. Default is -1, which is to tune automatically. (default -1)
+#   -dual-subsolver int
+#     	The sub-solver for dual mining. Valid values are 0, 1, 2, 3. Default is -1, which is to tune automatically. (default -1)
+#   -failover sameHost|immediateNext|random
+#     	Fail-over strategy between multiple pools. Bminer can retry the connection, failover to the next pool or a pool that is randomly chosen in the lists of available pools. (sameHost|immediateNext|random) (default "immediateNext")
+#   -fast int
+#     	Enable agressive optimizations (from 0-5). Too aggressive optimization might result in crashes due to OS / hardware issues. (default 1)
+#   -gpucheck uint
+#     	The interval in seconds that Bminer polls whether the GPUs have hung. Set to 0 to disable the checks. (default 90)
+#   -intensity int
+#     	The intensity of the CPU for grin/AE mining. Valid values are 0 to 12. Default is 6. Higher intensity may give better performance but more CPU usage. (default -1)
+#   -logfile <path>
+#     	Append the logs to the file <path>.
+#   -managed
+#     	
+#   -max-network-failures int
+#     	Number of consecutive attempts that Bminer tries to recover from network failures. Set to -1 to keep on recovering. (default -1)
+#   -max-temperature int
+#     	Hard limits of the temperature of the GPUs. Bminer slows down itself when the temperautres of the devices exceed the limit. (default 85)
+#   -no-runtime-info
+#     	Disable runtime information collection for Bminer.
+#   -no-timestamps
+#     	Suppress timestamps in the logging messages.
+#   -nofee
+#     	Disable the devfee but it also disables some optimizations.
+#   -pers string
+#     	Personalization string for equihash 144,5 based coins. Default: BgoldPoW. Valid values include BitcoinZ, Safecoin, ZelProof, etc. (default "BgoldPoW")
+#   -share-check uint
+#     	The interval of seconds that Bminer polls to ensure there are accepted shares. Set to 0 to disable the checks. (default 900)
+#   -strict-secure
+#     	Verify the certificates of servers when connecting to a SSL-enabled Stratum server.
+#   -syslog-level string
+#     	Enable syslog if level set, supported levels: CRIT/ERR/WARNING/INFO.
+#   -uri <scheme>://<username>[:<password>]@<host>:<port>
+#     	A comma-seperated list of URIs that bminer should mine towards. It has the format of <scheme>://<username>[:<password>]@<host>:<port>. Please refer to https://www.bminer.me for the specification of the URIs.
+#   -uri2 <scheme>://<username>[:<password>]@<host>:<port>
+#     	A comma-seperated list of URIs that bminer should mine towards secondarily. It has the format of <scheme>://<username>[:<password>]@<host>:<port>. Please refer to https://www.bminer.me for the specification of the URIs.
+#   -version
+#     	Output version information and exit.
+#   -watchdog
+#     	Automatically restart to recover from hung GPUs. Bminer exits itself in case of errors if watchdog is disabled. (default true)
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
 TYPE=GPU
 DIR=bminer
 BINARY=bminer
 CONF=u1:uri,u2:uri2
 API=api 127.0.0.1:
+
+# 2020-10-01 21:08:26

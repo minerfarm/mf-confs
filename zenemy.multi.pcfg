@@ -1,95 +1,132 @@
 # ==================================================================
 #        .__
 # ______ |__| _____ ______
-# \____ \|  |/     \____  \   Portable Instant Mining Platform  
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
 # |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
-# |   __/|__|__|_|  /   __/    Copyright (c) 2019 getPiMP.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
 # |__|            \/|__|
-# This file makes it easy for you to pick your wallet and pool.
+#
+# This file makes it easy for you to setup your wallet and pool.
+#
 # DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
 # ==================================================================
-NAME=Zenemy
+## CONFIG NAME: (Do Not Change)
 
-# POOL INFORMATION: Put your pool and wallet here.
-# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
-# USER1 is the username usually in form wallet.workername 
-# PASS1 is usually x but can be used for parameters on some pools.
-# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
-
-# ========== x16r ========== 
-# RVN (Ravencoin) (USER1 is RVN wallet dot workername)
- POOL1=stratum+tcp://us.ravenminer.com:3737
- USER1=RBwQmLMcAnwjhbAnsrZy9hGHBADVDE2AcU.PimpWorker
- PASS1=x
- ALGO1=x16rv2
-#
-# HelpTheHomeless(HTH) on BSOD
-#  POOL1=stratum+tcp://us.bsod.pw:2338
-#  USER1=WalletAddress.WorkerName
-#  PASS=x
-#  ALGO1=x16r
-#
-# Gravium (GRV) on BSOD
-#  POOL1=stratum+tcp://us.bsod.pw:2294
-#  USER1=WalletAddress.WorkerName
-#  PASS=x
-#  ALGO1=x16r
-#
-# ========== x16s ========== (T-rex / Zenemy)
-#  Coins: QUAR (QUAR), Shield (XSH), PigeonCoin (PGN), RESQ (RESQ)
-# PigeonCoin (PGN) on BSOD
-#  POOL1=stratum+tcp://us.bsod.pw:2196
-#  USER1=WalletAddress.WorkerName
-#  PASS=x
-#  ALGO1=x16s
-#
-#========== xevan ========== BSD (BitSend) Omegapool (USER1 is BSD wallet)
-#  POOL1=stratum+tcp://omegapool.cc:8005
-#  USER1=iE72zgiBtUCg63TSYaSHMxK16QTeTBQGoJ
-#  PASS1=x
-#  ALGO1=xevan
-#
-#========== bcd ========== (T-rex / Zenemy)
-#  Coins: BitCoinDiamond (BCD)
-#
-# POOL1=stratum+tcp://bcd.vvpool.com:5610
-# USER1=<WALLET>.<WORKER>
-# ALGO1=bcd
-# PASS1=x
-
-# ====== X17 ====== (Cryptodredge / T-rex / Zenemy)
-# Coins: Verge (XVG), Shield (XSH), MktCoin (MLM), Volvox (VVX)
-# Verge (XVG) on BSOD
-#  POOL1=stratum+tcp://us.bsod.pw:2420
-#  USER1=DQ5knWYNmGYrkqkjAU3buq2jhXAMXmrUev.WorkerName
-#  PASS=x
-#  ALGO1=x17
-
-# Shield (XSH) on BSOD
-#  POOL1=stratum+tcp://us.bsod.pw:3737
-#  USER1=WalletAddress.WorkerName
-#  PASS=x
-#  ALGO1=x17
-
-# ====== BitCore ======
-# BitCore (BTX) on BSOD
-#  POOL1=stratum+tcp://us.bsod.pw:3556
-#  USER1=WalletAddress.WorkerName
-#  PASS=x
-#  ALGO1=bitcore
-
-# Here is where you can add command line parameters such as intensity and mining modes.
-# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# -i 19 is the default intensity. 
-# For more details, see: https://forum.getpimp.org/topic/3434/flags-command-line-options-for-z-enemy-in-the-zenemy-multi-pcfg
-
-FLAGS=
+NAME=zenemy
 
 # ==================================================================
-# INTERNAL USE ONLY: modification below here is unadvised
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
+
+# Sandbox Pool (PHI2)
+
+	POOL1=stratum+tcp://eu.sandbox.pool.ms:4475
+	USER1=1234567890.MyPiMPWorker
+	PASS1=x
+	ALGO1=phi2
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	POOL1=<stratum>://<poolurl>:<port>
+#	USER1=<wallet>.<worker>
+#	PASS1=<pass>
+#	ALGO1=<algo>
+
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS=
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# Usage: z-enemy [OPTIONS]
+# Options:
+#   -a, --algo=ALGO           Coin hash algorithm to use:
+# 					aergo		(AeriumX: AEX)
+# 					bitcore		(Bitcore: BTX)
+# 					bcd			(Bitcoin Diamond: BCD)
+# 					kawpow		(KawPow: Ravencoin)
+# 					x16r		(X16R: old Ravencoin)
+# 					x16rv2		(X16Rv2: old Ravencoin)
+# 					x16s		(X16S: Pigeon)
+# 					x17			(X17: Verge)
+# 					c11			(C11: CHC)
+# 					phi			(PHI1612: Folm, Seraph)
+# 					phi2		(PHI2: LUXCoin)
+# 					tribus		(Tribus: Denarius)
+# 					poly		(Poly: Polytimos)
+# 					skunk		(Skunk: Skunk)
+# 					sonoa		(Sonoa: SONO)
+# 					hex			(Hex: HEX)
+# 					timetravel	(Machinecoin: MAC)
+# 					xevan		(Xevan: Transend)
+#   -d, --devices             Comma separated list of CUDA devices to use (0,1 etc).
+#                             Alternatively takes
+#                             string names of your cards like MSI 1080 Ti or MX150#2
+#                             (matching 2nd gt640 in the PC)
+#   -i  --intensity=N[,N]     GPU intensity 8.0-31.0, decimals allowed (default: 19) 
+#       --cuda-schedule       set CUDA scheduling option:
+# 	                           0: BlockingSync (default)
+# 	                           1: Spin
+# 	                           2: Yield
+#   -f, --diff-factor         Divide difficulty by this factor (default 1.0) 
+#   -l, --log=FILE            Duplicate output into log file. Sample: --log=logfile.txt
+#   -m, --diff-multiplier     Multiply difficulty by this value (default 1.0) 
+#   -o, --url=URL             URL of mining server
+#   -O, --userpass=U:P        username:password pair for mining server
+#   -u, --user=USERNAME       username for mining server
+#   -p, --pass=PASSWORD       password for mining server
+#   -x, --proxy=[PROTOCOL://]HOST[:PORT]  connect through a proxy
+#   -r, --retries=N           number of times to retry if a network call fails
+#                             (default: retry indefinitely)
+#   -R, --retry-pause=N       time to pause between retries, in seconds (default: 30)
+#   -T, --timeout=N           network timeout, in seconds (default: 300)
+#   -s, --scantime=N          upper bound on time spent scanning current work when
+#                             long polling is unavailable, in seconds (default: 60)
+#   -n, --ndevs               list cuda devices
+#   -N, --statsavg            number of samples used to compute hashrate (default: 30)
+#       --no-extranonce       disable extranonce subscribe on stratum
+#   -q, --quiet               disable per-thread hashmeter output
+#       --no-cert-verify      disable stratum+ssl certificate verification
+#       --no-color            disable colored output
+#       --no-nvml             disable NVML hardware sampling
+#       --no-reconnect        ignore client.reconnect requests
+#       --cpu-affinity        set process affinity to cpu core(s), mask 0x3 for cores 0 and 1
+#       --cpu-priority        set process priority (default: 3) 0 idle, 2 normal to 5 highest
+#   -b, --api-bind=port       IP:port for the legacy API (default: 127.0.0.1:4068), 0 disabled
+#       --api-allow=...       IP/mask of the allowed api client(s), 0/0 for all
+#       --api-remote          Allow remote control, like pool switching or exiting
+#       --api-bind-http=port  IP:port for the HTTP API (default: 127.0.0.1:4067), 0 disabled
+#       --max-temp=N          Only mine if gpu temperature is less than specified value
+#                             Can be tuned with --resume-temp=N to set a resume value
+#   -S, --syslog            use system log for output messages
+#       --syslog-prefix=... allow to change syslog tool name
+#   -B, --background        run the miner in the background
+#   -c, --config=FILE       load a JSON-format configuration file Sample: --config=config.json
+#   -V, --version           display version information and exit
+#   -h, --help              display this help text and exit
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
 TYPE=GPU
 DIR=zenemy
 BINARY=z-enemy
 CONF=p1:o,u1:u,l1:p,a1:a
 API=-api-allow=0/0 --api-remote -b
+
+# 2020-10-01 21:08:26

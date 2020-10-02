@@ -1,77 +1,161 @@
 # ==================================================================
-#       .__
-#______ |__| _____ ______  Portable Instant Mining Platform
-#\____ \|  |/     \____  \      by miners, for miners.
-#|  |_> >  |  Y Y  \  |_> >
-#|   __/|__|__|_|  /   __/   Support: forum.getpimp.org
-#|__|            \/|__|          https://getPiMP.org
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
 #
+# This file makes it easy for you to setup your wallet and pool.
 #
-# Copyright (c) 2018 getPiMP.org.  All Rights Reserved.
-# License: This code is licensed for use with getPiMP.org only.
-# Description: PIMP CLI miner module config file.
-# A .pcfg is a specially formatted PIMP Config mining profile.
-# This file makes it easy for you to pick your wallet and pool
-# and mine to it with this miner. 
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
 # ==================================================================
-# Profile Description:
-#
-# Mine ProgPow coins with progpowminer
- 
-#  PLEASE TAKE PRECAUTIONS AND TEST THOROUGHLY SO YOU DO NOT BURN OR DAMAGE
-#  YOUR HARDWARE. PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
-# ==================================================================
+## CONFIG NAME: (Do Not Change)
 
-# NAME = This is the way the miner will appear in miner farm
-NAME=progpowminer
-USER1=pimp # needed for ethminer compatibility with miner.farm
-
-# PRIMARY ProgPoW POOLS:
-# ---------------------------------------------------------------------
-# PRIMARY POOL INFORMATION: Put your ProgPoW pool and wallet here.
-# POOL1 is in form protocol://username:password@url:port
-
-#  BitCoinInterest (BCI) at CoinBlockers (USER1 is wallet dot worker)
-POOL1=stratum+tcp://iAPj8JmHrgnjFUeH1ezWorYnUdnusj9Git.PimpWorker@bci-us.coinblockers.com:3910
-
-
-# ---------------------------------------------------------------------
-# COMMAND LINE PARAMETERS:
-# Here is where you can add command line parameters such as intensity and mining modes.
-# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-
-FLAGS=-X --farm-recheck 2000
-
-# Mining configuration:
-#    -U,--cuda  When mining use the GPU via CUDA.
-#    --opencl-platform <n>  When mining using -G/--opencl use OpenCL platform n (default: 0).
-#    --opencl-device <n>  When mining using -G/--opencl use OpenCL device n (default: 0).
-#    --opencl-devices <0 1 ..n> Select which OpenCL devices to mine on. Default is to use all
-#    -t, --mining-threads <n> Limit number of CPU/GPU miners to n (default: use everything available on selected platform)
-#    -L, --dag-load-mode <mode> DAG generation mode.
-#        parallel    - load DAG on all GPUs at the same time (default)
-#        sequential  - load DAG on GPUs one after another. Use this when the miner crashes during DAG generation
-#        single <n>  - generate DAG on device n, then copy to other devices
-# CUDA configuration:
-#    --cuda-block-size Set the CUDA block work size. Default is 128
-#    --cuda-grid-size Set the CUDA grid size. Default is 8192
-#    --cuda-streams Set the number of CUDA streams. Default is 2
-#    --cuda-schedule <mode> Set the schedule mode for CUDA threads waiting for CUDA devices to finish work. Default is 'sync'. Possible values are:
-#        auto  - Uses a heuristic based on the number of active CUDA contexts in the process C and the number of logical processors in the system P. If C > P, then yield else spin.
-#        spin  - Instruct CUDA to actively spin when waiting for results from the device.
-#        yield - Instruct CUDA to yield its thread when waiting for results from the device.
-#        sync  - Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the results from the device.
-#    --cuda-devices <0 1 ..n> Select which CUDA GPUs to mine on. Default is to use all
-#    --cuda-parallel-hash <1 2 ..8> Define how many hashes to calculate in a kernel, can be scaled to achieve better performance. Default=4
-#    --cuda-noeval  bypass host software re-evalution of GPU solutions.
-#        This will trim some milliseconds off the time it takes to send a result to the pool.
-#        Use at your own risk! If GPU generates errored results they WILL be forwarded to the pool
-#        Not recommended at high overclock.
+NAME=progpow
 
 # ==================================================================
-# INTERNAL USE ONLY: modification below here is unadvised 
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
+
+# Sandbox Pool (ProgPow)
+
+	POOL1=stratum+tcp://1234567890.MyPiMPWorker:x@eu.sandbox.pool.ms:4456
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	POOL1=<stratum>://<wallet>.<worker>:<pass>@<poolurl>:<port>
+
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS=-X --farm-recheck 2000
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# 
+# ProgPoW GPU Miner
+# Usage: /opt/miners/progpow/progpowminer [OPTIONS] [pool...]
+# 
+# Positionals:
+#   pool TEXT ...               Specify one or more pool URLs. See below for URL syntax
+# 
+# Common Options:
+#   -h,--help                   Show help
+#   -V,--version                Show program version
+#   -v,--verbosity INT in [0 - 9]=5
+#                               Set log verbosity level
+#   --farm-recheck INT in [1 - 99999]=500
+#                               Set check interval in milliseconds for changed work
+#   --farm-retries INT in [0 - 99999]=3
+#                               Set number of reconnection retries
+#   --work-timeout INT in [1 - 99999]=180
+#                               Set disconnect timeout in seconds of working on the same job
+#   --response-timeout INT in [2 - 999]=2
+#                               Set disconnect timeout in seconds for pool responses
+#   -R,--report-hashrate        Report current hashrate to pool
+#   --display-interval INT in [1 - 99999]=5
+#                               Set mining stats log interval in seconds
+#   --HWMON INT in [0 - 1]      0 - Displays gpu temp, fan percent. 1 - and power usage. Note for Linux: The program uses sysfs for power, which requires running with root privileges.
+#   --exit                      Stops the miner whenever an error is encountered
+#   -P,--pool TEXT ...          Specify one or more pool URLs. See below for URL syntax
+#   --failover-timeout INT in [0 - 999]=0
+#                               Set the amount of time in minutes to stay on a failover pool before trying to reconnect to primary. If = 0 then no switch back.
+#   --nocolor                   Display monochrome log
+#   --syslog                    Use syslog appropriate log output (drop timestamp and channel prefix)
+#   --list-devices              List the detected OpenCL/CUDA devices and exit. Should be combined with -G, -U, or -X flag
+#   --noeval                    Bypass host software re-evaluation of GPU solutions
+#   -L,--dag-load-mode INT in [0 - 2]=0
+#                               Set the DAG load mode. 0=parallel, 1=sequential, 2=single.  parallel    - load DAG on all GPUs at the same time  sequential  - load DAG on GPUs one after another. Use this when the miner crashes during DAG generation  single      - generate DAG on device, then copy to other devices. Implies --dag-single-dev  
+#   --dag-single-dev UINT=0     Set the DAG creation device in single mode
+#   --benchmark-warmup UINT=15  Set the duration in seconds of warmup for the benchmark tests
+#   --benchmark-trial INT in [1 - 99]=3
+#                               Set the number of benchmark trials to run
+#   -G,--opencl                 When mining use the GPU via OpenCL
+#   -U,--cuda                   When mining use the GPU via CUDA
+#   -X,--cuda-opencl            When mining with mixed AMD(OpenCL) and CUDA GPUs
+#   -M,--benchmark UINT=0       Benchmark mining and exit; Specify block number to benchmark against specific DAG
+#   -Z,--simulation UINT=0      Mining test. Used to validate kernel optimizations. Specify block number
+#   --tstop INT in [30 - 100]=0 Stop mining on a GPU if temperature exceeds value. 0 is disabled, valid: 30..100
+#   --tstart INT in [30 - 100]=40
+#                               Restart mining on a GPU if the temperature drops below, valid: 30..100
+# 
+# 
+# API Options:
+#   --api-bind TEXT             Set the API address:port the miner should listen to. Use negative port number for readonly mode
+#   --api-port INT in [-65535 - 65535]=0
+#                               Set the API port, the miner should listen to. Use 0 to disable. Use negative numbers for readonly mode
+#   --api-password TEXT         Set the password to protect interaction with API server. If not set, any connection is granted access. Be advised passwords are sent unencrypted over plain TCP!!
+#   --http-bind TEXT            Set the web API address:port the miner should listen to.
+#   --http-port INT in [0 - 65535]=0
+#                               Set the web API port, the miner should listen to. Use 0 to disable. Data shown depends on hwmon setting
+# 
+# 
+# OpenCL Options:
+#   --cl-kernel INT in [0 - 2]=-1
+#                               Ignored parameter. Kernel is auto-selected.
+#   --opencl-platform UINT=0    Use OpenCL platform n
+#   --opencl-device,--opencl-devices UINT ...
+#                               Select list of devices to mine on (default: use all available)
+#   --cl-parallel-hash INT in {1,2,4,8}=-1
+#                               ignored parameter
+#   --cl-global-work UINT=2048  Set the global work size multipler.
+#   --cl-local-work UINT in {64,128,192,256}=256
+#                               Set the local work size
+#   --cl-only                   Use opencl kernel. Don't attempt to load binary kernel
+# 
+# 
+# CUDA Options:
+#   --cuda-grid-size INT in [1 - 999999999]=1024
+#                               Set the grid size
+#   --cuda-block-size INT in [1 - 999999999]=512
+#                               Set the block size
+#   --cuda-devices UINT ...     Select list of devices to mine on (default: use all available)
+#   --cuda-parallel-hash UINT in {1,2,4,8}=4
+#                               Set the number of hashes per kernel
+#   --cuda-schedule TEXT in {auto,spin,sync,yield}=sync
+#                               Set the scheduler mode.  auto  - Uses a heuristic based on the number of active CUDA contexts in the process C          and the number of logical processors in the system P. If C > P then yield else spin.
+#   spin  - Instruct CUDA to actively spin when waiting for results from the device.  yield - Instruct CUDA to yield its thread when waiting for results from the device.  sync  - Instruct CUDA to block the CPU thread on a synchronization primitive when waiting for the results from the device.  
+#   --cuda-streams INT in [1 - 99]=2
+#                               Set the number of streams
+# Pool URL Specification:
+#     URL takes the form: scheme://user[.workername][:password]@hostname:port[/...].
+#     where scheme can be any of:
+#     getwork     for getWork mode
+#     stratum     for stratum mode
+#     stratums    for secure stratum mode
+#     stratumss   for secure stratum mode with strong TLS12 verification
+# 
+#     Example 1:    stratums://0x012345678901234567890234567890123.miner1@ethermine.org:5555
+#     Example 2:    stratum://0x012345678901234567890234567890123.miner1@nanopool.org:9999/john.doe@gmail.com
+#     Example 3:    stratum://0x012345678901234567890234567890123@nanopool.org:9999/miner1/john.doe@gmail.com
+# 
+# Environment Variables:
+#     NO_COLOR - set to any value to disable color output. Unset to re-enable color output.
+#     SYSLOG   - set to any value to strip time and disable color from output, for logging under systemd
+# 
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
 TYPE=GPU
 DIR=progpow
 BINARY=progpowminer
 CONF=p1:P
 API=-api-port
+
+# 2020-10-01 21:08:26

@@ -1,119 +1,152 @@
 # ==================================================================
 #        .__
 # ______ |__| _____ ______
-# \____ \|  |/     \____  \   Portable Instant Mining Platform  
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
 # |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
-# |   __/|__|__|_|  /   __/    Copyright (c) 2019 getPiMP.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
 # |__|            \/|__|
-# This file makes it easy for you to pick your wallet and pool.
+#
+# This file makes it easy for you to setup your wallet and pool.
+#
 # DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
 # PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
-# ==================================================================
-NAME=gminer
-
-# POOL INFORMATION: Put your pool and wallet here.
-# POOL1 is in form url   (no stratum:// and the port is defined in the FLAGS)
-# USER1 is the username usually in form wallet.workername 
-# PASS1 is usually x but can be used for parameters on some pools.
-# Simply remove the # from the pool/user/pass that you want to use and put the # in front of every other pool.
-
-# YCash (YEC) at 1ds (USER1 is YEC wallet) (set --port 50152 --pers ZcashPoW below)
-   POOL1=mine-yec-na.equipool.1ds.us
-   USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
-   PASS1=minpayout=625
-   ALGO1=192_7
-
-# YCash (YEC) at flypool (USER1 is YEC wallet) (set --port 3333 --pers ZcashPoW below)
-#   POOL1=us1-ycash.flypool.org
-#   USER1=s1bSMnKwRE3ovEzb9oVeLsN1hMeumJXNtoe.PimpWorker
-#   PASS1=x
-#   ALGO1=192_7
-
-# SnowGem (XSG) at Snowgem Official Pool (USER1 is XSG Wallet) (set --port 3082 --pers sngemPoW below)
-#   POOL1=us-pool.snowgem.org
-#   USER1=s1ZpAPJN67MMN3zDy6Arn8c57bkbugcTuK2.PimpWorker
-#   PASS1=yourmail@domain.com
-#   ALGO1=144_5
-
-# AION (AION) at aionpool (USER1 is AION wallet) (set --port 3333 --pers AION0PoW below)
-#   POOL1=cluster.aionpool.tech
-#   USER1=0xa031185ba89a0f2c9a77b6eb9612bb5b5e685bd160cd1ce747aa96790ecf4977.PimpWorker
-#   PASS1=x
-#   ALGO1=210_9
-
-# BitcoinGold (BTG) at BTGpool (USER1 is BitcoinGold wallet) (set --port 1445 --pers BgoldPoW below)
-#   POOL1=eu.btgpool.pro
-#   USER1=GLHraJJfsNknm5wGCqSJ7V6cGDnA6gAV8y.PimpWorker
-#   PASS1=x
-#   ALGO1=144_5
-
-# ZELcash (ZEL) at Equihash.Pro (USER1 is ZELcash wallet) (set --port 20500 --pers ZelProof below)
-#   POOL1=zel.equihash.pro
-#   USER1=ZELwalletHere.PimpWorker
-#   PASS1=x
-#   ALGO1=125_4
-
-# LiteCoinZ (LTZ) at 1ds (USER1 is LitecoinZ wallet) (set FLAGS=--port 50092 --pers undefined below)
-#   POOL1=mine-ltz-na.equipool.1ds.us
-#   USER1=L1Ucd8BU7KfeoGWXFjgwerQHVHQS6uMVzfA.PimpWorker
-#   PASS1=minpayout=5
-#   ALGO1=144_5
-
-# MinexCoin (MNX) on Minexpool (USER1 is MNX wallet) (set FLAGS=--port 9999 below)
-#   POOL1=stratum.minexpool.eu
-#   USER1=XQZoBeGPZJoLhTdkcF8bScsNH5Wyesd9g4.PimpWorker
-#   PASS1=x
-#   ALGO1=96_5
-
-# ---------------------------------------------------------------------
-# FLAGS / COMMAND LINE PARAMETERS:
-# Here is where you can add command line parameters such as intensity and mining modes.
-# NOTE: the pool/wallet/algo settings are set by PIMP. Set those above.
-# You have to define the pool's Stratum port here as well.
-# IF YOU WANT TO MANAGE FANS WITH gputool YOU MUST REMOVE --templimit
-#  Reason: MINER will override gputool. But we didn't want to lose the failsafe defaults.
-
-FLAGS=--logfile /var/log/gminer.log --templimit 85 --port 50152 --pers ZcashPoW
-
-
-# Commonly used GMINER FLAGS:
-#  -a [ --algo ] arg           mining algorithm
-#  --ssl arg                   enable/disable ssl for stratum connection
-#  --ssl_verification arg      enable/disable certificates verification for ssl
-#                              stratum connection
-#  -d [ --devices ] arg        space-separated list of devices
-#  -i [ --intensity ] arg      space-separated list of intensities (1-100)
-#  -l [ --logfile ] arg        log filename
-#  -t [ --templimit ] arg      space-separated list of temperature limits
-#  -w [ --watchdog ] arg (=1)  enable/disable watchdog
-#  --config arg                specify configure file
-#  --pers arg                  personalization string for equihash algorithm
-#  --pec [=arg(=1)] (=1)       enable/disable power efficiency calculator
-#  --nvml arg (=1)             enable/disable NVML
-#  --cuda arg (=1)             enable/disable CUDA platform
-#  --opencl arg (=1)           enable/disable OpenCL platform
-#  --electricity_cost arg (=0) specify electricity cost in $
-
-# Supported algorithms:  (as of 1.53)
-#  equihash96_5, 96_5   Equihash 96,5
-#  vds                  Equihash + Scrypt "VDS"
-#  equihash144_5, 144_5 Equihash 144,5
-#  equihash125_4, 125_4 Equihash 125,4
-#  beamhash             BeamHash
-#  beamhashI            BeamHashI
-#  beamhashII           BeamHashII
-#  equihash192_7, 192_7 Equihash 192,7
-#  equihash210_9, 210_9 Equihash 210,9
-#  cuckoo29, aeternity  Cuckoo29
-#  cuckaroo29           Cuckaroo29
-#  cuckarood29, grin29  Cuckarood29
-#  cuckatoo31, grin31   Cuckatoo31
-#  cuckaroo29s, swap    Cuckaroo29s
 #
 # ==================================================================
-# INTERNAL USE ONLY: modification below here is unadvised
+## CONFIG NAME: (Do Not Change)
+
+NAME=gminer
+
+# ==================================================================
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
+
+# Sandbox Pool (Equihash(192,7))
+
+	POOL1=eu.sandbox.pool.ms
+	USER1=1234567890.MyPiMPWorker
+	PASS1=x
+	ALGO1=equihash192_7
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	POOL1=<poolurl>
+#	USER1=<wallet>.<worker>
+#	PASS1=<pass>
+#	ALGO1=<algo>
+
+# Notes:
+#	No Stratum in POOL1=
+#	Pool port number goes in FLAGS= (--port <port>)
+#	Adjust (--pers <pers>) in FLAGS= to match the pool requirement.
+
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS=--logfile /var/log/gminer.log --templimit 85 --port 4450 --pers ZcashPoW
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# +----------------------------------------------------------------+
+# |                          GMiner v2.21                          |
+# +----------------------------------------------------------------+
+# Allowed options:
+#   -h [ --help ]               display this message
+#   -v [ --version ]            print program version
+#   --list_devices              display available GPUs
+#   -a [ --algo ] arg           mining algorithm
+#   -s [ --server ] arg         stratum server address
+#   -n [ --port ] arg           stratum server port
+#   -u [ --user ] arg           stratum server username
+#   -p [ --pass ] arg           stratum server password
+#   --ssl arg                   enable/disable ssl for stratum connection
+#   --ssl_verification arg      enable/disable certificates verification for ssl 
+#                               stratum connection
+#   --proto arg                 stratum protocol: proxy, stratum or solo
+#   --dserver arg               dual stratum server address
+#   --dport arg                 dual stratum server port
+#   --duser arg                 dual stratum server username
+#   --dpass arg                 dual stratum server password
+#   --dssl arg                  enable/disable ssl for dual stratum connection
+#   --dssl_verification arg     enable/disable certificates verification for ssl 
+#                               dual stratum connection
+#   --dproto arg                dual stratum protocol: proxy, stratum or solo
+#   -d [ --devices ] arg        space-separated list of devices
+#   -i [ --intensity ] arg      space-separated list of intensities (1-100)
+#   --dual_intensity arg        space-separated list of intensities for secondary
+#                               algorithm in dual mining mode (0-10)
+#   --trim arg                  space-separated list of additional trimming 
+#                               rounds for cuckoo24 algorithm (>0)
+#   -l [ --logfile ] arg        log filename
+#   -t [ --templimit ] arg      space-separated list of temperature limits
+#   -c [ --color ] arg (=1)     enable/disable color output
+#   -w [ --watchdog ] arg (=1)  enable/disable watchdog
+#   --api arg                   specify API port to enable API
+#   --config arg                specify configure file
+#   --pers arg                  personalization string for equihash algorithm
+#   --pec [=arg(=1)] (=1)       enable/disable power efficiency calculator
+#   --nvml arg (=1)             enable/disable NVML
+#   --cuda arg (=1)             enable/disable CUDA platform
+#   --opencl arg (=1)           enable/disable OpenCL platform
+#   --electricity_cost arg (=0) specify electricity cost in $
+#   --oc arg                    space-separated list of OC modes for each device
+#   --oc1                       enable OC1 for all devices
+# 
+# Supported algorithms:
+#   equihash96_5, 96_5        Equihash 96,5
+#   vds                       Equihash + Scrypt "VDS"
+#   equihash144_5, 144_5      Equihash 144,5
+#   equihash125_4, 125_4      Equihash 125,4
+#   grimm                     Grimm
+#   beamhash                  BeamHash
+#   beamhashI                 BeamHashI
+#   beamhashII                BeamHashII
+#   beamhashIII               BeamHashIII
+#   equihash192_7, 192_7      Equihash 192,7
+#   equihash210_9, 210_9      Equihash 210,9
+#   cuckoo29, aeternity       Cuckoo29
+#   cuckaroo29                Cuckaroo29
+#   cuckarood29               Cuckarood29
+#   cuckaroom29               Cuckaroom29
+#   cuckarooz29               Cuckaroom29
+#   grin29                    Grin29
+#   cuckatoo31, grin31        Cuckatoo31
+#   cuckatoo32, grin32        Cuckatoo32
+#   cuckaroo29b, bittube      Cuckaroo29b
+#   cuckaroo29s, swap         Cuckaroo29s
+#   cuckarood29v, monerov     Cuckarood29v
+#   bfc                       BFC
+#   eth, ethash               Ethash
+#   eaglesong                 Eaglesong
+#   ethash+eaglesong, eth+ckb Ethash + Eaglesong
+#   ethash+blake2s, eth+kda   Ethash + Blake2s
+#   ethash+handshake, eth+hns Ethash + Handshake
+#   sero                      Sero
+#   cortex                    Cortex
+#   cuckaroom29_qitmeer       Cuckaroom29 "Qitmeer"
+#   blake2s, kda              Blake2s
+#   cryptonightbbc, bbc       CryptoNightBBC
+#   handshake, hns            Handshake
+#   kawpow, rvn, ravencoin    KAWPOW
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
 TYPE=GPU
 DIR=gminer
 BINARY=gminer
 CONF=p1:-server,u1:-user,l1:-pass,a1:-algo
 API=-api
+
+# 2020-10-01 21:08:26
