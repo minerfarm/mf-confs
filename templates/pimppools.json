@@ -769,6 +769,17 @@
          "Special":""
       }
    ],
+   "cuckAToo32":[
+      {
+         "Name":"Sandbox Pool (cuckAToo32)",
+         "Stratum":"stratum+tcp",
+         "URL":"eu.sandbox.pool.ms",
+         "Port":"4474",
+         "Wallet":"1234567890",
+         "Pass":"x",
+         "Special":""
+      }
+   ],
    "PHI2":[
       {
          "Name":"Sandbox Pool (PHI2)",
@@ -827,6 +838,17 @@
    "RandomSFX":[
       {
          "Name":"Sandbox Pool (RandomSFX)",
+         "Stratum":"stratum+tcp",
+         "URL":"eu.sandbox.pool.ms",
+         "Port":"4479",
+         "Wallet":"1234567890",
+         "Pass":"x",
+         "Special":""
+      }
+   ],
+   "RandomKEVA":[
+      {
+         "Name":"Sandbox Pool (RandomKEVA)",
          "Stratum":"stratum+tcp",
          "URL":"eu.sandbox.pool.ms",
          "Port":"4479",
@@ -896,6 +918,28 @@
          "Stratum":"stratum+tcp",
          "URL":"eu.sandbox.pool.ms",
          "Port":"4484",
+         "Wallet":"1234567890",
+         "Pass":"x",
+         "Special":""
+      }
+   ],
+   "BeamHashIII":[
+      {
+         "Name":"Sandbox Pool (BeamHashIII)",
+         "Stratum":"stratum+tcp",
+         "URL":"eu.sandbox.pool.ms",
+         "Port":"4486",
+         "Wallet":"1234567890",
+         "Pass":"x",
+         "Special":""
+      }
+   ],
+   "cuckARooz29":[
+      {
+         "Name":"Sandbox Pool (cuckARooz29)",
+         "Stratum":"stratum+tcp",
+         "URL":"eu.sandbox.pool.ms",
+         "Port":"4487",
          "Wallet":"1234567890",
          "Pass":"x",
          "Special":""
