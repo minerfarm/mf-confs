@@ -28,7 +28,7 @@ NAME=xmr-aeonstak
 # Sandbox Pool (CryptoNightV8)
 
 	POOL1=stratum+tcp://eu.sandbox.pool.ms:4447
-	USER1=1234567890.MyPiMPWorker
+	USER1=1234567890.m204_2_24_mix
 	PASS1=x
 
 #  User Pool: ------------------------------------------------
@@ -49,7 +49,7 @@ NAME=xmr-aeonstak
 # ==================================================================
 ## FLAG INFORMATION:
 
- FLAGS= -r MyPiMPWorker --currency cryptonight_v8
+ FLAGS=--noAMD --noNVIDIA --config /tmp/xmr-aeonstak.cpu.config.txt --poolconf /tmp/xmr-aeonstak.cpu.pools.txt --cpu /tmp/xmr-aeonstak.cpu.txt -r m204_2_24_mix --currency cryptonight_v8
 
 # ==================================================================
 ## MINER HELP OUTPUT: (For Information Only)
@@ -135,6 +135,6 @@ TYPE=CPU
 DIR=xmr-aeonstak
 BINARY=xmr-stak
 CONF=p1:o,u1:u,l1:p
-API=-noAMD --noNVIDIA -i
+API=-httpd
 
-# 2020-10-01 21:08:26
+# 2020-12-06 10:27:37

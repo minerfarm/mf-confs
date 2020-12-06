@@ -28,7 +28,7 @@ NAME=cpuminer-opt
 # Sandbox Pool (Allium)
 
 	POOL1=stratum+tcp://eu.sandbox.pool.ms:4458
-	USER1=1234567890.MyPiMPWorker
+	USER1=1234567890.m204_2_24_mix
 	PASS1=x
 	ALGO1=allium
 
@@ -54,7 +54,7 @@ NAME=cpuminer-opt
 #
 #
 # 
-#          **********  cpuminer-opt 3.14.3  *********** 
+#          **********  cpuminer-opt 3.15.2  *********** 
 #      A CPU miner with multi algo support and optimized for CPUs
 #      with AVX512, SHA and VAES extensions by JayDDee.
 #      BTC donation address: 12tdvfF7KmAsihBXQXynT6E6th2c2pByTT
@@ -208,4 +208,4 @@ BINARY=cpuminer
 CONF=p1:o,u1:u,l1:p,a1:a
 API=-api-remote --api-bind 127.0.0.1:
 
-# 2020-10-01 21:08:26
+# 2020-12-06 10:27:37

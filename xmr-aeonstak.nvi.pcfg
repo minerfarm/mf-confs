@@ -14,7 +14,7 @@
 # ==================================================================
 ## CONFIG NAME: (Do Not Change)
 
-NAME=xmr-stak
+NAME=xmr-aeonstak
 
 # ==================================================================
 ## POOL INFORMATION:
@@ -49,7 +49,7 @@ NAME=xmr-stak
 # ==================================================================
 ## FLAG INFORMATION:
 
- FLAGS=--noCPU --noNVIDIA --config /tmp/xmr-stak.amd.config.txt --poolconf /tmp/xmr-stak.amd.pools.txt --amd /tmp/xmr-stak.amd.txt -r m204_2_24_mix --currency cryptonight_v8
+ FLAGS=--noCPU --noAMD --config /tmp/xmr-aeonstak.nvi.config.txt --poolconf /tmp/xmr-aeonstak.nvi.pools.txt --nvidia /tmp/xmr-aeonstak.nvi.txt -r m204_2_24_mix --currency cryptonight_v8
 
 # ==================================================================
 ## MINER HELP OUTPUT: (For Information Only)
@@ -68,17 +68,13 @@ NAME=xmr-stak
 #   --noCPU                    disable the CPU miner backend
 #   --cpu FILE                 CPU backend miner config file
 #   --noAMD                    disable the AMD miner backend
-#   --amdGpus GPUS             indices of AMD GPUs to use. Example: 0,2,3
 #   --noAMDCache               disable the AMD(OpenCL) cache for precompiled binaries
 #   --openCLVendor VENDOR      use OpenCL driver of VENDOR and devices [AMD,NVIDIA]
 #                              default: AMD
 #   --amdCacheDir DIRECTORY    directory to store AMD binary files
 #   --amd FILE                 AMD backend miner config file
 #   --noNVIDIA                 disable the NVIDIA miner backend
-#   --nvidiaGpus GPUS          indices of NVIDIA GPUs to use. Example: 0,2,3
 #   --nvidia FILE              NVIDIA backend miner config file
-#   --log FILE                 miner output file
-#   --h-print-time SEC         interval for printing hashrate, in seconds
 #   -i --httpd HTTP_PORT       HTTP interface port
 #  
 # The following options can be used for automatic start without a guided config,
@@ -92,6 +88,7 @@ NAME=xmr-stak
 #   --currency NAME            currency to mine
 # 
 # Supported coin options: 
+# 	- aeon7
 # 	- bbscoin
 # 	- bittube
 # 	- cryptonight
@@ -114,24 +111,28 @@ NAME=xmr-stak
 # 	- cryptonight_v7_stellite
 # 	- cryptonight_gpu
 # 	- cryptonight_conceal
+# 	- freehaven
 # 	- graft
 # 	- haven
 # 	- lethean
 # 	- masari
+# 	- monero
 # 	- qrl
 # 	- ryo
-# 	- torque
+# 	- stellite
+# 	- turtlecoin
 # 	- plenteum
 # 	- zelerius
+# 	- xcash
 # 
-# Version: xmr-stak 2.10.8 67cf951
+# Version: xmr-stak 2.10.4 b50f3f9
 # Brought to by fireice_uk and psychocrypt under GPLv3.
 #
 # ==================================================================
 ## INTERNAL USE ONLY: (Do Not Change)
 #
 TYPE=GPU
-DIR=xmr-stak
+DIR=xmr-aeonstak
 BINARY=xmr-stak
 CONF=p1:o,u1:u,l1:p
 API=-httpd

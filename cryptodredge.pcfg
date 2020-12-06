@@ -28,7 +28,7 @@ NAME=cryptodredge
 # Sandbox Pool (PHI2)
 
 	POOL1=stratum+tcp://eu.sandbox.pool.ms:4475
-	USER1=1234567890.MyPiMPWorker
+	USER1=1234567890.m204_2_24_mix
 	PASS1=x
 	ALGO1=phi2
 
@@ -53,29 +53,61 @@ NAME=cryptodredge
 ## MINER HELP OUTPUT: (For Information Only)
 #
 #
-# 
+# CryptoDredge 0.25.1 NVIDIA GPU Miner
 # Usage:
 #   /opt/miners/cryptodredge/cryptodredge [OPTION...]
 # 
 #   -h, --help             Print help information
 #   -v, --version          Print version information
-#   -a, --algo arg         Specify algorithm to use: aeternity, allium,
-#                          argon2d-dyn, argon2d-nim, argon2d250, argon2d4096, bcd,
-#                          bitcore, chukwa, chukwa-wrkz, cnconceal, cnfast2, cngpu,
-#                          cnhaven, cnheavy, cnsaber, cnturtle, cnupx2, cnzls,
-#                          cuckaroo29, hmq1725, lyra2v3, lyra2vc0ban, lyra2z,
-#                          lyra2zz, mtp, mtp-tcr, neoscrypt, phi, phi2, pipe,
-#                          skunk, tribus, x16r, x16rt, x16rv2, x16s, x17, x21s, x22i
+#   -a, --algo arg         Specify algorithm to use: 
+#                          aeternity
+#                          allium
+#                          argon2d-dyn
+#                          argon2d-nim
+#                          argon2d250
+#                          argon2d4096
+#                          chukwa
+#                          cnconceal
+#                          cnfast2
+#                          cngpu
+#                          cnhaven
+#                          cnheavy
+#                          cntlo
+#                          cnturtle
+#                          cnupx2
+#                          cnzls
+#                          hmq1725
+#                          lyra2v3
+#                          lyra2vc0ban
+#                          lyra2z
+#                          mtp
+#                          mtp-tcr
+#                          neoscrypt
+#                          ninja
+#                          phi2
+#                          sha256csm
+#                          skunk
+#                          tribus
+#                          x16r
+#                          x16rt
+#                          x16rv2
+#                          x16s
+#                          x17
+#                          x21s
 #   -o, --url arg          URL of mining pool
 #   -x, --proxy arg        Connecting through a proxy. Syntax:
 #                          protocol://[user:password@]proxyhost[:port]. For example: -x
 #                          socks5://proxyuser:12345@127.0.0.1:1080. Only Socks5 is
 #                          currently supported.
 #       --cert arg         Mining pool server certificate path
+#       --sni              Enable SNI (Server Name Indication) for the pool
+#                          connection
 #   -u, --user arg         Username for mining pool
 #   -p, --pass arg         Password/Options for mining pool
-#   -i, --intensity arg    Mining intensity (0 - 6). For example: -i N[,N]
+#   -i, --intensity arg    Mining intensity (0.0 - 8.0). For example: -i N[,N]
 #                          (default: 6)
+#   -q, --recompute arg    Memory reduction factor (1 - 32) (argon2d-nim only).
+#                          For example: -q N[,N] (default: 256)
 #   -d, --device arg       List of comma-separated device IDs to use for
 #                          mining. IDs are numbered 0,1...,N - 1
 #       --log arg          Log output to file
@@ -88,15 +120,19 @@ NAME=cryptodredge
 #   -R, --retry-pause arg  N time to pause between retries, in seconds
 #                          (default: 15)
 #       --timeout arg      N network timeout, in seconds (default: 300)
-#       --api-type arg     API type {ccminer-tcp (ccminer 2.3 TCP) | ccminer-ws
-#                          (ccminer 2.3 WebSocket) | off} (default:
-#                          ccminer-tcp)
+#       --api-type arg     API type
+#                          ccminer-tcp (ccminer 2.3 TCP)
+#                          ccminer-ws (ccminer 2.3 WebSocket)
+#                          off (default: ccminer-tcp)
 #   -b, --api-bind arg     IP:port for the miner API, 0 disabled (default:
 #                          127.0.0.1:4068)
 #       --hashrate arg     Expected hashrate in kH/s (argon2d-nim only)
 #                          (default: 0)
 #   -c, --config arg       JSON configuration file to use (default:
 #                          config.json)
+#       --optimizer arg    Run optimizer, currently for argon2d-nim only
+#                          auto (Run if gpu.json does not exist)
+#                          force (Run always ignoring gpu.json) (default: auto)
 # 
 # 
 #
@@ -109,4 +145,4 @@ BINARY=cryptodredge
 CONF=p1:o,u1:u,l1:p,a1:a
 API=-api-bind 127.0.0.1:
 
-# 2020-10-01 21:08:26
+# 2020-12-06 10:27:37

@@ -1,0 +1,170 @@
+# ==================================================================
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
+#
+# This file makes it easy for you to setup your wallet and pool.
+#
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
+# ==================================================================
+## CONFIG NAME: (Do Not Change)
+
+NAME=lolminer
+
+# ==================================================================
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
+
+# Sandbox Pool (cuckAToo31)
+
+	POOL1=eu.sandbox.pool.ms:4474
+	USER1=1234567890.m204_2_24_mix
+	PASS1=x
+	ALGO1=C31
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	POOL1=<poolurl>:<port>
+#	USER1=<wallet>.<worker>
+#	PASS1=<pass>
+#	ALGO1=<algo>
+
+# Notes:
+#	No Stratum in POOL1=
+	
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS=--log 1 --logfile /var/log/lolminer.amd.log --devices AMD
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# [1m[38;2;100;149;237m+---------------------------------------------------------+
+# [0m[1m[38;2;100;149;237m|[0m     _       _ __  __ _                   _   _  __      [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m    | | ___ | |  \/  (_)_ __   ___ _ __  / | / |/ /_     [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m    | |/ _ \| | |\/| | | '_ \ / _ \ '__| | | | | '_ \    [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m    | | (_) | | |  | | | | | |  __/ |    | |_| | (_) |   [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m    |_|\___/|_|_|  |_|_|_| |_|\___|_|    |_(_)_|\___/    [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m                                                         [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              This software is for mining                [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              Ethash, Etchash                            [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              Equihash 144/5, 192/7, 210/9               [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              BeamHash I, II, III                        [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              ZelHash     (EquihashR 125/4/0)            [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              Cuck(ar)oo 29                              [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              Cuckaroo   30 CTX                          [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m              Cuckatoo   31/32                           [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m                                                         [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m                                                         [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m|[0m           Made by Lolliedieb, November 2020             [1m[38;2;100;149;237m|
+# [0m[1m[38;2;100;149;237m+---------------------------------------------------------+
+# [0mAllowed options:
+# 
+# General:
+#   -h [ --help ]                         Help screen
+#   --config arg (=./lolMiner.cfg)        Config file
+#   --json arg (=./user_config.json)      Config file in Json format
+#   --profile arg                         Profile to load from Json file
+#   --nocolor [=arg(=on)] (=off)          Disable colors in output
+#   --basecolor [=arg(=on)] (=off)        Use 16 colors scheme for non-rgb 
+#                                         terminals
+#   --list-coins                          List all supported coin profiles
+#   --list-algos                          List all supported algorithms
+#   --list-devices                        List all supported & detected GPUs in 
+#                                         your system
+#   -v [ --version ]                      Print lolMiner version number
+# 
+# Mining:
+#   -c [ --coin ] arg                     The coin to mine
+#   -p [ --pool ] arg                     Mining pool to mine on
+#                                         Format: <pool>:<port>
+#   -u [ --user ] arg                     Wallet or pool user account to mine on
+#   --pass arg                            Pool user account password (Optional)
+#   --tls arg                             Toggle TLS ("on" / "off")
+#   --devices arg                         The devices to mine on 
+#                                         Values: ALL / AMD / NVIDIA or a comma 
+#                                         separated list of indexces.
+#   --devicesbypcie [=arg(=on)] (=off)    Interpret --devices as list of PCIE 
+#                                         BUS:SLOT pair
+#   -a [ --algo ] arg                     The algorithm to mine. 
+#                                         This is an alternative to --coin. 
+#   --pers arg                            The personalization string. 
+#                                         Required when using --algo for Equihash
+#                                         algorithms
+#   --keepfree arg (=5)                   Set the number of MBytes of GPU memory 
+#                                         that should be left free by the miner.
+#   --benchmark arg                       The algorithm to benchmark
+# 
+# Statistics:
+#   --apiport arg (=0)                    The port the API will use
+#   --longstats arg (=150)                Long statistics interval
+#   --shortstats arg (=30)                Short statistics interval
+#   --digits arg                          Number of digits in hash speed after 
+#                                         delimiter
+#   --timeprint [=arg(=on)] (=off)        Enables time stamp on short statistics 
+#                                         ("on" / "off")
+#   --compactaccept [=arg(=on)] (=off)    Enables compact accept notification
+#   --log [=arg(=on)]                     Enables printing a log file ("on" / 
+#                                         "off")
+#   --logfile arg                         Path to a custom log file location
+# 
+# Ethash Options:
+#   --ethstratum arg (=ETHPROXY)          Ethash stratum mode. Available options:
+#                                         ETHV1: EthereumStratum/1.0.0 (Nicehash)
+#                                         ETHPROXY: Ethereum Proxy
+#   --worker arg (=eth1.0)                Separate worker name for Ethereum Proxy
+#                                         stratum mode.
+#   --dagdelay [=arg(=0)] (=-1)           Delay between creating the DAG buffers 
+#                                         for the GPUs. Negative values enable 
+#                                         parallel generation (default).
+#   --4g-alloc-size arg (=0)              Sets the memory size (in MByte) the 
+#                                         miner is allowed for Ethash on 4G 
+#                                         cards. Suggested values: 
+#                                         Linux: 4076 Windows: 4024
+#   --enablezilcache [=arg(=1)] (=0)      Allows 8G+ GPUs to store the DAG for 
+#                                         mining Zilliqa. It will generated only 
+#                                         once and offers a faster switching.
+#   --benchepoch arg (=350)               The DAG epoch the denchmark mode will 
+#                                         use
+# 
+# Ethash Expert Options:
+#   --workmulti arg (=180)                Modifys the amount of Ethash work a GPU
+#                                         does per batch.
+#   --rebuild-defect arg (=3)             Triggers a DAG rebuild if a card 
+#                                         produced <param> defect shares. Default
+#                                         is 3, use 0 to deactivate the rebuild.
+#   --enable-ecip1099 [=arg(=on)] (=off)  Enable reduced DAG size for mining ETC 
+#                                         from block 11.730.000 and higher.
+#   --disableLinux56fix [=arg(=on)] (=off)
+#                                         Disables the startup workaround for 
+#                                         Polaris GPUs on Linux kernel 5.6.
+#   --win4galloc [=arg(=1)] (=0)          Enables (1) / Disables (0) experimental
+#                                         4G DAG allocation mode on Windows.
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
+TYPE=GPU
+DIR=lolminer
+BINARY=lolminer
+CONF=p1:-pool,u1:-user,l1:-pass,a1:a
+API=-apiport
+
+# 2020-12-06 10:27:38

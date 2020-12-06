@@ -1,0 +1,184 @@
+# ==================================================================
+#        .__
+# ______ |__| _____ ______
+# \____ \|  |/     \____  \   Portable Instant Mining Platform
+# |  |_> >  |  Y Y  \  |_> >     Support: forum.getpimp.org
+# |   __/|__|__|_|  /   __/    Copyright (c) 2020 getPiMP.org
+# |__|            \/|__|
+#
+# This file makes it easy for you to setup your wallet and pool.
+#
+# DISCLAIMER: MINING IS DANGEROUS: TAKE PRECAUTIONS AND TEST THOROUGHLY.
+# PIMP ASSUMES NO LIABILITY FOR ANY DAMAGES CAUSED BY MINING.
+#
+# ==================================================================
+## CONFIG NAME: (Do Not Change)
+
+NAME=nbminer
+
+# ==================================================================
+## POOL INFORMATION:
+#
+#  Test Pool: ------------------------------------------------
+#	Enabled by default.
+#	This section is for miner/hardware testing only.
+#	No crypto is earned from this pool/configuration.
+#	Modification of this section is not recommended.
+
+# Sandbox Pool (Ethash)
+
+	POOL1=stratum+tcp://eu.sandbox.pool.ms:4445
+	USER1=1234567890.m204_2_24_mix
+	PASS1=x
+	ALGO1=ethash
+
+#  User Pool: ------------------------------------------------
+#	This section is for actual mining.
+#	Disable Test Pool above prior to use.
+#	Adjust the below scheme with your mining information.
+
+# <pool_name> - <coin>
+
+#	POOL1=<stratum>://<poolurl>:<port>
+#	USER1=<wallet>.<worker>
+#	PASS1=<pass>
+#	ALGO1=<algo>
+
+# ==================================================================
+## FLAG INFORMATION:
+
+ FLAGS=--log-file /var/log/nbminer.amd.log --platform 2
+
+# ==================================================================
+## MINER HELP OUTPUT: (For Information Only)
+#
+#
+# Usage: ./nbminer [options]
+# 
+# For more information, please visit 'https://github.com/NebuTech/NBMiner'.
+# 
+# Options:
+#   -h, --help                               Displays this help.
+#   -v, --version                            Displays version information.
+#   -c, --config <config file path>          Use config file rather than cmd line
+#                                            options.
+#   --generate-config <filename>             Generate a sample config file.
+#   --api <host:port>                        The endpoint for serving REST API.
+#   -d, --devices <devices>                  Specify GPU list to use. Example: 
+#                                            "-d 0,1,2,3" to use first 4 GPU.
+#   -a, --algo <algo>                        Algorithm to mining. Supported
+#                                            algos:
+#                                            * tensority
+#                                            * ethash, eth
+#                                            * tensority_ethash
+#                                            * cuckaroo
+#                                            * cuckarood
+#                                            * cuckatoo, grin31
+#                                            * cuckatoo32, grin32
+#                                            * cuckoo_ae
+#                                            * cuckaroo_swap
+#                                            * progpow_sero
+#                                            * sipc
+#                                            * eaglesong
+#                                            * eaglesong_ethash
+#                                            * bfc
+#                                            * hns
+#                                            * hns_ethash
+#                                            * trb
+#                                            * trb_ethash
+#                                            * kawpow
+#                                            * beamv3, beam
+#                                            * octopus, cfx
+#                                            * etchash, etc
+# 
+#   -o, --url <url>                          Mining pool url. Example:
+#                                            stratum+tcp://btm.f2pool.com:9221
+#                                            stratum+ssl://btm.f2pool.com:9443
+#                                            ethproxy+tcp://eth.f2pool.com:8008
+#                                            nicehash+tcp://daggerhashimoto.eu.nic
+#                                            ehash.com:3353
+#   --o1, --url1 <url>                       Backup url 1.
+#   --o2, --url2 <url>                       Backup url 2.
+#   -u, --user <user>                        User used in mining pool. Example:
+#                                            [wallet]
+#                                            bm1qjcexxxxxxxxxxxxx.rigName:password
+#                                            [username] miner_test.rigName
+#   --u1, --user1 <user>                     Backup user 1.
+#   --u2, --user2 <user>                     Backup user 2.
+#   --do, --secondary-url <url>              Mining pool for secondary algorithm.
+#   --du, --secondary-user <user>            User for secondary algorithm.
+#   --do1, --secondary-url1 <url>            Backup url 1 for secondary
+#                                            algorithm.
+#   --do2, --secondary-url2 <url>            Backup url 2 for secondary
+#                                            algorithm.
+#   --du1, --secondary-user1 <user>          Backup user 1 for secondary
+#                                            algorithm.
+#   --du2, --secondary-user2 <user>          Backup user 2 for secondary
+#                                            algorithm.
+#   -i, --intensity <intensities>            Comma-seperated list of intensities
+#                                            [1-100].
+#   --di, --secondary-intensity <intensity>  Intensity of secondary algorithm.
+#   --log                                    Generate log file named
+#                                            'log_<timestamp>.txt'.
+#   --log-file <logfile>                     Generate custom log file. Note: This
+#                                            option will override '--log'.
+#   --verbose                                Print communication data between
+#                                            miner & pool.
+#   --long-format                            Use 'yyyy-MM-dd HH:mm:ss,zzz' for
+#                                            log time format.
+#   --no-color                               Do not use colorful output log in
+#                                            cmd line.
+#   --no-nvml                                Do not query cuda device health
+#                                            status.
+#   --strict-ssl                             Use strict SSL certificate check
+#                                            when use ssl connections.
+#   --proxy <host:port>                      Socks5 proxy.
+#   --temperature-limit <temp-limit>         Set temperature limit of GPU, if
+#                                            exceeds, stop GPU for 10 sec and
+#                                            continue.
+#   --platform <platform>                    Choose platform, 0: Both (default),
+#                                            1: Nvidia Only, 2: AMD only.
+#   --mt, --memory-tweak <mode>              Enable memory tweaking to boost
+#                                            performance. comma-seperated list,
+#                                            range [1,6].
+#   --device-info                            Print out detailed information for
+#                                            every device.
+#   --device-info-json                       Print out detailed information for
+#                                            every device in json format.
+#   --RUN, --no-watchdog                     Disable watchdog process.
+#   --fee <fee>                              Change devfee in percentage, [0-5].
+#                                            Set to '0' to turn off devfee with
+#                                            lower hashrate. Otherwise, devfee =
+#                                            max(set_value, def_value).
+#   --reboot-times <reboot-times>            Passed by watchdog process to count
+#                                            the miner reboot times.
+#   --coin <coin>                            Set coin for algo ethash.
+#   --cuckoo-intensity <intensity>           Set intensity of cuckoo, cuckaroo,
+#                                            cuckatoo, [1, 12]. Set to 0 means
+#                                            autumatically adapt. Default: 4.
+#   --cuckatoo-power-optimize                Set this option to reduce the range
+#                                            of power consumed by rig when
+#                                            minining with algo cuckatoo.
+#                                            Warning: Setting this option may
+#                                            cause drop on minining performance.
+#   --gpu-tune, --gt <value>                 GPU tuning value for algo 'ethash'
+#                                            on AMD RX & Vega GPUs.
+#   --share-check <value>                    If <value> minutes without share,
+#                                            reboot miner, set 0 to disable.
+#                                            Default: 30
+#   --no-interrupt                           Set this option will disable miner
+#                                            interrupting current GPU jobs when a
+#                                            new job coming from pool, good for
+#                                            power supply, but will cause higher
+#                                            stale ratio and reject shares.
+#
+# ==================================================================
+## INTERNAL USE ONLY: (Do Not Change)
+#
+TYPE=GPU
+DIR=nbminer
+BINARY=nbminer
+CONF=p1:-url,u1:-user,a1:-algo
+API=-api 127.0.0.1:
+
+# 2020-12-06 10:27:37

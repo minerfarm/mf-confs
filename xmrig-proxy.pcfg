@@ -28,7 +28,7 @@ NAME=xmrig-proxy
 # Sandbox Pool (CryptoNightR)
 
 	POOL1=eu.sandbox.pool.ms:4447
-	USER1=1234567890.MyPiMPWorker
+	USER1=1234567890.m204_2_24_mix
 	PASS1=x
 	ALGO1=cn/r
 
@@ -51,7 +51,7 @@ NAME=xmrig-proxy
 # ==================================================================
 ## FLAG INFORMATION:
 
- FLAGS=-l /var/log/xmrig-proxy.log --donate-level 1 -k --api-worker-id MyPiMPWorker
+ FLAGS=-l /var/log/xmrig-proxy.log --donate-level 1 -k --api-worker-id m204_2_24_mix
 
 # ==================================================================
 ## MINER HELP OUTPUT: (For Information Only)
@@ -117,4 +117,4 @@ BINARY=xmrig-proxy
 CONF=p1:o,u1:u,l1:p,a1:a
 API=-http-enabled --http-port
 
-# 2020-10-01 21:08:26
+# 2020-12-06 10:27:37

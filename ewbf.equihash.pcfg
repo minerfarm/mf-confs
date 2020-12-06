@@ -28,7 +28,7 @@ NAME=ewbfminer
 # Sandbox Pool (Equihash(192,7))
 
 	POOL1=eu.sandbox.pool.ms
-	USER1=1234567890.MyPiMPWorker
+	USER1=1234567890.m204_2_24_mix
 	PASS1=x
 	ALGO1=192_7
 
@@ -97,4 +97,4 @@ BINARY=ewbfminer
 CONF=p1:-server,u1:-user,l1:-pass,a1:-algo
 API=-api 127.0.0.1:
 
-# 2020-10-01 21:08:26
+# 2020-12-06 10:27:37

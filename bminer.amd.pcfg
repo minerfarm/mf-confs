@@ -14,7 +14,7 @@
 # ==================================================================
 ## CONFIG NAME: (Do Not Change)
 
-NAME=claymore-xmr-amd
+NAME=bminer
 
 # ==================================================================
 ## POOL INFORMATION:
@@ -25,12 +25,10 @@ NAME=claymore-xmr-amd
 #	No crypto is earned from this pool/configuration.
 #	Modification of this section is not recommended.
 
-# Sandbox Pool (CryptoNightV7)
+# Sandbox Pool (Ethash)
 
-	POOL1=stratum+tcp://eu.sandbox.pool.ms:4447
-	USER1=1234567890.m204_2_24_mix
-	PASS1=x
-	ALGO1=cryptonight v7
+	USER1=ethash://1234567890.m204_2_24_mix:x@eu.sandbox.pool.ms:4445
+	ALGO1=ethash
 
 #  User Pool: ------------------------------------------------
 #	This section is for actual mining.
@@ -39,28 +37,28 @@ NAME=claymore-xmr-amd
 
 # <pool_name> - <coin>
 
-#	POOL1=<stratum>://<poolurl>:<port>
-#	USER1=<wallet>.<worker>
-#	PASS1=<pass>
+#	USER1=<algo>://<wallet>.<worker>:<pass>@<poolurl>:<port>
 #	ALGO1=<algo>
 
 # ==================================================================
 ## FLAG INFORMATION:
 
- FLAGS=-allpools 1 -logfile /var/log/claymore.xmr.log -tt 75 -tstop 90 -dbg -1 -pow7 1
+ FLAGS=-logfile /var/log/bminer.amd.log -devices amd:0
 
 # ==================================================================
 ## MINER HELP OUTPUT: (For Information Only)
 #
 #
+# Bminer: When Crypto-mining Made Fast (v16.3.6-b37c2ec)
+# 
 #
 # ==================================================================
 ## INTERNAL USE ONLY: (Do Not Change)
 #
 TYPE=GPU
-DIR=claymore-xmr-amd
-BINARY=xmramdminer64
-CONF=p1:xpool,u1:xwal,l1:xpsw
-API=mport
+DIR=bminer
+BINARY=bminer
+CONF=u1:uri,u2:uri2
+API=api 127.0.0.1:
 
 # 2020-12-06 10:27:37

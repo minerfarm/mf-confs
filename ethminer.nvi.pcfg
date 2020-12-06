@@ -41,7 +41,7 @@ NAME=ethminer
 # ==================================================================
 ## FLAG INFORMATION:
 
- FLAGS=-G --farm-recheck 2000
+ FLAGS=-U --farm-recheck 2000
 
 # ==================================================================
 ## MINER HELP OUTPUT: (For Information Only)

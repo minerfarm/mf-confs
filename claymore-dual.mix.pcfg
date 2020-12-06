@@ -14,7 +14,7 @@
 # ==================================================================
 ## CONFIG NAME: (Do Not Change)
 
-NAME=claymore-xmr-amd
+NAME=claymore-dual
 
 # ==================================================================
 ## POOL INFORMATION:
@@ -25,12 +25,12 @@ NAME=claymore-xmr-amd
 #	No crypto is earned from this pool/configuration.
 #	Modification of this section is not recommended.
 
-# Sandbox Pool (CryptoNightV7)
+# Sandbox Pool (Ethash)
 
-	POOL1=stratum+tcp://eu.sandbox.pool.ms:4447
+	POOL1=stratum+tcp://eu.sandbox.pool.ms:4445
 	USER1=1234567890.m204_2_24_mix
 	PASS1=x
-	ALGO1=cryptonight v7
+	ALGO1=ethash
 
 #  User Pool: ------------------------------------------------
 #	This section is for actual mining.
@@ -47,7 +47,7 @@ NAME=claymore-xmr-amd
 # ==================================================================
 ## FLAG INFORMATION:
 
- FLAGS=-allpools 1 -logfile /var/log/claymore.xmr.log -tt 75 -tstop 90 -dbg -1 -pow7 1
+ FLAGS=-allpools 1 -platform 3
 
 # ==================================================================
 ## MINER HELP OUTPUT: (For Information Only)
@@ -58,9 +58,9 @@ NAME=claymore-xmr-amd
 ## INTERNAL USE ONLY: (Do Not Change)
 #
 TYPE=GPU
-DIR=claymore-xmr-amd
-BINARY=xmramdminer64
-CONF=p1:xpool,u1:xwal,l1:xpsw
+DIR=claymore-dual
+BINARY=ethdcrminer64
+CONF=p1:epool,u1:ewal,l1:epsw,p2:dpool,u2:dwal,l2:dpsw
 API=mport
 
 # 2020-12-06 10:27:37

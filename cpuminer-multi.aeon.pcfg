@@ -28,7 +28,7 @@ NAME=cpuminer-multi
 # Sandbox Pool (CryptoNight)
 
 	POOL1=stratum+tcp://eu.sandbox.pool.ms:4447
-	USER1=1234567890.MyPiMPWorker
+	USER1=1234567890.m204_2_24_mix
 	PASS1=x
 	ALGO1=cryptoNight
 
@@ -172,4 +172,4 @@ BINARY=cpuminer
 CONF=p1:o,u1:u,l1:p,a1:a
 API=-api-remote --api-bind 127.0.0.1:
 
-# 2020-10-01 21:08:26
+# 2020-12-06 10:27:37
