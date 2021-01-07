@@ -40,7 +40,7 @@
          "Port":"4446",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"ZcashPoW"
+         "Special":"--pers ZcashPoW"
       }
    ],
    "CryptoNightV8":[
@@ -359,7 +359,7 @@
          "Port":"4448",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"Safecoin"
+         "Special":"--pers Safecoin"
       }
    ],
    "Zhash":[
@@ -370,7 +370,7 @@
          "Port":"4449",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"BZEZhash"
+         "Special":"--pers BZEZhash"
       }
    ],
    "Equihash(125,4)":[
@@ -381,7 +381,7 @@
          "Port":"4449",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"BgoldPoW"
+         "Special":"--pers BgoldPoW"
       }
    ],
    "EquihashBTG":[
@@ -392,7 +392,7 @@
          "Port":"4449",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"BgoldPoW"
+         "Special":"--pers BgoldPoW"
       }
    ],
    "Equihash(192,7)":[
@@ -403,7 +403,7 @@
          "Port":"4450",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"ZcashPoW"
+         "Special":"--pers ZcashPoW"
       }
    ],
    "EquihashZER":[
@@ -414,7 +414,7 @@
          "Port":"4450",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"ZcashPoW"
+         "Special":"--pers ZcashPoW"
       }
    ],
    "EquihashXSG":[
@@ -425,7 +425,7 @@
          "Port":"4451",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"sngemPoW"
+         "Special":"--pers sngemPoW"
       }
    ],
    "Equihash(144,5)":[
@@ -436,7 +436,7 @@
          "Port":"4451",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"BitcoinZ"
+         "Special":"--pers BitcoinZ"
       }
    ],
    "Equihash(96,5)":[
@@ -447,7 +447,7 @@
          "Port":"4451",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"MinexCoin"
+         "Special":""
       }
    ],
    "EquihashZEL":[
@@ -458,7 +458,7 @@
          "Port":"4452",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"ZcashPoW"
+         "Special":"--pers ZcashPoW"
       }
    ],
    "EquihashBTCZ":[
@@ -469,7 +469,7 @@
          "Port":"4453",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"BitcoinZ"
+         "Special":"--pers BitcoinZ"
       }
    ],
    "Aion":[
@@ -480,7 +480,7 @@
          "Port":"4454",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"Aion"
+         "Special":""
       }
    ],
    "Equihash(210,9)":[
@@ -491,7 +491,7 @@
          "Port":"4454",
          "Wallet":"1234567890",
          "Pass":"x",
-         "Special":"Aion"
+         "Special":""
       }
    ],
    "Hex":[
